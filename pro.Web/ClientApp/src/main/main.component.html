@@ -1,0 +1,104 @@
+<mat-toolbar *ngIf="shared.rd">
+
+  <!--<img src="../assets/jh-brayer-group-1.png" class="image invert" width="100" />-->
+
+  <div class="fx fx-middle fx-push">
+    <button mat-icon-button (click)="sidenav.toggle();" *ngIf="![2, 3].includes(shared.idRol)">
+      <mat-icon class="color-white" matTooltip="Menu">more_vert</mat-icon>
+    </button>
+  </div>
+
+</mat-toolbar>
+
+<mat-sidenav-container class="hc" *ngIf="![2, 3].includes(shared.idRol)">
+
+  <mat-sidenav #sidenav [mode]="mode" [opened]="opened" [disableClose]="closed" autoFocus="true" class="jh-menu" [ngClass]="{ 'wpx250': expand, 'wpx100': !expand }">
+
+    <div class="w100 h100 fx fx-direction-column-static content-space-between">
+
+      <div class="w100">
+
+        <div *ngIf="!shared.rd">
+
+          <div class="w100 align-center padding-top">
+            <!--<img src="../assets/jh-brayer-group-1.png" class="image invert" width="100" />-->
+          </div>
+
+          <div class="w100 align-center padding-top">
+
+            <button mat-icon-button class="outline omr omb outline-white" *ngIf="expand" (click)="expand = !expand;">
+              <mat-icon matTooltip="Contraer" class="color-white">first_page</mat-icon>
+            </button>
+
+            <button mat-icon-button class="outline omr omb outline-white" *ngIf="!expand" (click)="expand = !expand;">
+              <mat-icon matTooltip="Expandir" class="color-white">last_page</mat-icon>
+            </button>
+
+          </div>
+
+        </div>
+
+        <mat-nav-list (click)="ngCloseSide();" *ngIf="expand">
+
+          <div class="w100 padding-top padding-bottom">
+          </div>
+
+          <div *ngFor="let item of shared.inRolMenuView">
+
+            <mat-accordion *ngIf="item.idMenu > 1">
+              <mat-expansion-panel #matExpansionPanel>
+
+                <mat-expansion-panel-header (click)="ngOpenPanel(item.idMenu,matExpansionPanel,$event);">
+                  <mat-panel-title class="fx fx-middle">
+                    <mat-icon class="fl-left padding-right-05">{{ item['icono'] }}</mat-icon>
+                    {{ item['menu'] }}
+                  </mat-panel-title>
+                </mat-expansion-panel-header>
+
+                <mat-list>
+
+                  <div *ngFor="let row of shared.inRolSubMenuView">
+                    <mat-list-item class="color-gray padding-left" *ngIf="row['ruta']" [routerLink]="[row['ruta']]" [routerLinkActive]="['active']" (click)="ngClosePanel();">
+                      <mat-icon class="fl-left padding-left-05 padding-right-05">
+                        {{ row['icono'] }}
+                      </mat-icon>
+                      {{ row['subMenu'] }}
+                    </mat-list-item>
+                  </div>
+
+                </mat-list>
+
+              </mat-expansion-panel>
+            </mat-accordion>
+
+          </div>
+
+          <mat-accordion>
+            <mat-expansion-panel hideToggle [routerLink]="['/login']">
+              <mat-expansion-panel-header #panelSalir (click)="panelSalir._toggle();">
+                <mat-panel-title class="fx fx-middle">
+                  <mat-icon class="fl-left padding-right-05">exit_to_app</mat-icon>
+                  Salir
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+            </mat-expansion-panel>
+          </mat-accordion>
+
+        </mat-nav-list>
+
+      </div>
+
+      <div class="w100 padding">
+        <mat-label class="label-x-small color-white">v{{ shared.version }}</mat-label>
+      </div>
+
+    </div>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content class="background-jh-1" [ngClass]="{ 'margin-left-expandir': expand && !shared.rd, 'margin-left-contraer': !expand && !shared.rd }">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+

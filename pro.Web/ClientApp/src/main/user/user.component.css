@@ -1,0 +1,50 @@
+.mat-column-editar {
+  width: 100px !important;
+}
+
+.mat-column-usuario {
+  width: 200px !important;
+}
+
+.mat-column-nombreCompleto {
+  width: 400px !important;
+}
+
+.mat-column-rol {
+  width: 200px !important;
+}
+
+.mat-column-fecha {
+  width: 200px !important;
+}
+
+.mat-column-hora {
+  width: 200px !important;
+}
+
+.mat-column-user {
+  width: 200px !important;
+}
+
+.mat-column-nombreUsuario {
+  width: 400px !important;
+}
+
+.mat-column-activo {
+  width: 200px !important;
+}
+
+@media screen and (max-width:600px) {
+
+  .mat-column-editar,
+  .mat-column-usuario,
+  .mat-column-nombreCompleto,
+  .mat-column-rol,
+  .mat-column-fecha,
+  .mat-column-hora,
+  .mat-column-user,
+  .mat-column-nombreUsuario,
+  .mat-column-activo {
+    width: 100% !important;
+  }
+}

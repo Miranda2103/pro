@@ -1,0 +1,55 @@
+.mat-column-editar {
+  width: 100px !important;
+}
+
+.mat-column-organizacion {
+  width: 200px !important;
+}
+
+.mat-column-nombreCompleto {
+  width: 200px !important;
+}
+
+.mat-column-telefono {
+  width: 200px !important;
+}
+
+.mat-column-correo {
+  width: 200px !important;
+}
+
+.mat-column-fecha {
+  width: 200px !important;
+}
+
+.mat-column-hora {
+  width: 200px !important;
+}
+
+.mat-column-usuario {
+  width: 200px !important;
+}
+
+.mat-column-nombreUsuario {
+  width: 200px !important;
+}
+
+.mat-column-activo {
+  width: 200px !important;
+}
+
+@media screen and (max-width:600px) {
+
+  .mat-column-editar,
+  .mat-column-organizacion,
+  .mat-column-nombreCompleto,
+  .mat-column-telefono,
+  .mat-column-correo,
+  .mat-column-fecha,
+  .mat-column-hora,
+  .mat-column-usuario,
+  .mat-column-nombreUsuario,
+  .mat-column-activo {
+    width: 100% !important;
+  }
+}

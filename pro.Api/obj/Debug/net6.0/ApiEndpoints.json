@@ -1,0 +1,2504 @@
+[
+  {
+    "ContainingType": "pro.Api.Controllers.pro.MenuController",
+    "Method": "Delete",
+    "RelativePath": "api/pro/Menu/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.pro.MMenu, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.MenuController",
+    "Method": "Get",
+    "RelativePath": "api/pro/Menu/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Menu",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ruta",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Icono",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Orden",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInserta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioActualiza",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaActualiza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.MenuController",
+    "Method": "Post",
+    "RelativePath": "api/pro/Menu/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "pro.Model.pro.MMenu",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.MenuController",
+    "Method": "Put",
+    "RelativePath": "api/pro/Menu/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "pro.Model.pro.MMenu",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.OrganizacionController",
+    "Method": "Delete",
+    "RelativePath": "api/pro/Organizacion/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.pro.MOrganizacion, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.OrganizacionController",
+    "Method": "Get",
+    "RelativePath": "api/pro/Organizacion/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Organizacion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ApellidoPaterno",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ApellidoMaterno",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NombreCompleto",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Telefono",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Correo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Calle",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NumeroExterior",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NumeroInterior",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Colonia",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Municipio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Estado",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInserta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioActualiza",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaActualiza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.OrganizacionController",
+    "Method": "Post",
+    "RelativePath": "api/pro/Organizacion/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "pro.Model.pro.MOrganizacion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.OrganizacionController",
+    "Method": "Put",
+    "RelativePath": "api/pro/Organizacion/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "pro.Model.pro.MOrganizacion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.RolController",
+    "Method": "Delete",
+    "RelativePath": "api/pro/Rol/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.pro.MRol, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.RolController",
+    "Method": "Get",
+    "RelativePath": "api/pro/Rol/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Rol",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInserta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioActualiza",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaActualiza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.RolController",
+    "Method": "Post",
+    "RelativePath": "api/pro/Rol/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "pro.Model.pro.MRol",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.RolController",
+    "Method": "Put",
+    "RelativePath": "api/pro/Rol/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "pro.Model.pro.MRol",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.RolMenuController",
+    "Method": "Delete",
+    "RelativePath": "api/pro/RolMenu/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.pro.MRolMenu, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.RolMenuController",
+    "Method": "Get",
+    "RelativePath": "api/pro/RolMenu/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInserta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioActualiza",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaActualiza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.RolMenuController",
+    "Method": "Post",
+    "RelativePath": "api/pro/RolMenu/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.pro.MRolMenu, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.RolMenuController",
+    "Method": "Put",
+    "RelativePath": "api/pro/RolMenu/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "pro.Model.pro.MRolMenu",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.RolSubMenuController",
+    "Method": "Delete",
+    "RelativePath": "api/pro/RolSubMenu/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.pro.MRolSubMenu, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.RolSubMenuController",
+    "Method": "Get",
+    "RelativePath": "api/pro/RolSubMenu/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdSubMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInserta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioActualiza",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaActualiza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.RolSubMenuController",
+    "Method": "Post",
+    "RelativePath": "api/pro/RolSubMenu/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.pro.MRolSubMenu, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.RolSubMenuController",
+    "Method": "Put",
+    "RelativePath": "api/pro/RolSubMenu/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "pro.Model.pro.MRolSubMenu",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.SubMenuController",
+    "Method": "Delete",
+    "RelativePath": "api/pro/SubMenu/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.pro.MSubMenu, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.SubMenuController",
+    "Method": "Get",
+    "RelativePath": "api/pro/SubMenu/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "SubMenu",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ruta",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Icono",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Orden",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInserta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioActualiza",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaActualiza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.SubMenuController",
+    "Method": "Post",
+    "RelativePath": "api/pro/SubMenu/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "pro.Model.pro.MSubMenu",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.SubMenuController",
+    "Method": "Put",
+    "RelativePath": "api/pro/SubMenu/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "pro.Model.pro.MSubMenu",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.TokenController",
+    "Method": "Post",
+    "RelativePath": "api/pro/Token/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "pro.Model.pro.MAutenticacion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.UsuarioController",
+    "Method": "Delete",
+    "RelativePath": "api/pro/Usuario/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.pro.MUsuario, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.UsuarioController",
+    "Method": "Get",
+    "RelativePath": "api/pro/Usuario/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Usuario",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Contrasena",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ApellidoPaterno",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ApellidoMaterno",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NombreCompleto",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CambiaContrasena",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInserta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioActualiza",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaActualiza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.UsuarioController",
+    "Method": "Post",
+    "RelativePath": "api/pro/Usuario/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "pro.Model.pro.MUsuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.UsuarioController",
+    "Method": "Put",
+    "RelativePath": "api/pro/Usuario/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "pro.Model.pro.MUsuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.VersionController",
+    "Method": "Get",
+    "RelativePath": "api/pro/Version/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.VRolMenuController",
+    "Method": "Get",
+    "RelativePath": "api/pro/VRolMenu/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Rol",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Menu",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ruta",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Icono",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Orden",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Fecha",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.VRolSubMenuController",
+    "Method": "Get",
+    "RelativePath": "api/pro/VRolSubMenu/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Rol",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Menu",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdSubMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "SubMenu",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SubMenuR",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ruta",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Icono",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Orden",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Fecha",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.VUsuarioController",
+    "Method": "Get",
+    "RelativePath": "api/pro/VUsuario/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuario",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Usuario",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Contrasena",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ApellidoPaterno",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ApellidoMaterno",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NombreCompleto",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CambiaContrasena",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Rol",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "TipoCarteras",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Carteras",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Fecha",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.WOrganizacionController",
+    "Method": "GetFiltroExportar",
+    "RelativePath": "api/pro/WOrganizacion/GetFiltroExportar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.WOrganizacionController",
+    "Method": "GetFiltroLista",
+    "RelativePath": "api/pro/WOrganizacion/GetFiltroLista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.WOrganizacionController",
+    "Method": "GetFiltroTotal",
+    "RelativePath": "api/pro/WOrganizacion/GetFiltroTotal",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.WOrganizacionController",
+    "Method": "GetFiltroVista",
+    "RelativePath": "api/pro/WOrganizacion/GetFiltroVista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.WRolController",
+    "Method": "GetFiltroExportar",
+    "RelativePath": "api/pro/WRol/GetFiltroExportar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.WRolController",
+    "Method": "GetFiltroLista",
+    "RelativePath": "api/pro/WRol/GetFiltroLista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.WRolController",
+    "Method": "GetFiltroTotal",
+    "RelativePath": "api/pro/WRol/GetFiltroTotal",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.WRolController",
+    "Method": "GetFiltroVista",
+    "RelativePath": "api/pro/WRol/GetFiltroVista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.WRolMenuController",
+    "Method": "GetFiltroExportar",
+    "RelativePath": "api/pro/WRolMenu/GetFiltroExportar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.WRolMenuController",
+    "Method": "GetFiltroLista",
+    "RelativePath": "api/pro/WRolMenu/GetFiltroLista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.WRolMenuController",
+    "Method": "GetFiltroTotal",
+    "RelativePath": "api/pro/WRolMenu/GetFiltroTotal",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.WRolMenuController",
+    "Method": "GetFiltroVista",
+    "RelativePath": "api/pro/WRolMenu/GetFiltroVista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.WRolSubMenuController",
+    "Method": "GetFiltroExportar",
+    "RelativePath": "api/pro/WRolSubMenu/GetFiltroExportar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.WRolSubMenuController",
+    "Method": "GetFiltroLista",
+    "RelativePath": "api/pro/WRolSubMenu/GetFiltroLista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.WRolSubMenuController",
+    "Method": "GetFiltroTotal",
+    "RelativePath": "api/pro/WRolSubMenu/GetFiltroTotal",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.WRolSubMenuController",
+    "Method": "GetFiltroVista",
+    "RelativePath": "api/pro/WRolSubMenu/GetFiltroVista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.WUsuarioController",
+    "Method": "GetFiltroExportar",
+    "RelativePath": "api/pro/WUsuario/GetFiltroExportar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.WUsuarioController",
+    "Method": "GetFiltroLista",
+    "RelativePath": "api/pro/WUsuario/GetFiltroLista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.WUsuarioController",
+    "Method": "GetFiltroTotal",
+    "RelativePath": "api/pro/WUsuario/GetFiltroTotal",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.pro.WUsuarioController",
+    "Method": "GetFiltroVista",
+    "RelativePath": "api/pro/WUsuario/GetFiltroVista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

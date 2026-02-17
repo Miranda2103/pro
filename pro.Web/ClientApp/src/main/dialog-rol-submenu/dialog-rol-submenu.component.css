@@ -1,0 +1,30 @@
+.mat-column-editar {
+  width: 100px !important;
+}
+
+.mat-column-subMenu {
+  width: 200px !important;
+}
+
+.mat-column-icono {
+  width: 200px !important;
+}
+
+.mat-column-orden {
+  width: 200px !important;
+}
+
+.mat-column-activo {
+  width: 200px !important;
+}
+
+@media screen and (max-width:600px) {
+
+  .mat-column-editar,
+  .mat-column-subMenu,
+  .mat-column-icono,
+  .mat-column-orden,
+  .mat-column-activo {
+    width: 100% !important;
+  }
+}

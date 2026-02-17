@@ -1,0 +1,71 @@
+<div class="w100 h100 fx fx-direction-row">
+
+  <div *ngIf="!shared.rd" class="w70 h100 jh mat-elevation-z5">
+
+    <div class="w100 h100 fx fx-middle content-center">
+
+      <div class="w25">
+        <img src="../assets/pro-vital.png" class="image" />
+      </div>
+
+    </div>
+  </div>
+
+  <div class="w30 h100 fx content-center padding background-jh-2" [ngClass]="{ 'fx-middle': shared.rd }">
+
+    <div class="w80 hpx300">
+
+      <div *ngIf="!shared.rd" class="w100 fx fx-middle content-center padding">
+
+        <div class="wpx100 hpx100 fx fx-middle content-center circle mat-elevation-z1">
+          <img src="../assets/pro-vital.png" class="wpx75 hpx75 image-contain" />
+        </div>
+
+      </div>
+
+      <div class="w100 border-rd radius mat-elevation-z1-rd">
+
+        <div class="w100 fx fx-middle content-center jh-login">
+          <mat-icon class="fl-left padding-right-05">account_circle</mat-icon>
+          <h1>Acceso</h1>
+        </div>
+
+        <div class="w100 padding">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Usuario</mat-label>
+            <input matInput #inputUsuario name="inputUsuario" [(ngModel)]="usuario" maxlength="25" (keyup.enter)="ngKeyUp()">
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Contraseña</mat-label>
+            <input matInput #inputPassword name="inputPassword" [(ngModel)]="contrasena" type="password" maxlength="25" (keyup.enter)="ngKeyUp()">
+          </mat-form-field>
+
+          <div class="w100 align-center">
+            <button mat-raised-button class="wpx125 background-3" (click)="ngController('postToken')">
+              <mat-icon class="fl-left button-icon">check_circle_outline</mat-icon>
+              Ingresar
+            </button>
+          </div>
+
+          <div class="w100 fx fx-middle fx-direction-row" [ngClass]="{ 'padding-top': shared.rd }">
+
+            <div class="w50 align-left-rd-center">
+            </div>
+
+            <div class="w50 align-right-rd-center">
+              <mat-label class="label-x-small">v{{ shared.version }}</mat-label>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

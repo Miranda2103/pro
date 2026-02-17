@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyVersion>1.0.21.0603</AssemblyVersion>
+    <FileVersion>1.0.21.2506</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\pro.Model\pro.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="proh\" />
+  </ItemGroup>
+
+</Project>

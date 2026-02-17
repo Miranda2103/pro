@@ -1,0 +1,16 @@
+C:\Users\syste\source\repos\pro\pro.Function\bin\Debug\net6.0\pro.Function.deps.json
+C:\Users\syste\source\repos\pro\pro.Function\bin\Debug\net6.0\pro.Function.dll
+C:\Users\syste\source\repos\pro\pro.Function\bin\Debug\net6.0\pro.Function.pdb
+C:\Users\syste\source\repos\pro\pro.Function\bin\Debug\net6.0\pro.Model.dll
+C:\Users\syste\source\repos\pro\pro.Function\bin\Debug\net6.0\pro.Model.pdb
+C:\Users\syste\source\repos\pro\pro.Function\obj\Debug\net6.0\pro.Function.csproj.AssemblyReference.cache
+C:\Users\syste\source\repos\pro\pro.Function\obj\Debug\net6.0\pro.Function.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\syste\source\repos\pro\pro.Function\obj\Debug\net6.0\pro.Function.AssemblyInfoInputs.cache
+C:\Users\syste\source\repos\pro\pro.Function\obj\Debug\net6.0\pro.Function.AssemblyInfo.cs
+C:\Users\syste\source\repos\pro\pro.Function\obj\Debug\net6.0\pro.Function.csproj.CoreCompileInputs.cache
+C:\Users\syste\source\repos\pro\pro.Function\obj\Debug\net6.0\pro.Function.sourcelink.json
+C:\Users\syste\source\repos\pro\pro.Function\obj\Debug\net6.0\pro.Func.9743A5BA.Up2Date
+C:\Users\syste\source\repos\pro\pro.Function\obj\Debug\net6.0\pro.Function.dll
+C:\Users\syste\source\repos\pro\pro.Function\obj\Debug\net6.0\refint\pro.Function.dll
+C:\Users\syste\source\repos\pro\pro.Function\obj\Debug\net6.0\pro.Function.pdb
+C:\Users\syste\source\repos\pro\pro.Function\obj\Debug\net6.0\ref\pro.Function.dll

@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\syste\\source\\repos\\pro\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1B9D41AA-6F99-44BD-A8D8-72B2DC6B6961}|pro.Web\\pro.Web.csproj|c:\\users\\syste\\source\\repos\\pro\\pro.web\\clientapp\\src\\main\\dialog-submenu\\dialog-submenu.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{1B9D41AA-6F99-44BD-A8D8-72B2DC6B6961}|pro.Web\\pro.Web.csproj|solutionrelative:pro.web\\clientapp\\src\\main\\dialog-submenu\\dialog-submenu.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B9D41AA-6F99-44BD-A8D8-72B2DC6B6961}|pro.Web\\pro.Web.csproj|c:\\users\\syste\\source\\repos\\pro\\pro.web\\clientapp\\src\\main\\dialog-submenu\\dialog-submenu.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1B9D41AA-6F99-44BD-A8D8-72B2DC6B6961}|pro.Web\\pro.Web.csproj|solutionrelative:pro.web\\clientapp\\src\\main\\dialog-submenu\\dialog-submenu.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B9D41AA-6F99-44BD-A8D8-72B2DC6B6961}|pro.Web\\pro.Web.csproj|c:\\users\\syste\\source\\repos\\pro\\pro.web\\clientapp\\src\\service\\service-pro.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{1B9D41AA-6F99-44BD-A8D8-72B2DC6B6961}|pro.Web\\pro.Web.csproj|solutionrelative:pro.web\\clientapp\\src\\service\\service-pro.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B9D41AA-6F99-44BD-A8D8-72B2DC6B6961}|pro.Web\\pro.Web.csproj|c:\\users\\syste\\source\\repos\\pro\\pro.web\\clientapp\\src\\main\\dialog-rol-submenu\\dialog-rol-submenu.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{1B9D41AA-6F99-44BD-A8D8-72B2DC6B6961}|pro.Web\\pro.Web.csproj|solutionrelative:pro.web\\clientapp\\src\\main\\dialog-rol-submenu\\dialog-rol-submenu.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B9D41AA-6F99-44BD-A8D8-72B2DC6B6961}|pro.Web\\pro.Web.csproj|c:\\users\\syste\\source\\repos\\pro\\pro.web\\clientapp\\src\\main\\dialog-rol-submenu\\dialog-rol-submenu.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1B9D41AA-6F99-44BD-A8D8-72B2DC6B6961}|pro.Web\\pro.Web.csproj|solutionrelative:pro.web\\clientapp\\src\\main\\dialog-rol-submenu\\dialog-rol-submenu.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "dialog-submenu.component.html",
+              "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\main\\dialog-submenu\\dialog-submenu.component.html",
+              "RelativeDocumentMoniker": "pro.Web\\ClientApp\\src\\main\\dialog-submenu\\dialog-submenu.component.html",
+              "ToolTip": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\main\\dialog-submenu\\dialog-submenu.component.html",
+              "RelativeToolTip": "pro.Web\\ClientApp\\src\\main\\dialog-submenu\\dialog-submenu.component.html",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAwDoAAABhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-02-17T05:00:25.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "dialog-submenu.component.ts",
+              "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\main\\dialog-submenu\\dialog-submenu.component.ts",
+              "RelativeDocumentMoniker": "pro.Web\\ClientApp\\src\\main\\dialog-submenu\\dialog-submenu.component.ts",
+              "ToolTip": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\main\\dialog-submenu\\dialog-submenu.component.ts",
+              "RelativeToolTip": "pro.Web\\ClientApp\\src\\main\\dialog-submenu\\dialog-submenu.component.ts",
+              "ViewState": "AgIAADkAAAAAAAAAAAAjwEgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T05:00:24.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "service-pro.service.ts",
+              "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\service\\service-pro.service.ts",
+              "RelativeDocumentMoniker": "pro.Web\\ClientApp\\src\\service\\service-pro.service.ts",
+              "ToolTip": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\service\\service-pro.service.ts",
+              "RelativeToolTip": "pro.Web\\ClientApp\\src\\service\\service-pro.service.ts",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAjwLEAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T04:14:20.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "dialog-rol-submenu.component.html",
+              "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\main\\dialog-rol-submenu\\dialog-rol-submenu.component.html",
+              "RelativeDocumentMoniker": "pro.Web\\ClientApp\\src\\main\\dialog-rol-submenu\\dialog-rol-submenu.component.html",
+              "ToolTip": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\main\\dialog-rol-submenu\\dialog-rol-submenu.component.html",
+              "RelativeToolTip": "pro.Web\\ClientApp\\src\\main\\dialog-rol-submenu\\dialog-rol-submenu.component.html",
+              "ViewState": "AgIAAMoAAAAAAAAAAAAAANUAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2026-02-17T03:10:36.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "dialog-rol-submenu.component.ts",
+              "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\main\\dialog-rol-submenu\\dialog-rol-submenu.component.ts",
+              "RelativeDocumentMoniker": "pro.Web\\ClientApp\\src\\main\\dialog-rol-submenu\\dialog-rol-submenu.component.ts",
+              "ToolTip": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\main\\dialog-rol-submenu\\dialog-rol-submenu.component.ts",
+              "RelativeToolTip": "pro.Web\\ClientApp\\src\\main\\dialog-rol-submenu\\dialog-rol-submenu.component.ts",
+              "ViewState": "AgIAACYBAAAAAAAAAAAjwDUBAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-02-17T03:10:37.066Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

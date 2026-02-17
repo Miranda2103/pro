@@ -1,0 +1,271 @@
+<div class="w100 h100" [ngClass]="{'fx' : !shared.rd, 'grid' : shared.rd}">
+
+  <div class="h100 fx fx-flow border-right background-jh-2" [ngClass]="{ 'w25': expand, 'w5': !expand }" *ngIf="!shared.rd">
+
+    <div class="w100 padding">
+
+      <div class="fl-left" *ngIf="expand">
+        <h1>Mensaje del Sistema</h1>
+      </div>
+
+      <div class="fx-push align-right">
+        <button mat-icon-button [mat-dialog-close]="false" color="warn" matTooltip="Cerrar">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+
+    </div>
+
+    <div class="w100 padding fx-remaining fx fx-middle content-center">
+
+      <div class="fl-left" *ngIf="expand">
+        <mat-icon class="padding-right-05">info</mat-icon>
+        <mat-label class="bold">SubMenu</mat-label>
+      </div>
+
+      <div class="fx-push align-right">
+
+        <button mat-icon-button class="outline omr omb" *ngIf="expand" (click)="expand = !expand;">
+          <mat-icon matTooltip="Contraer">first_page</mat-icon>
+        </button>
+
+        <button mat-icon-button class="outline omr omb" *ngIf="!expand" (click)="expand = !expand;">
+          <mat-icon matTooltip="Expandir">last_page</mat-icon>
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="h100 background-jh-4" [ngClass]="{'w75': expand, 'w95': !expand , 'overflow-hidden' : !shared.rd}">
+
+    <div class="w100 h100 fx fx-flow padding" [ngClass]="{'overflow' : !shared.rd}">
+
+      <div class="w100" *ngIf="shared.rd">
+        <button mat-raised-button class="wpx125 background-cerrar" [mat-dialog-close]="false">
+          <mat-icon class="fl-left button-icon">close</mat-icon>
+          Cerrar
+        </button>
+      </div>
+
+      <div class="w100 padding-bottom-05" *ngIf="shared.rd">
+      </div>
+
+      <div class="w100 fx fx-direction-row fx-middle content-center">
+
+        <div class="w30 padding-top-05">
+        </div>
+
+        <div class="w30 align-center padding-bottom-05">
+
+          <button mat-raised-button class="wpx125 background-9" (click)="ngHandleSearch('full');">
+            <mat-icon class="fl-left button-icon">refresh</mat-icon>
+            Consultar
+          </button>
+
+          <div class="w100 padding-bottom-05" *ngIf="shared.rd">
+          </div>
+
+          <button mat-raised-button class="wpx125 background-10" (click)="ngController('getFiltroExportar');" *ngIf="inFiltroVista.length">
+            <mat-icon class="fl-left button-icon">get_app</mat-icon>
+            Descargar
+          </button>
+
+          <div class="w100 padding-bottom-05" *ngIf="shared.rd">
+          </div>
+
+          <button mat-raised-button class="wpx125 background-guardar" (click)="ngController('deleteRolSubMenu');" *ngIf="selection.selected.length">
+            <mat-icon class="fl-left button-icon">save</mat-icon>
+            Guardar
+          </button>
+
+          <div class="w100 padding-bottom-05" *ngIf="shared.rd">
+          </div>
+
+        </div>
+
+        <div class="w10 align-center fx fx-flow">
+
+          <div class="w100" *ngIf="inFiltroVista.length">
+
+            <mat-form-field class="wpx50">
+              <mat-label [ngClass]="{'hidden' : !shared.rd}">Formato de Descarga</mat-label>
+              <mat-select [panelClass]="'panel-select'" [matTooltip]="!shared.rd ? 'Formato de Descarga' : null" [(value)]="shared.extension">
+                <mat-option *ngFor="let item of shared.inExtensionDescarga" [value]="item.extension">
+                  {{ item.extension }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+          </div>
+
+          <div class="w100">
+
+          </div>
+
+        </div>
+
+        <div class="w30 fx content-center padding-top">
+          <mat-paginator [length]="length" [pageSizeOptions]="pageSizeOptions" (page)="ngHandlePage($event)" showFirstLastButtons>
+          </mat-paginator>
+        </div>
+
+      </div>
+
+      <div class="w100" *ngIf="shared.rd">
+        <mat-form-field class="w100">
+          <mat-label>Buscar</mat-label>
+          <input matInput [(ngModel)]="search" (keyup.enter)="ngHandleFilter('full')">
+          <button mat-icon-button matSuffix *ngIf="search" (click)="ngClean('search'); ngHandleFilter('full');">
+            <mat-icon matTooltip="Limpiar">close</mat-icon>
+          </button>
+          <button mat-icon-button matSuffix *ngIf="search" (click)="ngHandleFilter('full')">
+            <mat-icon matTooltip="Buscar">search</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+
+      <div class="w100 padding-bottom-05" *ngIf="shared.rd">
+      </div>
+
+      <div class="w100 hpx100 border-rd fx-remaining mat-elevation-z1 overflow background-7">
+        <table mat-table [dataSource]="ds" class="wmc" matSort (matSortChange)="ngHandleSort($event)">
+
+          <tr mat-header-row *matHeaderRowDef="dc; sticky: true"></tr>
+          <tr mat-header-row *matHeaderRowDef="fl; sticky: true"></tr>
+          <tr mat-row *matRowDef="let row; columns: dc;" tabindex="0" class="focusable-row"></tr>
+
+          <!--FILTER-->
+
+          <ng-container matColumnDef="editar-fl" [sticky]="!shared.rd">
+            <th mat-header-cell *matHeaderCellDef>
+            </th>
+          </ng-container>
+
+          <ng-container matColumnDef="subMenu-fl" [sticky]="!shared.rd">
+            <th mat-header-cell *matHeaderCellDef>
+              <mat-form-field class="w95 underline-white">
+                <mat-label class="color-white">Filtro</mat-label>
+                <input matInput [(ngModel)]="subMenu" (keyup.enter)="ngHandleFilter('selection')" />
+                <button mat-icon-button matSuffix *ngIf="subMenu" (click)="subMenu = ''; ngHandleFilter('selection')">
+                  <mat-icon matTooltip="Limpiar">close</mat-icon>
+                </button>
+                <button mat-icon-button matSuffix *ngIf="subMenu" (click)="ngHandleFilter('selection')">
+                  <mat-icon matTooltip="Buscar">search</mat-icon>
+                </button>
+              </mat-form-field>
+            </th>
+          </ng-container>
+
+          <ng-container matColumnDef="icono-fl">
+            <th mat-header-cell *matHeaderCellDef>
+              <mat-form-field class="w95 underline-white">
+                <mat-label class="color-white">Filtro</mat-label>
+                <input matInput [(ngModel)]="icono" (keyup.enter)="ngHandleFilter('selection')" />
+                <button mat-icon-button matSuffix *ngIf="icono" (click)="icono = ''; ngHandleFilter('selection')">
+                  <mat-icon matTooltip="Limpiar">close</mat-icon>
+                </button>
+                <button mat-icon-button matSuffix *ngIf="icono" (click)="ngHandleFilter('selection')">
+                  <mat-icon matTooltip="Buscar">search</mat-icon>
+                </button>
+              </mat-form-field>
+            </th>
+          </ng-container>
+
+          <ng-container matColumnDef="orden-fl">
+            <th mat-header-cell *matHeaderCellDef>
+              <mat-form-field class="w95 underline-white">
+                <mat-label class="color-white">Filtro</mat-label>
+                <input matInput [(ngModel)]="orden" (keyup.enter)="ngHandleFilter('selection')" />
+                <button mat-icon-button matSuffix *ngIf="orden" (click)="orden = ''; ngHandleFilter('selection')">
+                  <mat-icon matTooltip="Limpiar">close</mat-icon>
+                </button>
+                <button mat-icon-button matSuffix *ngIf="orden" (click)="ngHandleFilter('selection')">
+                  <mat-icon matTooltip="Buscar">search</mat-icon>
+                </button>
+              </mat-form-field>
+            </th>
+          </ng-container>
+
+          <ng-container matColumnDef="activo-fl">
+            <th mat-header-cell *matHeaderCellDef>
+              <mat-form-field class="w95 underline-white arrow-white">
+                <mat-label class="color-white">Filtro</mat-label>
+                <mat-select [(ngModel)]="activo" [panelClass]="'panel-select'" class="mat-select-white" multiple (selectionChange)="activo.length == 0 && ngHandleFilter('selection')">
+                  <mat-option *ngFor="let item of ngHandleList(1)" [value]="item.id">
+                    <mat-label title="{{ item.valor }}">{{ item.valor }}</mat-label>
+                  </mat-option>
+                </mat-select>
+                <button mat-icon-button matSuffix *ngIf="activo.length" (click)="$event.stopPropagation(); ngHandleFilter('selection')">
+                  <mat-icon matTooltip="Buscar">search</mat-icon>
+                </button>
+              </mat-form-field>
+            </th>
+          </ng-container>
+
+          <!--HEADER-->
+
+          <ng-container matColumnDef="editar" [sticky]="!shared.rd">
+            <th mat-header-cell *matHeaderCellDef>
+            </th>
+            <td mat-cell *matCellDef="let row" class="align-center-rd-left">
+              <mat-label class="mobile-field mobile-label bold"></mat-label>
+              <button mat-icon-button matTooltip="Editar" (click)="ngDialog('iModelUpdate',row);">
+                <mat-icon class="color-editar">edit</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="subMenu" [sticky]="!shared.rd">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>
+              <mat-label>SubMenu</mat-label>
+            </th>
+            <td mat-cell *matCellDef="let row" class="truncate-row">
+              <mat-label class="mobile-field mobile-label bold">SubMenu</mat-label>
+              <mat-label matTooltip="{{ row.subMenu }}">{{ row.subMenu }}</mat-label>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="icono">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>
+              <mat-label>Icono</mat-label>
+            </th>
+            <td mat-cell *matCellDef="let row" class="truncate-row">
+              <mat-label class="mobile-field mobile-label bold">Icono</mat-label>
+              <mat-label matTooltip="{{ row.icono }}">{{ row.icono }}</mat-label>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="orden">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>
+              <mat-label>Orden</mat-label>
+            </th>
+            <td mat-cell *matCellDef="let row" class="truncate-row">
+              <mat-label class="mobile-field mobile-label bold">Orden</mat-label>
+              <mat-label matTooltip="{{ row.orden }}">{{ row.orden }}</mat-label>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="activo">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>
+              <mat-label>Activo</mat-label>
+            </th>
+            <td mat-cell *matCellDef="let row" [ngClass]="{'align-center' : !shared.rd, 'align-left' : !shared.rd }">
+              <mat-label class="mobile-field mobile-label bold">Activo</mat-label>
+              <mat-checkbox [matTooltip]="row.activo ? 'Activo' : 'Inactivo'" [checked]="row.activo" (change)="row.activo = $event.checked; selection.toggle(row)"></mat-checkbox>
+            </td>
+          </ng-container>
+
+        </table>
+      </div>
+
+    </div>
+
+    <div class="w60 h100" *ngIf="!shared.rd">
+    </div>
+
+  </div>
+
+</div>
+
