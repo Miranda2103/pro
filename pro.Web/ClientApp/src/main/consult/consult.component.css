@@ -1,0 +1,70 @@
+.mat-column-editar {
+  width: 100px !important;
+}
+
+.mat-column-paciente {
+  width: 200px !important;
+}
+
+.mat-column-nombreCompleto {
+  width: 200px !important;
+}
+
+.mat-column-titulo {
+  width: 200px !important;
+}
+
+.mat-column-fechaInicio {
+  width: 200px !important;
+}
+
+.mat-column-horaInicio {
+  width: 200px !important;
+}
+
+.mat-column-fechaFin {
+  width: 200px !important;
+}
+
+.mat-column-horaFin {
+  width: 200px !important;
+}
+
+.mat-column-fecha {
+  width: 200px !important;
+}
+
+.mat-column-hora {
+  width: 200px !important;
+}
+
+.mat-column-usuario {
+  width: 200px !important;
+}
+
+.mat-column-nombreUsuario {
+  width: 200px !important;
+}
+
+.mat-column-activo {
+  width: 200px !important;
+}
+
+@media screen and (max-width:600px) {
+
+  .mat-column-editar,
+  .mat-column-paciente,
+  .mat-column-nombreCompleto,
+  .mat-column-titulo,
+  .mat-column-fechaInicio,
+  .mat-column-horaInicio,
+  .mat-column-fechaFin,
+  .mat-column-horaFin,
+  .mat-column-fecha,
+  .mat-column-hora,
+  .mat-column-usuario,
+  .mat-column-nombreUsuario,
+  .mat-column-activo {
+    width: 100% !important;
+  }
+}

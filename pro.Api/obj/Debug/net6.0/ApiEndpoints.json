@@ -1,6 +1,1245 @@
 [
   {
-    "ContainingType": "pro.Api.Controllers.pro.MenuController",
+    "ContainingType": "pro.Api.Controllers.AgendaController",
+    "Method": "Delete",
+    "RelativePath": "api/pro/Agenda/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MAgenda, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.AgendaController",
+    "Method": "Get",
+    "RelativePath": "api/pro/Agenda/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdPaciente",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdEquipo",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Comentario",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaAgenda",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInserta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioActualiza",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaActualiza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.AgendaController",
+    "Method": "Post",
+    "RelativePath": "api/pro/Agenda/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "pro.Model.MAgenda",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.AgendaController",
+    "Method": "Put",
+    "RelativePath": "api/pro/Agenda/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "pro.Model.MAgenda",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.ColoniaController",
+    "Method": "Delete",
+    "RelativePath": "api/pro/Colonia/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MColonia, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.ColoniaController",
+    "Method": "Get",
+    "RelativePath": "api/pro/Colonia/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdEstado",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMunicipio",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Colonia",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CodigoPostal",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInserta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioActualiza",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaActualiza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.ColoniaController",
+    "Method": "Post",
+    "RelativePath": "api/pro/Colonia/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "pro.Model.MColonia",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.ColoniaController",
+    "Method": "Put",
+    "RelativePath": "api/pro/Colonia/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "pro.Model.MColonia",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.DecisionController",
+    "Method": "Delete",
+    "RelativePath": "api/pro/Decision/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MDecision, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.DecisionController",
+    "Method": "Get",
+    "RelativePath": "api/pro/Decision/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Decision",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInserta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioActualiza",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaActualiza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.DecisionController",
+    "Method": "Post",
+    "RelativePath": "api/pro/Decision/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "pro.Model.MDecision",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.DecisionController",
+    "Method": "Put",
+    "RelativePath": "api/pro/Decision/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "pro.Model.MDecision",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.EquipoController",
+    "Method": "Delete",
+    "RelativePath": "api/pro/Equipo/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MEquipo, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.EquipoController",
+    "Method": "Get",
+    "RelativePath": "api/pro/Equipo/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Equipo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInserta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioActualiza",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaActualiza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.EquipoController",
+    "Method": "Post",
+    "RelativePath": "api/pro/Equipo/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "pro.Model.MEquipo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.EquipoController",
+    "Method": "Put",
+    "RelativePath": "api/pro/Equipo/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "pro.Model.MEquipo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.EstadoController",
+    "Method": "Delete",
+    "RelativePath": "api/pro/Estado/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MEstado, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.EstadoController",
+    "Method": "Get",
+    "RelativePath": "api/pro/Estado/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Estado",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInserta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioActualiza",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaActualiza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.EstadoController",
+    "Method": "Post",
+    "RelativePath": "api/pro/Estado/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "pro.Model.MEstado",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.EstadoController",
+    "Method": "Put",
+    "RelativePath": "api/pro/Estado/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "pro.Model.MEstado",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.HemodialisisController",
+    "Method": "Delete",
+    "RelativePath": "api/pro/Hemodialisis/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MHemodialisis, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.HemodialisisController",
+    "Method": "Get",
+    "RelativePath": "api/pro/Hemodialisis/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdAgenda",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Diagnostico",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaIngreso",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Talla",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Peso",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TipoDe",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaAn",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Residual",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Alergias",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaPanelViral",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "AgsVHB",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AcVHC",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AcVIH",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionSalida",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionBaston",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionAuditiva",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionLinguistica",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionAndadera",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionCamilla",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionVisual",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionCreencias",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Tiempo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Qs",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Qo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Temp",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Na",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "C",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Qa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Hcc",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Anticoagulacion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Rodo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Infusion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ktv",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Uf",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ResumenFiltro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FrecuenciaHemodialisis",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IndicacionesMedicas",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IndicacionesVerbales",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IndicacionesTelefonicas",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IndicacionesElectronicas",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionIndicacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPaciente",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionProcedimiento",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionVerificacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPreescripcion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionAngioacceso",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTimeOut",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionEquipo",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionRiesgo",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionIdentifico",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "PreTAPie",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PreFCPie",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PreTempC",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PreTASentado",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PreFCSentado",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PreSaturacion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PreFRespiratoria",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PrePesoEgreso",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PrePesoActual",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PosTAPie",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PosFCPie",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PosTempC",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PosTASentado",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PosFCSentado",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PosSaturacion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PosFRespiratoria",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PosGananciaPeso",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PosPesoFinal",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPreExterno",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPreInterno",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPreCateter",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPrePermeabilidad",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPreInfeccion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTraExterno",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTraInterno",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTraCateter",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTraPermeabilidad",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTraInfeccion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPosExterno",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPosInterno",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPosCateter",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPosPermeabilidad",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPosInfeccion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "ObservacionCateter",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPreTrill",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPreEdena",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPreEquimosis",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPreHematoma",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPreAnerisma",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPreAdecuada",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPreDato",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTraTrill",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTraEdena",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTraEquimosis",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTraHematoma",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTraAnerisma",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTraAdecuada",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTraDato",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPosTrill",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPosEdena",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPosEquimosis",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPosHematoma",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPosAnerisma",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPosAdecuada",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPosDato",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "ObservacionFistula",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInserta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioActualiza",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaActualiza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.HemodialisisController",
+    "Method": "Post",
+    "RelativePath": "api/pro/Hemodialisis/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "pro.Model.MHemodialisis",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.HemodialisisController",
+    "Method": "Put",
+    "RelativePath": "api/pro/Hemodialisis/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "pro.Model.MHemodialisis",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.MenuController",
     "Method": "Delete",
     "RelativePath": "api/pro/Menu/Delete",
     "HttpMethod": "DELETE",
@@ -14,14 +1253,14 @@
       },
       {
         "Name": "model",
-        "Type": "System.Collections.Generic.List\u00601[[pro.Model.pro.MMenu, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MMenu, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.MenuController",
+    "ContainingType": "pro.Api.Controllers.MenuController",
     "Method": "Get",
     "RelativePath": "api/pro/Menu/Get",
     "HttpMethod": "GET",
@@ -87,7 +1326,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.MenuController",
+    "ContainingType": "pro.Api.Controllers.MenuController",
     "Method": "Post",
     "RelativePath": "api/pro/Menu/Post",
     "HttpMethod": "POST",
@@ -96,14 +1335,14 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "pro.Model.pro.MMenu",
+        "Type": "pro.Model.MMenu",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.MenuController",
+    "ContainingType": "pro.Api.Controllers.MenuController",
     "Method": "Put",
     "RelativePath": "api/pro/Menu/Put",
     "HttpMethod": "PUT",
@@ -117,14 +1356,128 @@
       },
       {
         "Name": "model",
-        "Type": "pro.Model.pro.MMenu",
+        "Type": "pro.Model.MMenu",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.OrganizacionController",
+    "ContainingType": "pro.Api.Controllers.MunicipioController",
+    "Method": "Delete",
+    "RelativePath": "api/pro/Municipio/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MMunicipio, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.MunicipioController",
+    "Method": "Get",
+    "RelativePath": "api/pro/Municipio/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdEstado",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Municipio",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInserta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioActualiza",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaActualiza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.MunicipioController",
+    "Method": "Post",
+    "RelativePath": "api/pro/Municipio/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "pro.Model.MMunicipio",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.MunicipioController",
+    "Method": "Put",
+    "RelativePath": "api/pro/Municipio/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "pro.Model.MMunicipio",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.OrganizacionController",
     "Method": "Delete",
     "RelativePath": "api/pro/Organizacion/Delete",
     "HttpMethod": "DELETE",
@@ -138,14 +1491,14 @@
       },
       {
         "Name": "model",
-        "Type": "System.Collections.Generic.List\u00601[[pro.Model.pro.MOrganizacion, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MOrganizacion, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.OrganizacionController",
+    "ContainingType": "pro.Api.Controllers.OrganizacionController",
     "Method": "Get",
     "RelativePath": "api/pro/Organizacion/Get",
     "HttpMethod": "GET",
@@ -256,7 +1609,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.OrganizacionController",
+    "ContainingType": "pro.Api.Controllers.OrganizacionController",
     "Method": "Post",
     "RelativePath": "api/pro/Organizacion/Post",
     "HttpMethod": "POST",
@@ -265,14 +1618,14 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "pro.Model.pro.MOrganizacion",
+        "Type": "pro.Model.MOrganizacion",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.OrganizacionController",
+    "ContainingType": "pro.Api.Controllers.OrganizacionController",
     "Method": "Put",
     "RelativePath": "api/pro/Organizacion/Put",
     "HttpMethod": "PUT",
@@ -286,14 +1639,413 @@
       },
       {
         "Name": "model",
-        "Type": "pro.Model.pro.MOrganizacion",
+        "Type": "pro.Model.MOrganizacion",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.RolController",
+    "ContainingType": "pro.Api.Controllers.PacienteController",
+    "Method": "Delete",
+    "RelativePath": "api/pro/Paciente/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MPaciente, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.PacienteController",
+    "Method": "Get",
+    "RelativePath": "api/pro/Paciente/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Paciente",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ApellidoPaterno",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ApellidoMaterno",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NombreCompleto",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaNacimiento",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Edad",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdSexo",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdEstado",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMunicipio",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdColonia",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "CodigoPostal",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Calle",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NumeroInterior",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "NumeroExterior",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TelefonoMovil",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TelefonoCasa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Correo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInserta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioActualiza",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaActualiza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.PacienteController",
+    "Method": "Post",
+    "RelativePath": "api/pro/Paciente/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "pro.Model.MPaciente",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.PacienteController",
+    "Method": "Put",
+    "RelativePath": "api/pro/Paciente/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "pro.Model.MPaciente",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.PacienteImagenController",
+    "Method": "Delete",
+    "RelativePath": "api/pro/PacienteImagen/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MPacienteImagen, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.PacienteImagenController",
+    "Method": "Download",
+    "RelativePath": "api/pro/PacienteImagen/Download",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "archivo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.PacienteImagenController",
+    "Method": "Get",
+    "RelativePath": "api/pro/PacienteImagen/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdPaciente",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ruta",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Extension",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Archivo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Imagen",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInserta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioActualiza",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaActualiza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.PacienteImagenController",
+    "Method": "Post",
+    "RelativePath": "api/pro/PacienteImagen/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paciente",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "idPaciente",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentDisposition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Headers",
+        "Type": "Microsoft.AspNetCore.Http.IHeaderDictionary",
+        "IsRequired": false
+      },
+      {
+        "Name": "Length",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "idOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "idUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.PacienteImagenController",
+    "Method": "Put",
+    "RelativePath": "api/pro/PacienteImagen/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "pro.Model.MPacienteImagen",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.RolController",
     "Method": "Delete",
     "RelativePath": "api/pro/Rol/Delete",
     "HttpMethod": "DELETE",
@@ -307,14 +2059,14 @@
       },
       {
         "Name": "model",
-        "Type": "System.Collections.Generic.List\u00601[[pro.Model.pro.MRol, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MRol, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.RolController",
+    "ContainingType": "pro.Api.Controllers.RolController",
     "Method": "Get",
     "RelativePath": "api/pro/Rol/Get",
     "HttpMethod": "GET",
@@ -370,7 +2122,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.RolController",
+    "ContainingType": "pro.Api.Controllers.RolController",
     "Method": "Post",
     "RelativePath": "api/pro/Rol/Post",
     "HttpMethod": "POST",
@@ -379,14 +2131,14 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "pro.Model.pro.MRol",
+        "Type": "pro.Model.MRol",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.RolController",
+    "ContainingType": "pro.Api.Controllers.RolController",
     "Method": "Put",
     "RelativePath": "api/pro/Rol/Put",
     "HttpMethod": "PUT",
@@ -400,14 +2152,14 @@
       },
       {
         "Name": "model",
-        "Type": "pro.Model.pro.MRol",
+        "Type": "pro.Model.MRol",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.RolMenuController",
+    "ContainingType": "pro.Api.Controllers.RolMenuController",
     "Method": "Delete",
     "RelativePath": "api/pro/RolMenu/Delete",
     "HttpMethod": "DELETE",
@@ -421,14 +2173,14 @@
       },
       {
         "Name": "model",
-        "Type": "System.Collections.Generic.List\u00601[[pro.Model.pro.MRolMenu, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MRolMenu, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.RolMenuController",
+    "ContainingType": "pro.Api.Controllers.RolMenuController",
     "Method": "Get",
     "RelativePath": "api/pro/RolMenu/Get",
     "HttpMethod": "GET",
@@ -484,7 +2236,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.RolMenuController",
+    "ContainingType": "pro.Api.Controllers.RolMenuController",
     "Method": "Post",
     "RelativePath": "api/pro/RolMenu/Post",
     "HttpMethod": "POST",
@@ -493,14 +2245,14 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "System.Collections.Generic.List\u00601[[pro.Model.pro.MRolMenu, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MRolMenu, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.RolMenuController",
+    "ContainingType": "pro.Api.Controllers.RolMenuController",
     "Method": "Put",
     "RelativePath": "api/pro/RolMenu/Put",
     "HttpMethod": "PUT",
@@ -514,14 +2266,14 @@
       },
       {
         "Name": "model",
-        "Type": "pro.Model.pro.MRolMenu",
+        "Type": "pro.Model.MRolMenu",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.RolSubMenuController",
+    "ContainingType": "pro.Api.Controllers.RolSubMenuController",
     "Method": "Delete",
     "RelativePath": "api/pro/RolSubMenu/Delete",
     "HttpMethod": "DELETE",
@@ -535,14 +2287,14 @@
       },
       {
         "Name": "model",
-        "Type": "System.Collections.Generic.List\u00601[[pro.Model.pro.MRolSubMenu, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MRolSubMenu, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.RolSubMenuController",
+    "ContainingType": "pro.Api.Controllers.RolSubMenuController",
     "Method": "Get",
     "RelativePath": "api/pro/RolSubMenu/Get",
     "HttpMethod": "GET",
@@ -603,7 +2355,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.RolSubMenuController",
+    "ContainingType": "pro.Api.Controllers.RolSubMenuController",
     "Method": "Post",
     "RelativePath": "api/pro/RolSubMenu/Post",
     "HttpMethod": "POST",
@@ -612,14 +2364,14 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "System.Collections.Generic.List\u00601[[pro.Model.pro.MRolSubMenu, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MRolSubMenu, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.RolSubMenuController",
+    "ContainingType": "pro.Api.Controllers.RolSubMenuController",
     "Method": "Put",
     "RelativePath": "api/pro/RolSubMenu/Put",
     "HttpMethod": "PUT",
@@ -633,14 +2385,128 @@
       },
       {
         "Name": "model",
-        "Type": "pro.Model.pro.MRolSubMenu",
+        "Type": "pro.Model.MRolSubMenu",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.SubMenuController",
+    "ContainingType": "pro.Api.Controllers.SexoController",
+    "Method": "Delete",
+    "RelativePath": "api/pro/Sexo/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MSexo, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.SexoController",
+    "Method": "Get",
+    "RelativePath": "api/pro/Sexo/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Sexo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInserta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioActualiza",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaActualiza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.SexoController",
+    "Method": "Post",
+    "RelativePath": "api/pro/Sexo/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "pro.Model.MSexo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.SexoController",
+    "Method": "Put",
+    "RelativePath": "api/pro/Sexo/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "pro.Model.MSexo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.SubMenuController",
     "Method": "Delete",
     "RelativePath": "api/pro/SubMenu/Delete",
     "HttpMethod": "DELETE",
@@ -654,14 +2520,14 @@
       },
       {
         "Name": "model",
-        "Type": "System.Collections.Generic.List\u00601[[pro.Model.pro.MSubMenu, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MSubMenu, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.SubMenuController",
+    "ContainingType": "pro.Api.Controllers.SubMenuController",
     "Method": "Get",
     "RelativePath": "api/pro/SubMenu/Get",
     "HttpMethod": "GET",
@@ -732,7 +2598,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.SubMenuController",
+    "ContainingType": "pro.Api.Controllers.SubMenuController",
     "Method": "Post",
     "RelativePath": "api/pro/SubMenu/Post",
     "HttpMethod": "POST",
@@ -741,14 +2607,14 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "pro.Model.pro.MSubMenu",
+        "Type": "pro.Model.MSubMenu",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.SubMenuController",
+    "ContainingType": "pro.Api.Controllers.SubMenuController",
     "Method": "Put",
     "RelativePath": "api/pro/SubMenu/Put",
     "HttpMethod": "PUT",
@@ -762,14 +2628,14 @@
       },
       {
         "Name": "model",
-        "Type": "pro.Model.pro.MSubMenu",
+        "Type": "pro.Model.MSubMenu",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.TokenController",
+    "ContainingType": "pro.Api.Controllers.TokenController",
     "Method": "Post",
     "RelativePath": "api/pro/Token/Post",
     "HttpMethod": "POST",
@@ -778,14 +2644,198 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "pro.Model.pro.MAutenticacion",
+        "Type": "pro.Model.MAutenticacion",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.UsuarioController",
+    "ContainingType": "pro.Api.Controllers.TranshemodialisisController",
+    "Method": "Delete",
+    "RelativePath": "api/pro/Transhemodialisis/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MTranshemodialisis, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.TranshemodialisisController",
+    "Method": "Get",
+    "RelativePath": "api/pro/Transhemodialisis/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdAgenda",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Hora",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ta",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Fc",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Fr",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Sat",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Temp",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Qc",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Qo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Part",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pven",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ptm",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TasaUf",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Uf",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ktv",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInserta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioActualiza",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaActualiza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.TranshemodialisisController",
+    "Method": "Post",
+    "RelativePath": "api/pro/Transhemodialisis/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MTranshemodialisis, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.TranshemodialisisController",
+    "Method": "Put",
+    "RelativePath": "api/pro/Transhemodialisis/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "pro.Model.MTranshemodialisis",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.UsuarioController",
     "Method": "Delete",
     "RelativePath": "api/pro/Usuario/Delete",
     "HttpMethod": "DELETE",
@@ -799,14 +2849,14 @@
       },
       {
         "Name": "model",
-        "Type": "System.Collections.Generic.List\u00601[[pro.Model.pro.MUsuario, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MUsuario, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.UsuarioController",
+    "ContainingType": "pro.Api.Controllers.UsuarioController",
     "Method": "Get",
     "RelativePath": "api/pro/Usuario/Get",
     "HttpMethod": "GET",
@@ -897,7 +2947,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.UsuarioController",
+    "ContainingType": "pro.Api.Controllers.UsuarioController",
     "Method": "Post",
     "RelativePath": "api/pro/Usuario/Post",
     "HttpMethod": "POST",
@@ -906,14 +2956,14 @@
     "Parameters": [
       {
         "Name": "model",
-        "Type": "pro.Model.pro.MUsuario",
+        "Type": "pro.Model.MUsuario",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.UsuarioController",
+    "ContainingType": "pro.Api.Controllers.UsuarioController",
     "Method": "Put",
     "RelativePath": "api/pro/Usuario/Put",
     "HttpMethod": "PUT",
@@ -927,14 +2977,14 @@
       },
       {
         "Name": "model",
-        "Type": "pro.Model.pro.MUsuario",
+        "Type": "pro.Model.MUsuario",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.VersionController",
+    "ContainingType": "pro.Api.Controllers.VersionController",
     "Method": "Get",
     "RelativePath": "api/pro/Version/Get",
     "HttpMethod": "GET",
@@ -944,7 +2994,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.VRolMenuController",
+    "ContainingType": "pro.Api.Controllers.VRolMenuController",
     "Method": "Get",
     "RelativePath": "api/pro/VRolMenu/Get",
     "HttpMethod": "GET",
@@ -1010,7 +3060,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.VRolSubMenuController",
+    "ContainingType": "pro.Api.Controllers.VRolSubMenuController",
     "Method": "Get",
     "RelativePath": "api/pro/VRolSubMenu/Get",
     "HttpMethod": "GET",
@@ -1091,7 +3141,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.VUsuarioController",
+    "ContainingType": "pro.Api.Controllers.VUsuarioController",
     "Method": "Get",
     "RelativePath": "api/pro/VUsuario/Get",
     "HttpMethod": "GET",
@@ -1182,7 +3232,311 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.WOrganizacionController",
+    "ContainingType": "pro.Api.Controllers.WAgendaController",
+    "Method": "GetFiltroExportar",
+    "RelativePath": "api/pro/WAgenda/GetFiltroExportar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.WAgendaController",
+    "Method": "GetFiltroLista",
+    "RelativePath": "api/pro/WAgenda/GetFiltroLista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.WAgendaController",
+    "Method": "GetFiltroTotal",
+    "RelativePath": "api/pro/WAgenda/GetFiltroTotal",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.WAgendaController",
+    "Method": "GetFiltroVista",
+    "RelativePath": "api/pro/WAgenda/GetFiltroVista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.WOrganizacionController",
     "Method": "GetFiltroExportar",
     "RelativePath": "api/pro/WOrganizacion/GetFiltroExportar",
     "HttpMethod": "GET",
@@ -1205,6 +3559,16 @@
         "IsRequired": false
       },
       {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
         "Name": "Registros",
         "Type": "System.Int32",
         "IsRequired": false
@@ -1248,7 +3612,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.WOrganizacionController",
+    "ContainingType": "pro.Api.Controllers.WOrganizacionController",
     "Method": "GetFiltroLista",
     "RelativePath": "api/pro/WOrganizacion/GetFiltroLista",
     "HttpMethod": "GET",
@@ -1271,6 +3635,16 @@
         "IsRequired": false
       },
       {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
         "Name": "Registros",
         "Type": "System.Int32",
         "IsRequired": false
@@ -1314,7 +3688,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.WOrganizacionController",
+    "ContainingType": "pro.Api.Controllers.WOrganizacionController",
     "Method": "GetFiltroTotal",
     "RelativePath": "api/pro/WOrganizacion/GetFiltroTotal",
     "HttpMethod": "GET",
@@ -1337,6 +3711,16 @@
         "IsRequired": false
       },
       {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
         "Name": "Registros",
         "Type": "System.Int32",
         "IsRequired": false
@@ -1380,7 +3764,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.WOrganizacionController",
+    "ContainingType": "pro.Api.Controllers.WOrganizacionController",
     "Method": "GetFiltroVista",
     "RelativePath": "api/pro/WOrganizacion/GetFiltroVista",
     "HttpMethod": "GET",
@@ -1403,6 +3787,16 @@
         "IsRequired": false
       },
       {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
         "Name": "Registros",
         "Type": "System.Int32",
         "IsRequired": false
@@ -1446,7 +3840,311 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.WRolController",
+    "ContainingType": "pro.Api.Controllers.WPacienteController",
+    "Method": "GetFiltroExportar",
+    "RelativePath": "api/pro/WPaciente/GetFiltroExportar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.WPacienteController",
+    "Method": "GetFiltroLista",
+    "RelativePath": "api/pro/WPaciente/GetFiltroLista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.WPacienteController",
+    "Method": "GetFiltroTotal",
+    "RelativePath": "api/pro/WPaciente/GetFiltroTotal",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.WPacienteController",
+    "Method": "GetFiltroVista",
+    "RelativePath": "api/pro/WPaciente/GetFiltroVista",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdRol",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdMenu",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Registros",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pagina",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "OrdenValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroColumna",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FiltroValor",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Formato",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.WRolController",
     "Method": "GetFiltroExportar",
     "RelativePath": "api/pro/WRol/GetFiltroExportar",
     "HttpMethod": "GET",
@@ -1469,6 +4167,16 @@
         "IsRequired": false
       },
       {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
         "Name": "Registros",
         "Type": "System.Int32",
         "IsRequired": false
@@ -1512,7 +4220,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.WRolController",
+    "ContainingType": "pro.Api.Controllers.WRolController",
     "Method": "GetFiltroLista",
     "RelativePath": "api/pro/WRol/GetFiltroLista",
     "HttpMethod": "GET",
@@ -1535,6 +4243,16 @@
         "IsRequired": false
       },
       {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
         "Name": "Registros",
         "Type": "System.Int32",
         "IsRequired": false
@@ -1578,7 +4296,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.WRolController",
+    "ContainingType": "pro.Api.Controllers.WRolController",
     "Method": "GetFiltroTotal",
     "RelativePath": "api/pro/WRol/GetFiltroTotal",
     "HttpMethod": "GET",
@@ -1601,6 +4319,16 @@
         "IsRequired": false
       },
       {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
         "Name": "Registros",
         "Type": "System.Int32",
         "IsRequired": false
@@ -1644,7 +4372,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.WRolController",
+    "ContainingType": "pro.Api.Controllers.WRolController",
     "Method": "GetFiltroVista",
     "RelativePath": "api/pro/WRol/GetFiltroVista",
     "HttpMethod": "GET",
@@ -1667,6 +4395,16 @@
         "IsRequired": false
       },
       {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
         "Name": "Registros",
         "Type": "System.Int32",
         "IsRequired": false
@@ -1710,7 +4448,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.WRolMenuController",
+    "ContainingType": "pro.Api.Controllers.WRolMenuController",
     "Method": "GetFiltroExportar",
     "RelativePath": "api/pro/WRolMenu/GetFiltroExportar",
     "HttpMethod": "GET",
@@ -1733,6 +4471,16 @@
         "IsRequired": false
       },
       {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
         "Name": "Registros",
         "Type": "System.Int32",
         "IsRequired": false
@@ -1776,7 +4524,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.WRolMenuController",
+    "ContainingType": "pro.Api.Controllers.WRolMenuController",
     "Method": "GetFiltroLista",
     "RelativePath": "api/pro/WRolMenu/GetFiltroLista",
     "HttpMethod": "GET",
@@ -1799,6 +4547,16 @@
         "IsRequired": false
       },
       {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
         "Name": "Registros",
         "Type": "System.Int32",
         "IsRequired": false
@@ -1842,7 +4600,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.WRolMenuController",
+    "ContainingType": "pro.Api.Controllers.WRolMenuController",
     "Method": "GetFiltroTotal",
     "RelativePath": "api/pro/WRolMenu/GetFiltroTotal",
     "HttpMethod": "GET",
@@ -1865,6 +4623,16 @@
         "IsRequired": false
       },
       {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
         "Name": "Registros",
         "Type": "System.Int32",
         "IsRequired": false
@@ -1908,7 +4676,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.WRolMenuController",
+    "ContainingType": "pro.Api.Controllers.WRolMenuController",
     "Method": "GetFiltroVista",
     "RelativePath": "api/pro/WRolMenu/GetFiltroVista",
     "HttpMethod": "GET",
@@ -1931,6 +4699,16 @@
         "IsRequired": false
       },
       {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
         "Name": "Registros",
         "Type": "System.Int32",
         "IsRequired": false
@@ -1974,7 +4752,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.WRolSubMenuController",
+    "ContainingType": "pro.Api.Controllers.WRolSubMenuController",
     "Method": "GetFiltroExportar",
     "RelativePath": "api/pro/WRolSubMenu/GetFiltroExportar",
     "HttpMethod": "GET",
@@ -1997,6 +4775,16 @@
         "IsRequired": false
       },
       {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
         "Name": "Registros",
         "Type": "System.Int32",
         "IsRequired": false
@@ -2040,7 +4828,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.WRolSubMenuController",
+    "ContainingType": "pro.Api.Controllers.WRolSubMenuController",
     "Method": "GetFiltroLista",
     "RelativePath": "api/pro/WRolSubMenu/GetFiltroLista",
     "HttpMethod": "GET",
@@ -2063,6 +4851,16 @@
         "IsRequired": false
       },
       {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
         "Name": "Registros",
         "Type": "System.Int32",
         "IsRequired": false
@@ -2106,7 +4904,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.WRolSubMenuController",
+    "ContainingType": "pro.Api.Controllers.WRolSubMenuController",
     "Method": "GetFiltroTotal",
     "RelativePath": "api/pro/WRolSubMenu/GetFiltroTotal",
     "HttpMethod": "GET",
@@ -2129,6 +4927,16 @@
         "IsRequired": false
       },
       {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
         "Name": "Registros",
         "Type": "System.Int32",
         "IsRequired": false
@@ -2172,7 +4980,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.WRolSubMenuController",
+    "ContainingType": "pro.Api.Controllers.WRolSubMenuController",
     "Method": "GetFiltroVista",
     "RelativePath": "api/pro/WRolSubMenu/GetFiltroVista",
     "HttpMethod": "GET",
@@ -2195,6 +5003,16 @@
         "IsRequired": false
       },
       {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
         "Name": "Registros",
         "Type": "System.Int32",
         "IsRequired": false
@@ -2238,7 +5056,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.WUsuarioController",
+    "ContainingType": "pro.Api.Controllers.WUsuarioController",
     "Method": "GetFiltroExportar",
     "RelativePath": "api/pro/WUsuario/GetFiltroExportar",
     "HttpMethod": "GET",
@@ -2261,6 +5079,16 @@
         "IsRequired": false
       },
       {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
         "Name": "Registros",
         "Type": "System.Int32",
         "IsRequired": false
@@ -2304,7 +5132,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.WUsuarioController",
+    "ContainingType": "pro.Api.Controllers.WUsuarioController",
     "Method": "GetFiltroLista",
     "RelativePath": "api/pro/WUsuario/GetFiltroLista",
     "HttpMethod": "GET",
@@ -2327,6 +5155,16 @@
         "IsRequired": false
       },
       {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
         "Name": "Registros",
         "Type": "System.Int32",
         "IsRequired": false
@@ -2370,7 +5208,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.WUsuarioController",
+    "ContainingType": "pro.Api.Controllers.WUsuarioController",
     "Method": "GetFiltroTotal",
     "RelativePath": "api/pro/WUsuario/GetFiltroTotal",
     "HttpMethod": "GET",
@@ -2393,6 +5231,16 @@
         "IsRequired": false
       },
       {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
         "Name": "Registros",
         "Type": "System.Int32",
         "IsRequired": false
@@ -2436,7 +5284,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.pro.WUsuarioController",
+    "ContainingType": "pro.Api.Controllers.WUsuarioController",
     "Method": "GetFiltroVista",
     "RelativePath": "api/pro/WUsuario/GetFiltroVista",
     "HttpMethod": "GET",
@@ -2456,6 +5304,16 @@
       {
         "Name": "IdMenu",
         "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInicio",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaFin",
+        "Type": "System.DateTime",
         "IsRequired": false
       },
       {

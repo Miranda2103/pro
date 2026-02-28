@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace pro.Model.pro
+namespace pro.Model
 {
     [DisplayName("Filtro")]
     public class MFiltro
@@ -8,6 +8,8 @@ namespace pro.Model.pro
         public long IdOrganizacion { get; set; }
         public long IdRol { get; set; }
         public long IdMenu { get; set; }
+        public DateTime FechaInicio { get; set; }
+        public DateTime FechaFin { get; set; }
         public int Registros { get; set; }
         public int Pagina { get; set; }
         public string OrdenColumna { get; set; }

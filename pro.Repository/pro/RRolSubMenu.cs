@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using pro.Context;
-using pro.Interface.pro;
-using pro.Model.pro;
+using pro.Interface;
+using pro.Model;
 
-namespace pro.Repository.pro
+namespace pro.Repository
 {
     public class RRolSubMenu : IRolSubMenu
     {
@@ -18,7 +18,7 @@ namespace pro.Repository.pro
         {
             return option switch
             {
-                1 => await _dbc.RolSubMenu.Where(r => r.IdRol == model.IdRol && r.Activo == true).ToListAsync(),
+                1 => await _dbc.RolSubMenu.Where(r => r.IdRol == model.IdRol && r.IdMenu == model.IdMenu && r.Activo == true).ToListAsync(),
                 _ => throw new NotImplementedException()
             };
         }

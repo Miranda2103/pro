@@ -1,0 +1,1438 @@
+<div class="w100 h100" [ngClass]="{'fx' : !shared.rd, 'grid' : shared.rd}">
+
+  <div class="w5 h100 fx fx-flow padding border-right background-jh-2" *ngIf="!shared.rd">
+
+    <div class="w100 fx-push align-right">
+      <button mat-icon-button [mat-dialog-close]="false" color="warn" matTooltip="Cerrar">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+
+  </div>
+
+  <div class="w95 h100 background-jh-4" [ngClass]="{'overflow-hidden' : !shared.rd}">
+
+    <div class="w100 h100 padding" [ngClass]="{'overflow' : !shared.rd}">
+
+      <div class="w100" *ngIf="shared.rd">
+        <button mat-raised-button class="wpx125 background-cerrar" [mat-dialog-close]="false">
+          <mat-icon class="fl-left button-icon">close</mat-icon>
+          Cerrar
+        </button>
+      </div>
+
+      <div class="w100 background-4 radius padding align-center">
+        FICHA DE IDENTIFICACION
+      </div>
+
+      <div class="w100 fx fx-direction-row padding-top">
+
+        <div class="w20 fx fx-middle content-center padding">
+
+          <div class="wpx150 hspx175 radius mat-elevation-z3">
+            <img class="w100 h100 image-contain" [src]="ngImage()" />
+          </div>
+
+        </div>
+
+        <div class="w20 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Nombre del Paciente</mat-label>
+            <input matInput [(ngModel)]="iPaciente.nombreCompleto" maxlength="250" readonly>
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Diagnostico</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.diagnostico" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Tipo de</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.tipoDe" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+        </div>
+
+        <div class="w20 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Fecha de Nacimiento</mat-label>
+            <input matInput [(ngModel)]="iPaciente.fechaNacimiento" [matDatepicker]="fechaNacimiento" readonly>
+            <mat-datepicker-toggle matSuffix [for]="fechaNacimiento"></mat-datepicker-toggle>
+            <mat-datepicker #fechaNacimiento disabled></mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Fecha de Inigreso</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.fechaIngreso" [matDatepicker]="fechaIngreso" (click)="fechaIngreso.open()" (focus)="fechaIngreso.open()" readonly>
+            <mat-datepicker-toggle matSuffix [for]="fechaIngreso"></mat-datepicker-toggle>
+            <mat-datepicker #fechaIngreso></mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Fecha de An</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.fechaAn" [matDatepicker]="fechaAn" (click)="fechaAn.open()" (focus)="fechaAn.open()" readonly>
+            <mat-datepicker-toggle matSuffix [for]="fechaAn"></mat-datepicker-toggle>
+            <mat-datepicker #fechaAn></mat-datepicker>
+          </mat-form-field>
+
+        </div>
+
+        <div class="w20 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Edad (años)</mat-label>
+            <input matInput [(ngModel)]="iPaciente.edad" maxlength="3" readonly>
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Talla (cm)</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.talla" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Residual 24 hrs</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.residual" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+        </div>
+
+        <div class="w20 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Sexo</mat-label>
+            <mat-select [panelClass]="'panel-select'" #selectSexo [(value)]="iPaciente.idSexo" disabled>
+              <mat-option *ngFor="let item of inSexo" [value]="item.id">
+                {{ item.sexo }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Peso (kg)</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.peso" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+        </div>
+
+      </div>
+
+      <div class="w100 fx fx-direction-row">
+
+        <div class="w20 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Alergias</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.alergias" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+        </div>
+
+        <div class="w20 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Panel Viral (fecha)</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.fechaPanelViral" [matDatepicker]="fechaPanelViral" (click)="fechaPanelViral.open()" (focus)="fechaPanelViral.open()" readonly>
+            <mat-datepicker-toggle matSuffix [for]="fechaPanelViral"></mat-datepicker-toggle>
+            <mat-datepicker #fechaPanelViral></mat-datepicker>
+          </mat-form-field>
+
+        </div>
+
+        <div class="w20 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>AgS VHB</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.agsVHB" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+        </div>
+
+        <div class="w20 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>AcVHC</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.acVHC" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+        </div>
+
+        <div class="w20 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Ac VIH</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.acVIH" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+        </div>
+
+      </div>
+
+      <div class="w100 background-4 radius padding align-center">
+        BARRERAS FISICAS
+      </div>
+
+      <div class="w100 fx fx-direction-row">
+
+        <div class="w25 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Salida de Ruedas</mat-label>
+            <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionSalida">
+              <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                {{ item.decision }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Andadera</mat-label>
+            <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionAndadera">
+              <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                {{ item.decision }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        </div>
+
+        <div class="w25 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Baston</mat-label>
+            <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionBaston">
+              <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                {{ item.decision }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Camilla</mat-label>
+            <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionCamilla">
+              <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                {{ item.decision }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        </div>
+
+        <div class="w25 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Auditiva</mat-label>
+            <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionAuditiva">
+              <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                {{ item.decision }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Visual</mat-label>
+            <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionVisual">
+              <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                {{ item.decision }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        </div>
+
+        <div class="w25 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Linguisticas</mat-label>
+            <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionLinguistica">
+              <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                {{ item.decision }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Creencias y/o Costumbres</mat-label>
+            <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionCreencias">
+              <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                {{ item.decision }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        </div>
+
+      </div>
+
+      <div class="w100 background-4 radius padding align-center">
+        PRESCRIPCION DE HEMODIALISIS
+      </div>
+
+      <div class="w100 fx fx-direction-row">
+
+        <div class="w15 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Filtro</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.filtro" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Qa</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.qa" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+        </div>
+
+        <div class="w15 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Tiempo</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.tiempo" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>HCC</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.hcc" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+        </div>
+
+        <div class="w15 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>QS</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.qs" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Anticoagulacion</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.anticoagulacion" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+        </div>
+
+        <div class="w15 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>QO</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.qo" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Rodo</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.rodo" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+        </div>
+
+        <div class="w15 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Temp</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.temp" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Infusion</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.infusion" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+        </div>
+
+        <div class="w15 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Na</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.na" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>KTV</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.ktv" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+        </div>
+
+        <div class="w15 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>C</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.c" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>UF</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.uf" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+        </div>
+
+      </div>
+
+      <div class="w100 fx fx-direction-row">
+
+        <div class="w45 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Resumen de Filtro</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.resumenFiltro" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+        </div>
+
+        <div class="w60 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Frecuencia de Hemodialisis</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.frecuenciaHemodialisis" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+        </div>
+
+      </div>
+
+      <div class="w100 background-4 radius padding align-center">
+        INDICACIONES MEDICAS
+      </div>
+
+      <div class="w100 fx fx-direction-row">
+
+        <div class="w100 padding-rd">
+
+          <mat-form-field class="w100 radius" appearance="outline">
+            <mat-label>Indicaciones Medicas</mat-label>
+            <textarea matInput [(ngModel)]="iHemodialisis.indicacionesMedicas" oninput="value = value.toUpperCase()" matTextareaAutosize="false" class="hpx100" maxlength="1000"></textarea>
+          </mat-form-field>
+
+        </div>
+
+      </div>
+
+      <div class="w100 fx fx-direction-row">
+
+        <div class="w35 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Indicaciones Verbales</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.indicacionesVerbales" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Confirmacion de Indicaciones</mat-label>
+            <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionIndicacion">
+              <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                {{ item.decision }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        </div>
+
+        <div class="w35 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Indicaciones Telefonicas</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.indicacionesTelefonicas" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+        </div>
+
+        <div class="w35 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Indicaciones Electronicas</mat-label>
+            <input matInput [(ngModel)]="iHemodialisis.indicacionesElectronicas" oninput="value = value.toUpperCase()" maxlength="250">
+          </mat-form-field>
+
+        </div>
+
+      </div>
+
+      <div class="w100 background-4 radius padding align-center">
+        VERIFICACION PRE PROCEDIMIENTO PARA TRATAMIENTO HEMODIALITICO
+      </div>
+
+      <div class="w100 fx fx-direction-row">
+
+        <div class="w35 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Paciente Correcto</mat-label>
+            <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPaciente">
+              <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                {{ item.decision }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Preescripcion de hemodialisis correcta</mat-label>
+            <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPreescripcion">
+              <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                {{ item.decision }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Equipo Medico Funcional</mat-label>
+            <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionEquipo">
+              <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                {{ item.decision }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        </div>
+
+        <div class="w35 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Procedimiento Correcto</mat-label>
+            <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionProcedimiento">
+              <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                {{ item.decision }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Angioacceso Correcto</mat-label>
+            <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionAngioacceso">
+              <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                {{ item.decision }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Riesgo de Hemorragia</mat-label>
+            <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionRiesgo">
+              <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                {{ item.decision }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        </div>
+
+        <div class="w35 padding-rd">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>¿Se realizo verificacion?</mat-label>
+            <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionVerificacion">
+              <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                {{ item.decision }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>¿Se realizo time out?</mat-label>
+            <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionTimeOut">
+              <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                {{ item.decision }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>¿Se identifico angioacceso?</mat-label>
+            <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionIdentifico">
+              <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                {{ item.decision }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        </div>
+
+      </div>
+
+      <div class="w100 background-4 radius padding align-center">
+        SOMATOMETRIA
+      </div>
+
+      <div class="w100 fx fx-direction-row">
+
+        <div class="w50 padding-top padding-bottom padding-right-rd">
+
+          <div class="w100 background-11 radius padding align-center">
+            PREHEMODIALISIS
+          </div>
+
+          <div class="w100 fx fx-direction-row border radius">
+
+            <div class="w35 padding-rd">
+
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>T/A de Pie</mat-label>
+                <input matInput [(ngModel)]="iHemodialisis.preTAPie" oninput="value = value.toUpperCase()" maxlength="250">
+              </mat-form-field>
+
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>T/A Sentado</mat-label>
+                <input matInput [(ngModel)]="iHemodialisis.preTASentado" oninput="value = value.toUpperCase()" maxlength="250">
+              </mat-form-field>
+
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Fr Respiratoria</mat-label>
+                <input matInput [(ngModel)]="iHemodialisis.preFRespiratoria" oninput="value = value.toUpperCase()" maxlength="250">
+              </mat-form-field>
+
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Peso de Egreso Previo (kg)</mat-label>
+                <input matInput [(ngModel)]="iHemodialisis.prePesoEgreso" oninput="value = value.toUpperCase()" maxlength="250">
+              </mat-form-field>
+
+            </div>
+
+            <div class="w35 padding-rd">
+
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>F.C. de Pie</mat-label>
+                <input matInput [(ngModel)]="iHemodialisis.preFCPie" oninput="value = value.toUpperCase()" maxlength="250">
+              </mat-form-field>
+
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>F.C. Sentado</mat-label>
+                <input matInput [(ngModel)]="iHemodialisis.preFCSentado" oninput="value = value.toUpperCase()" maxlength="250">
+              </mat-form-field>
+
+              <mat-form-field class="w100 hidden" appearance="outline">
+                <mat-label></mat-label>
+                <input matInput maxlength="250">
+              </mat-form-field>
+
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Peso Actual (kg)</mat-label>
+                <input matInput [(ngModel)]="iHemodialisis.prePesoActual" oninput="value = value.toUpperCase()" maxlength="250">
+              </mat-form-field>
+
+            </div>
+
+            <div class="w35 padding-rd">
+
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Temp C</mat-label>
+                <input matInput [(ngModel)]="iHemodialisis.preTempC" oninput="value = value.toUpperCase()" maxlength="250">
+              </mat-form-field>
+
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Saturación (%)</mat-label>
+                <input matInput [(ngModel)]="iHemodialisis.preSaturacion" oninput="value = value.toUpperCase()" maxlength="250">
+              </mat-form-field>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="w50 padding-top padding-bottom padding-left-rd">
+
+          <div class="w100 background-11 radius padding align-center">
+            POSTHEMODIALISIS
+          </div>
+
+          <div class="w100 fx fx-direction-row border radius">
+
+            <div class="w35 padding-rd">
+
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>T/A de Pie</mat-label>
+                <input matInput [(ngModel)]="iHemodialisis.posTAPie" oninput="value = value.toUpperCase()" maxlength="250">
+              </mat-form-field>
+
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>T/A Sentado</mat-label>
+                <input matInput [(ngModel)]="iHemodialisis.posTASentado" oninput="value = value.toUpperCase()" maxlength="250">
+              </mat-form-field>
+
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Fr Respiratoria</mat-label>
+                <input matInput [(ngModel)]="iHemodialisis.posFRespiratoria" oninput="value = value.toUpperCase()" maxlength="250">
+              </mat-form-field>
+
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Ganancia de Peso (kg)</mat-label>
+                <input matInput [(ngModel)]="iHemodialisis.posGananciaPeso" oninput="value = value.toUpperCase()" maxlength="250">
+              </mat-form-field>
+
+            </div>
+
+            <div class="w35 padding-rd">
+
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>F.C. de Pie</mat-label>
+                <input matInput [(ngModel)]="iHemodialisis.posFCPie" oninput="value = value.toUpperCase()" maxlength="250">
+              </mat-form-field>
+
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>F.C. Sentado</mat-label>
+                <input matInput [(ngModel)]="iHemodialisis.posFCSentado" oninput="value = value.toUpperCase()" maxlength="250">
+              </mat-form-field>
+
+              <mat-form-field class="w100 hidden" appearance="outline">
+                <mat-label></mat-label>
+                <input matInput maxlength="250">
+              </mat-form-field>
+
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Peso Final (kg)</mat-label>
+                <input matInput [(ngModel)]="iHemodialisis.posPesoFinal" oninput="value = value.toUpperCase()" maxlength="250">
+              </mat-form-field>
+
+            </div>
+
+            <div class="w35 padding-rd">
+
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Temp C</mat-label>
+                <input matInput [(ngModel)]="iHemodialisis.posTempC" oninput="value = value.toUpperCase()" maxlength="250">
+              </mat-form-field>
+
+              <mat-form-field class="w100" appearance="outline">
+                <mat-label>Saturación (%)</mat-label>
+                <input matInput [(ngModel)]="iHemodialisis.posSaturacion" oninput="value = value.toUpperCase()" maxlength="250">
+              </mat-form-field>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="w100 background-4 radius padding align-center">
+        VALORACION DE ANGIOACCESO
+      </div>
+
+      <div class="w100 fx fx-direction-row">
+
+        <div class="w25 padding-top padding-bottom padding-right-rd" *ngIf="!shared.rd">
+
+          <div class="w100 background-11 radius padding align-center">
+            CATETER
+          </div>
+
+          <div class="w100 padding border radius">
+
+            <mat-form-field class="w100" appearance="standard">
+              <mat-label>Parche Externo Integro</mat-label>
+              <input matInput maxlength="250" disabled>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="standard">
+              <mat-label>Parche Interno Integro</mat-label>
+              <input matInput maxlength="250" disabled>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="standard">
+              <mat-label>Cateter Integro</mat-label>
+              <input matInput maxlength="250" disabled>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="standard">
+              <mat-label>Permeabilidad Adecuada</mat-label>
+              <input matInput maxlength="250" disabled>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="standard">
+              <mat-label>Datos de Infeccion</mat-label>
+              <input matInput maxlength="250" disabled>
+            </mat-form-field>
+
+          </div>
+
+        </div>
+
+        <div class="w25 padding-top padding-bottom padding-left-rd">
+
+          <div class="w100 background-11 radius padding align-center">
+            PREHEMODIALISIS
+          </div>
+
+          <div class="w100 padding border radius">
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Parche Externo Integro</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPreExterno">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Parche Interno Integro</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPreInterno">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Cateter Integro</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPreCateter">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Permeabilidad Adecuada</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPrePermeabilidad">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Datos de Infeccion</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPreInfeccion">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+          </div>
+
+        </div>
+
+        <div class="w25 padding-top padding-bottom padding-left-rd">
+
+          <div class="w100 background-11 radius padding align-center">
+            TRANSHEMODIALISIS
+          </div>
+
+          <div class="w100 padding border radius">
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Parche Externo Integro</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionTraExterno">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Parche Interno Integro</mat-label>
+              <mat-select [panelClass]="'panel-select'"[(ngModel)]="iHemodialisis.idDecisionTraInterno" >
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Cateter Integro</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionTraCateter">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Permeabilidad Adecuada</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionTraPermeabilidad">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Datos de Infeccion</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionTraInfeccion">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+          </div>
+
+        </div>
+
+        <div class="w25 padding-top padding-bottom padding-left-rd">
+
+          <div class="w100 background-11 radius padding align-center">
+            POSTHEMODIALISIS
+          </div>
+
+          <div class="w100 padding border radius">
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Parche Externo Integro</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPosExterno">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Parche Interno Integro</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPosInterno">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Cateter Integro</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPosCateter">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Permeabilidad Adecuada</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPosPermeabilidad">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Datos de Infeccion</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPosInfeccion">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="w100">
+
+        <mat-form-field class="w100" appearance="outline">
+          <mat-label>Observaciones</mat-label>
+          <input matInput [(ngModel)]="iHemodialisis.observacionCateter" maxlength="500">
+        </mat-form-field>
+
+      </div>
+
+      <div class="w100 fx fx-direction-row">
+
+        <div class="w25 padding-top padding-bottom padding-right-rd" *ngIf="!shared.rd">
+
+          <div class="w100 background-11 radius padding align-center">
+            FISTULA O INJERTO
+          </div>
+
+          <div class="w100 padding border radius">
+
+            <mat-form-field class="w100" appearance="standard">
+              <mat-label>Trill</mat-label>
+              <input matInput maxlength="250" disabled>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="standard">
+              <mat-label>Edena</mat-label>
+              <input matInput maxlength="250" disabled>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="standard">
+              <mat-label>Equimosis</mat-label>
+              <input matInput maxlength="250" disabled>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="standard">
+              <mat-label>Hematoma</mat-label>
+              <input matInput maxlength="250" disabled>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="standard">
+              <mat-label>Anerisma</mat-label>
+              <input matInput maxlength="250" disabled>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="standard">
+              <mat-label>Permeabilidad Adecuada</mat-label>
+              <input matInput maxlength="250" disabled>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="standard">
+              <mat-label>Datos de Infeccion</mat-label>
+              <input matInput maxlength="250" disabled>
+            </mat-form-field>
+
+          </div>
+
+        </div>
+
+        <div class="w25 padding-top padding-bottom padding-left-rd">
+
+          <div class="w100 background-11 radius padding align-center">
+            PREHEMODIALISIS
+          </div>
+
+          <div class="w100 padding border radius">
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Trill</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPreTrill">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Edena</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPreEdena">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Equimosis</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPreEquimosis">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Hematoma</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPreHematoma">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Anerisma</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPreAnerisma">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Permeabilidad Adecuada</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPreAdecuada">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Datos de Infeccion</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPreDato">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+          </div>
+
+        </div>
+
+        <div class="w25 padding-top padding-bottom padding-left-rd">
+
+          <div class="w100 background-11 radius padding align-center">
+            TRANSHEMODIALISIS
+          </div>
+
+          <div class="w100 padding border radius">
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Trill</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionTraTrill">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Edena</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionTraEdena">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Equimosis</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionTraEquimosis">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Hematoma</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionTraHematoma">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Anerisma</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionTraAnerisma">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Permeabilidad Adecuada</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionTraAdecuada">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Datos de Infeccion</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionTraDato">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+          </div>
+
+        </div>
+
+        <div class="w25 padding-top padding-bottom padding-left-rd">
+
+          <div class="w100 background-11 radius padding align-center">
+            POSTHEMODIALISIS
+          </div>
+
+          <div class="w100 padding border radius">
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Trill</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPosTrill">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Edena</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPosEdena">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Equimosis</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPosEquimosis">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Hematoma</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPosHematoma">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Anerisma</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPosAnerisma">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Permeabilidad Adecuada</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPosAdecuada">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label *ngIf="shared.rd">Datos de Infeccion</mat-label>
+              <mat-select [panelClass]="'panel-select'" [(ngModel)]="iHemodialisis.idDecisionPosDato">
+                <mat-option *ngFor="let item of inDecision" [value]="item.id">
+                  {{ item.decision }}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="w100">
+
+        <mat-form-field class="w100" appearance="outline">
+          <mat-label>Observaciones</mat-label>
+          <input matInput [(ngModel)]="iHemodialisis.observacionFistula" maxlength="500">
+        </mat-form-field>
+
+      </div>
+
+      <div class="w100 background-4 radius padding align-center">
+        REGISTRO TRANSHEMODIALISIS
+      </div>
+
+      <div class="w100 hpx500 border-rd mat-elevation-z1 overflow background-7">
+        <table mat-table [dataSource]="ds" class="w100">
+
+          <tr mat-header-row *matHeaderRowDef="dc;"></tr>
+          <tr mat-row *matRowDef="let row; columns: dc;" tabindex="0" class="focusable-row"></tr>
+
+          <ng-container matColumnDef="editar">
+            <th mat-header-cell *matHeaderCellDef>
+            </th>
+            <td mat-cell *matCellDef="let row">
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="hora">
+            <th mat-header-cell *matHeaderCellDef>
+              <mat-label>Hora</mat-label>
+            </th>
+            <td mat-cell *matCellDef="let row">
+              <mat-label class="mobile-field mobile-label bold">Hora</mat-label>
+              <mat-form-field class="w100" appearance="legacy">
+                <input matInput [(ngModel)]="row.hora" maxlength="250">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="ta">
+            <th mat-header-cell *matHeaderCellDef>
+              <mat-label>TA</mat-label>
+            </th>
+            <td mat-cell *matCellDef="let row">
+              <mat-label class="mobile-field mobile-label bold">TA</mat-label>
+              <mat-form-field class="w100" appearance="legacy">
+                <input matInput [(ngModel)]="row.ta" maxlength="250">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="fc">
+            <th mat-header-cell *matHeaderCellDef>
+              <mat-label>FC</mat-label>
+            </th>
+            <td mat-cell *matCellDef="let row">
+              <mat-label class="mobile-field mobile-label bold">FC</mat-label>
+              <mat-form-field class="w100" appearance="legacy">
+                <input matInput [(ngModel)]="row.fc" maxlength="250">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="fr">
+            <th mat-header-cell *matHeaderCellDef>
+              <mat-label>FR</mat-label>
+            </th>
+            <td mat-cell *matCellDef="let row">
+              <mat-label class="mobile-field mobile-label bold">FR</mat-label>
+              <mat-form-field class="w100" appearance="legacy">
+                <input matInput [(ngModel)]="row.fr" maxlength="250">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="sat">
+            <th mat-header-cell *matHeaderCellDef>
+              <mat-label>Sat</mat-label>
+            </th>
+            <td mat-cell *matCellDef="let row">
+              <mat-label class="mobile-field mobile-label bold">Sat</mat-label>
+              <mat-form-field class="w100" appearance="legacy">
+                <input matInput [(ngModel)]="row.sar" maxlength="250">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="temp">
+            <th mat-header-cell *matHeaderCellDef>
+              <mat-label>Temp</mat-label>
+            </th>
+            <td mat-cell *matCellDef="let row">
+              <mat-label class="mobile-field mobile-label bold">Temp</mat-label>
+              <mat-form-field class="w100" appearance="legacy">
+                <input matInput [(ngModel)]="row.temp" maxlength="250">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="qc">
+            <th mat-header-cell *matHeaderCellDef>
+              <mat-label>Q5</mat-label>
+            </th>
+            <td mat-cell *matCellDef="let row">
+              <mat-label class="mobile-field mobile-label bold">Q5</mat-label>
+              <mat-form-field class="w100" appearance="legacy">
+                <input matInput [(ngModel)]="row.qc" maxlength="250">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="qo">
+            <th mat-header-cell *matHeaderCellDef>
+              <mat-label>Q0</mat-label>
+            </th>
+            <td mat-cell *matCellDef="let row">
+              <mat-label class="mobile-field mobile-label bold">Q0</mat-label>
+              <mat-form-field class="w100" appearance="legacy">
+                <input matInput [(ngModel)]="row.qo" maxlength="250">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="part">
+            <th mat-header-cell *matHeaderCellDef>
+              <mat-label>P-art</mat-label>
+            </th>
+            <td mat-cell *matCellDef="let row">
+              <mat-label class="mobile-field mobile-label bold">P-art</mat-label>
+              <mat-form-field class="w100" appearance="legacy">
+                <input matInput [(ngModel)]="row.part" maxlength="250">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="pven">
+            <th mat-header-cell *matHeaderCellDef>
+              <mat-label>P-ven</mat-label>
+            </th>
+            <td mat-cell *matCellDef="let row">
+              <mat-label class="mobile-field mobile-label bold">P-ven</mat-label>
+              <mat-form-field class="w100" appearance="legacy">
+                <input matInput [(ngModel)]="row.pven" maxlength="250">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="ptm">
+            <th mat-header-cell *matHeaderCellDef>
+              <mat-label>PTM</mat-label>
+            </th>
+            <td mat-cell *matCellDef="let row">
+              <mat-label class="mobile-field mobile-label bold">PTM</mat-label>
+              <mat-form-field class="w100" appearance="legacy">
+                <input matInput [(ngModel)]="row.ptm" maxlength="250">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="tasaUf">
+            <th mat-header-cell *matHeaderCellDef>
+              <mat-label>Tasa de UF</mat-label>
+            </th>
+            <td mat-cell *matCellDef="let row">
+              <mat-label class="mobile-field mobile-label bold">Tasa de UF</mat-label>
+              <mat-form-field class="w100" appearance="legacy">
+                <input matInput [(ngModel)]="row.tasaUf" maxlength="250">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="uf">
+            <th mat-header-cell *matHeaderCellDef>
+              <mat-label>UF</mat-label>
+            </th>
+            <td mat-cell *matCellDef="let row">
+              <mat-label class="mobile-field mobile-label bold">UF</mat-label>
+              <mat-form-field class="w100" appearance="legacy">
+                <input matInput [(ngModel)]="row.uf" maxlength="250">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="ktv">
+            <th mat-header-cell *matHeaderCellDef>
+              <mat-label>KTV</mat-label>
+            </th>
+            <td mat-cell *matCellDef="let row">
+              <mat-label class="mobile-field mobile-label bold">KTV</mat-label>
+              <mat-form-field class="w100" appearance="legacy">
+                <input matInput [(ngModel)]="row.ktv" maxlength="250">
+              </mat-form-field>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="agregar">
+            <th mat-header-cell *matHeaderCellDef>
+            </th>
+            <td mat-cell *matCellDef="let row; let i = index">
+
+              <button mat-icon-button matSuffix (click)="ngRemoveTranshemodialisis(i)" *ngIf="i != inTranshemodialisis.length - 1">
+                <mat-icon color="warn" matTooltip="Eliminar">remove</mat-icon>
+              </button>
+
+              <button mat-icon-button matSuffix (click)="ngAddTranshemodialisis()" *ngIf="i == inTranshemodialisis.length - 1">
+                <mat-icon class="color-verde" matTooltip="Agregar">add</mat-icon>
+              </button>
+
+            </td>
+          </ng-container>
+
+        </table>
+      </div>
+
+      <div class="w100 padding align-center">
+
+        <button mat-raised-button class="wpx125 background-4" (click)="ngHandle('hemodialisis');">
+          <mat-icon class="fl-left button-icon">save</mat-icon>
+          Guardar
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+

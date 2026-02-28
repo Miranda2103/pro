@@ -5,7 +5,7 @@ import { MatDrawerMode, MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
 import { Message } from '.././message/message';
 import { Shared } from '.././shared/shared';
-import { IResponse, IRolMenuView, IRolSubMenuView } from '../interface/interface-pro.interface';
+import { IResponse, IRolMenuView, IRolSubMenuView, ISexo } from '../interface/interface-pro.interface';
 import { ServiceProService } from '../service/service-pro.service';
 
 @Component({
@@ -50,7 +50,7 @@ export class MainComponent implements OnInit, AfterViewInit {
     }
   }
 
-  constructor(private cd: ChangeDetectorRef, public servicePro: ServiceProService, public shared: Shared, public message: Message, public dialog: MatDialog, private router: Router) { }
+  constructor(private cd: ChangeDetectorRef, public service: ServiceProService, public shared: Shared, public message: Message, public dialog: MatDialog, private router: Router) { }
 
   ngOnInit() {
     this.ngResize();
@@ -110,12 +110,12 @@ export class MainComponent implements OnInit, AfterViewInit {
   ngModelGet(option: string, data?: any): void {
 
     switch (option) {
-      case 'inRolMenuView': {
+      case 'iRolMenuView': {
         const model: IRolMenuView[] = data as IRolMenuView[];
         this.inRolMenuView = model;
         break;
       }
-      case 'inRolSubMenuView': {
+      case 'iRolSubMenuView': {
         const model: IRolSubMenuView[] = data as IRolSubMenuView[];
         this.inRolSubMenuView = model;
         break;
@@ -167,11 +167,11 @@ export class MainComponent implements OnInit, AfterViewInit {
 
   async ngGetRolMenuView(option: number, model: IRolMenuView) {
 
-    await this.servicePro.ngGetRolMenuView(option, model)
+    await this.service.ngGetRolMenuView(option, model)
       .then((r: IResponse) => {
 
         if (r.success) {
-          this.ngModelGet('inRolMenuView', r.data);
+          this.ngModelGet('iRolMenuView', r.data);
           this.ngController('getRolSubMenuView');
         }
         else {
@@ -189,11 +189,11 @@ export class MainComponent implements OnInit, AfterViewInit {
 
   async ngGetRolSubMenuView(option: number, model: IRolSubMenuView) {
 
-    await this.servicePro.ngGetRolSubMenuView(option, model)
+    await this.service.ngGetRolSubMenuView(option, model)
       .then((r: IResponse) => {
 
         if (r.success) {
-          this.ngModelGet('inRolSubMenuView', r.data);
+          this.ngModelGet('iRolSubMenuView', r.data);
           this.ngMenu();
         }
         else {

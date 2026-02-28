@@ -1,4 +1,4 @@
-﻿using pro.Model.pro;
+﻿using pro.Model;
 using Microsoft.EntityFrameworkCore;
 
 namespace pro.Context
@@ -7,6 +7,11 @@ namespace pro.Context
     {
         #region table
 
+        public DbSet<MPaciente> Paciente { get; set; }
+        public DbSet<MPacienteImagen> PacienteImagen { get; set; }
+        public DbSet<MHemodialisis> Hemodialisis { get; set; }
+        public DbSet<MTranshemodialisis> Transhemodialisis { get; set; }
+        public DbSet<MAgenda> Agenda { get; set; }
         public DbSet<MOrganizacion> Organizacion { get; set; }
         public DbSet<MRol> Rol { get; set; }
         public DbSet<MRolMenu> RolMenu { get; set; }
@@ -14,6 +19,17 @@ namespace pro.Context
         public DbSet<MMenu> Menu { get; set; }
         public DbSet<MSubMenu> SubMenu { get; set; }
         public DbSet<MUsuario> Usuario { get; set; }
+
+        #endregion
+
+        #region list
+
+        public DbSet<MSexo> Sexo { get; set; }
+        public DbSet<MEstado> Estado { get; set; }
+        public DbSet<MMunicipio> Municipio { get; set; }
+        public DbSet<MColonia> Colonia { get; set; }
+        public DbSet<MDecision> Decision { get; set; }
+        public DbSet<MEquipo> Equipo { get; set; }
 
         #endregion
 
@@ -26,6 +42,16 @@ namespace pro.Context
         #endregion
 
         #region store
+        public DbSet<MFiltroLista> PacienteFiltro { get; set; }
+        public DbSet<MFiltroTotal> PacienteTotal { get; set; }
+        public DbSet<MWPacienteVista> PacienteVista { get; set; }
+        public DbSet<MWPacienteExportar> PacienteExportar { get; set; }
+
+        public DbSet<MFiltroLista> AgendaFiltro { get; set; }
+        public DbSet<MFiltroTotal> AgendaTotal { get; set; }
+        public DbSet<MWAgendaVista> AgendaVista { get; set; }
+        public DbSet<MWAgendaExportar> AgendaExportar { get; set; }
+
         public DbSet<MFiltroLista> OrganizacionFiltro { get; set; }
         public DbSet<MFiltroTotal> OrganizacionTotal { get; set; }
         public DbSet<MWOrganizacionVista> OrganizacionVista { get; set; }
@@ -55,6 +81,13 @@ namespace pro.Context
 
         public DBPRO(DbContextOptions<DBPRO> dbContextOptions) : base(dbContextOptions)
         {
+            #region table
+
+            Paciente = Set<MPaciente>();
+            PacienteImagen = Set<MPacienteImagen>();
+            Hemodialisis = Set<MHemodialisis>();
+            Transhemodialisis = Set<MTranshemodialisis>();
+            Agenda = Set<MAgenda>();
             Organizacion = Set<MOrganizacion>();
             Rol = Set<MRol>();
             RolMenu = Set<MRolMenu>();
@@ -63,9 +96,38 @@ namespace pro.Context
             SubMenu = Set<MSubMenu>();
             Usuario = Set<MUsuario>();
 
+            #endregion
+
+            #region list
+
+            Sexo = Set<MSexo>();
+            Estado = Set<MEstado>();
+            Municipio = Set<MMunicipio>();
+            Colonia = Set<MColonia>();
+            Decision = Set<MDecision>();
+            Equipo = Set<MEquipo>();
+
+            #endregion
+
+            #region view
+
             ViewUsuario = Set<MVUsuario>();
             ViewRolMenu = Set<MVRolMenu>();
             ViewRolSubMenu = Set<MVRolSubMenu>();
+
+            #endregion
+
+            #region store
+
+            PacienteFiltro = Set<MFiltroLista>();
+            PacienteTotal = Set<MFiltroTotal>();
+            PacienteVista = Set<MWPacienteVista>();
+            PacienteExportar = Set<MWPacienteExportar>();
+
+            AgendaFiltro = Set<MFiltroLista>();
+            AgendaTotal = Set<MFiltroTotal>();
+            AgendaVista = Set<MWAgendaVista>();
+            AgendaExportar = Set<MWAgendaExportar>();
 
             OrganizacionFiltro = Set<MFiltroLista>();
             OrganizacionTotal = Set<MFiltroTotal>();
@@ -91,16 +153,30 @@ namespace pro.Context
             UsuarioTotal = Set<MFiltroTotal>();
             UsuarioVista = Set<MWUsuarioVista>();
             UsuarioExportar = Set<MWUsuarioExportar>();
+
+            #endregion
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            #region view
+
             modelBuilder.Entity<MVUsuario>(r => { r.HasNoKey(); r.ToView("vwUsuario"); });
             modelBuilder.Entity<MVRolMenu>(r => { r.HasNoKey(); r.ToView("vwRolMenu"); });
             modelBuilder.Entity<MVRolSubMenu>(r => { r.HasNoKey(); r.ToView("vwRolSubMenu"); });
 
+            #endregion
+
+            #region store
+
             modelBuilder.Entity<MFiltroLista>(r => { r.HasNoKey(); });
             modelBuilder.Entity<MFiltroTotal>(r => { r.HasNoKey(); });
+
+            modelBuilder.Entity<MWPacienteVista>(r => { r.HasNoKey(); });
+            modelBuilder.Entity<MWPacienteExportar>(r => { r.HasNoKey(); });
+
+            modelBuilder.Entity<MWAgendaVista>(r => { r.HasNoKey(); });
+            modelBuilder.Entity<MWAgendaExportar>(r => { r.HasNoKey(); });
 
             modelBuilder.Entity<MWOrganizacionVista>(r => { r.HasNoKey(); });
             modelBuilder.Entity<MWOrganizacionExportar>(r => { r.HasNoKey(); });
@@ -116,6 +192,8 @@ namespace pro.Context
 
             modelBuilder.Entity<MWUsuarioVista>(r => { r.HasNoKey(); });
             modelBuilder.Entity<MWUsuarioExportar>(r => { r.HasNoKey(); });
+
+            #endregion
         }
 
     }

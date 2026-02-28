@@ -1,10 +1,10 @@
 ﻿using pro.Context;
-using pro.Interface.pro;
-using pro.Model.pro;
+using pro.Interface;
+using pro.Model;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
 
-namespace pro.Repository.pro
+namespace pro.Repository
 {
     public class RVRolSubMenu : IVRolSubMenu
     {

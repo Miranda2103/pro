@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using pro.Context;
-using pro.Logic.pro;
-using pro.Model.pro;
+using pro.Logic;
+using pro.Model;
 
-namespace pro.Api.Controllers.pro
+namespace pro.Api.Controllers
 {
     [Route("api/pro/[controller]")]
     [ApiController]

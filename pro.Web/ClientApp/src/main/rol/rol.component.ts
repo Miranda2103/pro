@@ -17,7 +17,6 @@ import { DialogRolComponent } from '../dialog-rol/dialog-rol.component';
   styleUrls: ['./rol.component.css']
 })
 export class RolComponent implements OnInit {
-
   @ViewChild(MatSort) sort: MatSort;
 
   iFiltro: IFiltro;
@@ -65,7 +64,7 @@ export class RolComponent implements OnInit {
 
     switch (option) {
       case 'iFiltro': {
-        this.iFiltro = { idOrganizacion: this.shared.idOrganizacion, idRol: 0, idMenu: 0, registros: this.pageSize, pagina: this.pageIndex, ordenColumna: '', ordenValor: '', filtro: '', filtroColumna: '', filtroValor: '', formato: '' };
+        this.iFiltro = { idOrganizacion: this.shared.idOrganizacion, idRol: 0, idMenu: 0, fechaInicio: '', fechaFin: '', registros: this.pageSize, pagina: this.pageIndex, ordenColumna: '', ordenValor: '', filtro: '', filtroColumna: '', filtroValor: '', formato: '' };
         break;
       }
       case 'inFiltroLista': {

@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,6 +30,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSelectFilterModule } from 'mat-select-filter';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -44,6 +46,7 @@ import { MatStepperModule } from '@angular/material/stepper';
     BrowserAnimationsModule,
     FormsModule,
     NgxChartsModule,
+    FullCalendarModule,
 
     MatDialogModule,
     MatButtonModule,
@@ -55,7 +58,8 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatSelectModule,
     MatSelectFilterModule,
     MatBadgeModule,
-    MatStepperModule
+    MatStepperModule,
+    MatSnackBarModule
   ],
   exports: [
     CommonModule,

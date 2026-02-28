@@ -73,7 +73,7 @@ export class DialogRolSubMenuComponent implements OnInit {
 
     switch (option) {
       case 'iFiltro': {
-        this.iFiltro = { idOrganizacion: this.shared.idOrganizacion, idRol: this.idRol, idMenu: this.iRolMenuVista.idMenu, registros: this.pageSize, pagina: this.pageIndex, ordenColumna: '', ordenValor: '', filtro: '', filtroColumna: '', filtroValor: '', formato: '' };
+        this.iFiltro = { idOrganizacion: this.shared.idOrganizacion, idRol: this.idRol, idMenu: this.iRolMenuVista.idMenu, fechaInicio: '', fechaFin: '', registros: this.pageSize, pagina: this.pageIndex, ordenColumna: '', ordenValor: '', filtro: '', filtroColumna: '', filtroValor: '', formato: '' };
         break;
       }
       case 'inFiltroLista': {

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace pro.Model.pro
+namespace pro.Model
 {
     [DisplayName("UsuarioStoreExportar")]
     public class MWUsuarioExportar

@@ -1,0 +1,85 @@
+.mat-column-editar {
+  width: 1% !important;
+}
+
+.mat-column-hora {
+  width: 7% !important;
+}
+
+.mat-column-ta {
+  width: 7% !important;
+}
+
+.mat-column-fc {
+  width: 7% !important;
+}
+
+.mat-column-fr {
+  width: 7% !important;
+}
+
+.mat-column-sat {
+  width: 7% !important;
+}
+
+.mat-column-temp {
+  width: 7% !important;
+}
+
+.mat-column-q5 {
+  width: 7% !important;
+}
+
+.mat-column-q0 {
+  width: 7% !important;
+}
+
+.mat-column-part {
+  width: 7% !important;
+}
+
+.mat-column-pven {
+  width: 7% !important;
+}
+
+.mat-column-ptm {
+  width: 7% !important;
+}
+
+.mat-column-tasa {
+  width: 7% !important;
+}
+
+.mat-column-uf {
+  width: 7% !important;
+}
+
+.mat-column-ktv {
+  width: 7% !important;
+}
+
+.mat-column-agregar {
+  width: 1% !important;
+}
+
+@media screen and (max-width:600px) {
+
+  .mat-column-editar,
+  .mat-column-hora,
+  .mat-column-ta,
+  .mat-column-fc,
+  .mat-column-fr,
+  .mat-column-sat,
+  .mat-column-temp,
+  .mat-column-q5,
+  .mat-column-q0,
+  .mat-column-part,
+  .mat-column-pven,
+  .mat-column-ptm,
+  .mat-column-tasa,
+  .mat-column-uf,
+  .mat-column-ktv,
+  .mat-column-agregar {
+    width: 100% !important;
+  }
+}

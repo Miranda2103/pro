@@ -5,6 +5,2197 @@
     "version": "v1"
   },
   "paths": {
+    "/api/pro/Agenda/Get": {
+      "get": {
+        "tags": [
+          "Agenda"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdPaciente",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdEquipo",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Comentario",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "FechaAgenda",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "IdOrganizacion",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdUsuarioInserta",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInserta",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "IdUsuarioActualiza",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaActualiza",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Activo",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Agenda/Post": {
+      "post": {
+        "tags": [
+          "Agenda"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Agenda"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Agenda"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Agenda"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Agenda/Put": {
+      "put": {
+        "tags": [
+          "Agenda"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Agenda"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Agenda"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Agenda"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Agenda/Delete": {
+      "delete": {
+        "tags": [
+          "Agenda"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Agenda"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Agenda"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Agenda"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Colonia/Get": {
+      "get": {
+        "tags": [
+          "Colonia"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdEstado",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdMunicipio",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Colonia",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "CodigoPostal",
+            "in": "query",
+            "schema": {
+              "maxLength": 5,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdUsuarioInserta",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInserta",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "IdUsuarioActualiza",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaActualiza",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Activo",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Colonia/Post": {
+      "post": {
+        "tags": [
+          "Colonia"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Colonia"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Colonia"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Colonia"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Colonia/Put": {
+      "put": {
+        "tags": [
+          "Colonia"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Colonia"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Colonia"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Colonia"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Colonia/Delete": {
+      "delete": {
+        "tags": [
+          "Colonia"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Colonia"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Colonia"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Colonia"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Decision/Get": {
+      "get": {
+        "tags": [
+          "Decision"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Decision",
+            "in": "query",
+            "schema": {
+              "maxLength": 50,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdUsuarioInserta",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInserta",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "IdUsuarioActualiza",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaActualiza",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Activo",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Decision/Post": {
+      "post": {
+        "tags": [
+          "Decision"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Decision"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Decision"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Decision"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Decision/Put": {
+      "put": {
+        "tags": [
+          "Decision"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Decision"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Decision"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Decision"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Decision/Delete": {
+      "delete": {
+        "tags": [
+          "Decision"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Decision"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Decision"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Decision"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Equipo/Get": {
+      "get": {
+        "tags": [
+          "Equipo"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Equipo",
+            "in": "query",
+            "schema": {
+              "maxLength": 50,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdOrganizacion",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdUsuarioInserta",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInserta",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "IdUsuarioActualiza",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaActualiza",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Activo",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Equipo/Post": {
+      "post": {
+        "tags": [
+          "Equipo"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Equipo"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Equipo"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Equipo"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Equipo/Put": {
+      "put": {
+        "tags": [
+          "Equipo"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Equipo"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Equipo"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Equipo"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Equipo/Delete": {
+      "delete": {
+        "tags": [
+          "Equipo"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Equipo"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Equipo"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Equipo"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Estado/Get": {
+      "get": {
+        "tags": [
+          "Estado"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Estado",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdUsuarioInserta",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInserta",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "IdUsuarioActualiza",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaActualiza",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Activo",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Estado/Post": {
+      "post": {
+        "tags": [
+          "Estado"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Estado"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Estado"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Estado"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Estado/Put": {
+      "put": {
+        "tags": [
+          "Estado"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Estado"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Estado"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Estado"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Estado/Delete": {
+      "delete": {
+        "tags": [
+          "Estado"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Estado"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Estado"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Estado"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Hemodialisis/Get": {
+      "get": {
+        "tags": [
+          "Hemodialisis"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdAgenda",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Diagnostico",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "FechaIngreso",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Talla",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Peso",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "TipoDe",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "FechaAn",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Residual",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Alergias",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "FechaPanelViral",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "AgsVHB",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "AcVHC",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "AcVIH",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdDecisionSalida",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionBaston",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionAuditiva",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionLinguistica",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionAndadera",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionCamilla",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionVisual",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionCreencias",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Filtro",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Tiempo",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Qs",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Qo",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Temp",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Na",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "C",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Qa",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Hcc",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Anticoagulacion",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Rodo",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Infusion",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Ktv",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Uf",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "ResumenFiltro",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "FrecuenciaHemodialisis",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "IndicacionesMedicas",
+            "in": "query",
+            "schema": {
+              "maxLength": 1000,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "IndicacionesVerbales",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "IndicacionesTelefonicas",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "IndicacionesElectronicas",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdDecisionIndicacion",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionPaciente",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionProcedimiento",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionVerificacion",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionPreescripcion",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionAngioacceso",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionTimeOut",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionEquipo",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionRiesgo",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionIdentifico",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "PreTAPie",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "PreFCPie",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "PreTempC",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "PreTASentado",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "PreFCSentado",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "PreSaturacion",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "PreFRespiratoria",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "PrePesoEgreso",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "PrePesoActual",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "PosTAPie",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "PosFCPie",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "PosTempC",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "PosTASentado",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "PosFCSentado",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "PosSaturacion",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "PosFRespiratoria",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "PosGananciaPeso",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "PosPesoFinal",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdDecisionPreExterno",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionPreInterno",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionPreCateter",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionPrePermeabilidad",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionPreInfeccion",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionTraExterno",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionTraInterno",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionTraCateter",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionTraPermeabilidad",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionTraInfeccion",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionPosExterno",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionPosInterno",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionPosCateter",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionPosPermeabilidad",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionPosInfeccion",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "ObservacionCateter",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdDecisionPreTrill",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionPreEdena",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionPreEquimosis",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionPreHematoma",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionPreAnerisma",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionPreAdecuada",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionPreDato",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionTraTrill",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionTraEdena",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionTraEquimosis",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionTraHematoma",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionTraAnerisma",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionTraAdecuada",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionTraDato",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionPosTrill",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionPosEdena",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionPosEquimosis",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionPosHematoma",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionPosAnerisma",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionPosAdecuada",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdDecisionPosDato",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "ObservacionFistula",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdOrganizacion",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdUsuarioInserta",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInserta",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "IdUsuarioActualiza",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaActualiza",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Activo",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Hemodialisis/Post": {
+      "post": {
+        "tags": [
+          "Hemodialisis"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Hemodialisis"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Hemodialisis"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Hemodialisis"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Hemodialisis/Put": {
+      "put": {
+        "tags": [
+          "Hemodialisis"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Hemodialisis"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Hemodialisis"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Hemodialisis"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Hemodialisis/Delete": {
+      "delete": {
+        "tags": [
+          "Hemodialisis"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Hemodialisis"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Hemodialisis"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Hemodialisis"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/pro/Menu/Get": {
       "get": {
         "tags": [
@@ -220,6 +2411,215 @@
                 "type": "array",
                 "items": {
                   "$ref": "#/components/schemas/Menu"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Municipio/Get": {
+      "get": {
+        "tags": [
+          "Municipio"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdEstado",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Municipio",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdUsuarioInserta",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInserta",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "IdUsuarioActualiza",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaActualiza",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Activo",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Municipio/Post": {
+      "post": {
+        "tags": [
+          "Municipio"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Municipio"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Municipio"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Municipio"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Municipio/Put": {
+      "put": {
+        "tags": [
+          "Municipio"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Municipio"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Municipio"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Municipio"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Municipio/Delete": {
+      "delete": {
+        "tags": [
+          "Municipio"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Municipio"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Municipio"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Municipio"
                 }
               }
             }
@@ -532,6 +2932,691 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Paciente/Get": {
+      "get": {
+        "tags": [
+          "Paciente"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Paciente",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Nombre",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "ApellidoPaterno",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "ApellidoMaterno",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "NombreCompleto",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FechaNacimiento",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Edad",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "IdSexo",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdEstado",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdMunicipio",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdColonia",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "CodigoPostal",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Calle",
+            "in": "query",
+            "schema": {
+              "maxLength": 500,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "NumeroInterior",
+            "in": "query",
+            "schema": {
+              "maxLength": 10,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "NumeroExterior",
+            "in": "query",
+            "schema": {
+              "maxLength": 10,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "TelefonoMovil",
+            "in": "query",
+            "schema": {
+              "maxLength": 10,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "TelefonoCasa",
+            "in": "query",
+            "schema": {
+              "maxLength": 10,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Correo",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdOrganizacion",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdUsuarioInserta",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInserta",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "IdUsuarioActualiza",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaActualiza",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Activo",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Paciente/Post": {
+      "post": {
+        "tags": [
+          "Paciente"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Paciente"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Paciente"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Paciente"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Paciente/Put": {
+      "put": {
+        "tags": [
+          "Paciente"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Paciente"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Paciente"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Paciente"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Paciente/Delete": {
+      "delete": {
+        "tags": [
+          "Paciente"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Paciente"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Paciente"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Paciente"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/PacienteImagen/Get": {
+      "get": {
+        "tags": [
+          "PacienteImagen"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdPaciente",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Ruta",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Nombre",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Extension",
+            "in": "query",
+            "schema": {
+              "maxLength": 5,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Archivo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Imagen",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdOrganizacion",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdUsuarioInserta",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInserta",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "IdUsuarioActualiza",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaActualiza",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Activo",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/PacienteImagen/Post": {
+      "post": {
+        "tags": [
+          "PacienteImagen"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "paciente": {
+                    "type": "string"
+                  },
+                  "idPaciente": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "ContentType": {
+                    "type": "string"
+                  },
+                  "ContentDisposition": {
+                    "type": "string"
+                  },
+                  "Headers": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "Length": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "Name": {
+                    "type": "string"
+                  },
+                  "FileName": {
+                    "type": "string"
+                  },
+                  "idOrganizacion": {
+                    "type": "integer",
+                    "format": "int64"
+                  },
+                  "idUsuarioInserta": {
+                    "type": "integer",
+                    "format": "int64"
+                  }
+                }
+              },
+              "encoding": {
+                "paciente": {
+                  "style": "form"
+                },
+                "idPaciente": {
+                  "style": "form"
+                },
+                "ContentType": {
+                  "style": "form"
+                },
+                "ContentDisposition": {
+                  "style": "form"
+                },
+                "Headers": {
+                  "style": "form"
+                },
+                "Length": {
+                  "style": "form"
+                },
+                "Name": {
+                  "style": "form"
+                },
+                "FileName": {
+                  "style": "form"
+                },
+                "idOrganizacion": {
+                  "style": "form"
+                },
+                "idUsuarioInserta": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/PacienteImagen/Put": {
+      "put": {
+        "tags": [
+          "PacienteImagen"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PacienteImagen"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PacienteImagen"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PacienteImagen"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/PacienteImagen/Delete": {
+      "delete": {
+        "tags": [
+          "PacienteImagen"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/PacienteImagen"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/PacienteImagen"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/PacienteImagen"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/PacienteImagen/Download": {
+      "get": {
+        "tags": [
+          "PacienteImagen"
+        ],
+        "parameters": [
+          {
+            "name": "archivo",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Success"
@@ -1190,6 +4275,215 @@
         }
       }
     },
+    "/api/pro/Sexo/Get": {
+      "get": {
+        "tags": [
+          "Sexo"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Sexo",
+            "in": "query",
+            "schema": {
+              "maxLength": 50,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdOrganizacion",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdUsuarioInserta",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInserta",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "IdUsuarioActualiza",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaActualiza",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Activo",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Sexo/Post": {
+      "post": {
+        "tags": [
+          "Sexo"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sexo"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sexo"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sexo"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Sexo/Put": {
+      "put": {
+        "tags": [
+          "Sexo"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sexo"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sexo"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sexo"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Sexo/Delete": {
+      "delete": {
+        "tags": [
+          "Sexo"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Sexo"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Sexo"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Sexo"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/pro/SubMenu/Get": {
       "get": {
         "tags": [
@@ -1445,6 +4739,349 @@
             "application/*+json": {
               "schema": {
                 "$ref": "#/components/schemas/Autenticacion"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Transhemodialisis/Get": {
+      "get": {
+        "tags": [
+          "Transhemodialisis"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdAgenda",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "Hora",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Ta",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Fc",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Fr",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Sat",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Temp",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Qc",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Qo",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Part",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Pven",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Ptm",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "TasaUf",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Uf",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "Ktv",
+            "in": "query",
+            "schema": {
+              "maxLength": 250,
+              "minLength": 0,
+              "type": "string"
+            }
+          },
+          {
+            "name": "IdOrganizacion",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdUsuarioInserta",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInserta",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "IdUsuarioActualiza",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaActualiza",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Activo",
+            "in": "query",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Transhemodialisis/Post": {
+      "post": {
+        "tags": [
+          "Transhemodialisis"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Transhemodialisis"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Transhemodialisis"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Transhemodialisis"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Transhemodialisis/Put": {
+      "put": {
+        "tags": [
+          "Transhemodialisis"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Transhemodialisis"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Transhemodialisis"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Transhemodialisis"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/Transhemodialisis/Delete": {
+      "delete": {
+        "tags": [
+          "Transhemodialisis"
+        ],
+        "parameters": [
+          {
+            "name": "option",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Transhemodialisis"
+                }
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Transhemodialisis"
+                }
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/Transhemodialisis"
+                }
               }
             }
           }
@@ -2082,6 +5719,454 @@
         }
       }
     },
+    "/api/pro/WAgenda/GetFiltroLista": {
+      "get": {
+        "tags": [
+          "WAgenda"
+        ],
+        "parameters": [
+          {
+            "name": "IdOrganizacion",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdRol",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdMenu",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Registros",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Pagina",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "OrdenColumna",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrdenValor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Filtro",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FiltroColumna",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FiltroValor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Formato",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/WAgenda/GetFiltroTotal": {
+      "get": {
+        "tags": [
+          "WAgenda"
+        ],
+        "parameters": [
+          {
+            "name": "IdOrganizacion",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdRol",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdMenu",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Registros",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Pagina",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "OrdenColumna",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrdenValor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Filtro",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FiltroColumna",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FiltroValor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Formato",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/WAgenda/GetFiltroVista": {
+      "get": {
+        "tags": [
+          "WAgenda"
+        ],
+        "parameters": [
+          {
+            "name": "IdOrganizacion",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdRol",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdMenu",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Registros",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Pagina",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "OrdenColumna",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrdenValor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Filtro",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FiltroColumna",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FiltroValor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Formato",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/WAgenda/GetFiltroExportar": {
+      "get": {
+        "tags": [
+          "WAgenda"
+        ],
+        "parameters": [
+          {
+            "name": "IdOrganizacion",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdRol",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdMenu",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Registros",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Pagina",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "OrdenColumna",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrdenValor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Filtro",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FiltroColumna",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FiltroValor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Formato",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/pro/WOrganizacion/GetFiltroLista": {
       "get": {
         "tags": [
@@ -2110,6 +6195,22 @@
             "schema": {
               "type": "integer",
               "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
             }
           },
           {
@@ -2209,6 +6310,22 @@
             }
           },
           {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
             "name": "Registros",
             "in": "query",
             "schema": {
@@ -2302,6 +6419,22 @@
             "schema": {
               "type": "integer",
               "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
             }
           },
           {
@@ -2401,6 +6534,470 @@
             }
           },
           {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Registros",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Pagina",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "OrdenColumna",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrdenValor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Filtro",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FiltroColumna",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FiltroValor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Formato",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/WPaciente/GetFiltroLista": {
+      "get": {
+        "tags": [
+          "WPaciente"
+        ],
+        "parameters": [
+          {
+            "name": "IdOrganizacion",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdRol",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdMenu",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Registros",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Pagina",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "OrdenColumna",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrdenValor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Filtro",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FiltroColumna",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FiltroValor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Formato",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/WPaciente/GetFiltroTotal": {
+      "get": {
+        "tags": [
+          "WPaciente"
+        ],
+        "parameters": [
+          {
+            "name": "IdOrganizacion",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdRol",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdMenu",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Registros",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Pagina",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "OrdenColumna",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrdenValor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Filtro",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FiltroColumna",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FiltroValor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Formato",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/WPaciente/GetFiltroVista": {
+      "get": {
+        "tags": [
+          "WPaciente"
+        ],
+        "parameters": [
+          {
+            "name": "IdOrganizacion",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdRol",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdMenu",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "Registros",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "Pagina",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "OrdenColumna",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "OrdenValor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Filtro",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FiltroColumna",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "FiltroValor",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "Formato",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/pro/WPaciente/GetFiltroExportar": {
+      "get": {
+        "tags": [
+          "WPaciente"
+        ],
+        "parameters": [
+          {
+            "name": "IdOrganizacion",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdRol",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "IdMenu",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
             "name": "Registros",
             "in": "query",
             "schema": {
@@ -2494,6 +7091,22 @@
             "schema": {
               "type": "integer",
               "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
             }
           },
           {
@@ -2593,6 +7206,22 @@
             }
           },
           {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
             "name": "Registros",
             "in": "query",
             "schema": {
@@ -2686,6 +7315,22 @@
             "schema": {
               "type": "integer",
               "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
             }
           },
           {
@@ -2785,6 +7430,22 @@
             }
           },
           {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
             "name": "Registros",
             "in": "query",
             "schema": {
@@ -2878,6 +7539,22 @@
             "schema": {
               "type": "integer",
               "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
             }
           },
           {
@@ -2977,6 +7654,22 @@
             }
           },
           {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
             "name": "Registros",
             "in": "query",
             "schema": {
@@ -3070,6 +7763,22 @@
             "schema": {
               "type": "integer",
               "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
             }
           },
           {
@@ -3169,6 +7878,22 @@
             }
           },
           {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
             "name": "Registros",
             "in": "query",
             "schema": {
@@ -3262,6 +7987,22 @@
             "schema": {
               "type": "integer",
               "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
             }
           },
           {
@@ -3361,6 +8102,22 @@
             }
           },
           {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
             "name": "Registros",
             "in": "query",
             "schema": {
@@ -3454,6 +8211,22 @@
             "schema": {
               "type": "integer",
               "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
             }
           },
           {
@@ -3553,6 +8326,22 @@
             }
           },
           {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
             "name": "Registros",
             "in": "query",
             "schema": {
@@ -3646,6 +8435,22 @@
             "schema": {
               "type": "integer",
               "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
             }
           },
           {
@@ -3745,6 +8550,22 @@
             }
           },
           {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
             "name": "Registros",
             "in": "query",
             "schema": {
@@ -3838,6 +8659,22 @@
             "schema": {
               "type": "integer",
               "format": "int64"
+            }
+          },
+          {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
             }
           },
           {
@@ -3937,6 +8774,22 @@
             }
           },
           {
+            "name": "FechaInicio",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
+            "name": "FechaFin",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          {
             "name": "Registros",
             "in": "query",
             "schema": {
@@ -4005,6 +8858,65 @@
   },
   "components": {
     "schemas": {
+      "Agenda": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idPaciente": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idEquipo": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "comentario": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "fechaAgenda": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fechaInicio": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "fechaFin": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "idOrganizacion": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idUsuarioInserta": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fechaInserta": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "idUsuarioActualiza": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fechaActualiza": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "activo": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "Autenticacion": {
         "type": "object",
         "properties": {
@@ -4015,6 +8927,723 @@
           "contrasena": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Colonia": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idEstado": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idMunicipio": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "colonia": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "codigoPostal": {
+            "maxLength": 5,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "idUsuarioInserta": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fechaInserta": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "idUsuarioActualiza": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fechaActualiza": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "activo": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Decision": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "decision": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "idUsuarioInserta": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fechaInserta": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "idUsuarioActualiza": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fechaActualiza": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "activo": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Equipo": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "equipo": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "idOrganizacion": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idUsuarioInserta": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fechaInserta": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "idUsuarioActualiza": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fechaActualiza": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "activo": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Estado": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "estado": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "idUsuarioInserta": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fechaInserta": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "idUsuarioActualiza": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fechaActualiza": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "activo": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Hemodialisis": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idAgenda": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "diagnostico": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "fechaIngreso": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "talla": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "peso": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "tipoDe": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "fechaAn": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "residual": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "alergias": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "fechaPanelViral": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "agsVHB": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "acVHC": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "acVIH": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "idDecisionSalida": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionBaston": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionAuditiva": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionLinguistica": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionAndadera": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionCamilla": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionVisual": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionCreencias": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "filtro": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "tiempo": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "qs": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "qo": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "temp": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "na": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "c": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "qa": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "hcc": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "anticoagulacion": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "rodo": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "infusion": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "ktv": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "uf": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "resumenFiltro": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "frecuenciaHemodialisis": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "indicacionesMedicas": {
+            "maxLength": 1000,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "indicacionesVerbales": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "indicacionesTelefonicas": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "indicacionesElectronicas": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "idDecisionIndicacion": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionPaciente": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionProcedimiento": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionVerificacion": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionPreescripcion": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionAngioacceso": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionTimeOut": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionEquipo": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionRiesgo": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionIdentifico": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "preTAPie": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "preFCPie": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "preTempC": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "preTASentado": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "preFCSentado": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "preSaturacion": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "preFRespiratoria": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "prePesoEgreso": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "prePesoActual": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "posTAPie": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "posFCPie": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "posTempC": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "posTASentado": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "posFCSentado": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "posSaturacion": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "posFRespiratoria": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "posGananciaPeso": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "posPesoFinal": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "idDecisionPreExterno": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionPreInterno": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionPreCateter": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionPrePermeabilidad": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionPreInfeccion": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionTraExterno": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionTraInterno": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionTraCateter": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionTraPermeabilidad": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionTraInfeccion": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionPosExterno": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionPosInterno": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionPosCateter": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionPosPermeabilidad": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionPosInfeccion": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "observacionCateter": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "idDecisionPreTrill": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionPreEdena": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionPreEquimosis": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionPreHematoma": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionPreAnerisma": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionPreAdecuada": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionPreDato": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionTraTrill": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionTraEdena": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionTraEquimosis": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionTraHematoma": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionTraAnerisma": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionTraAdecuada": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionTraDato": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionPosTrill": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionPosEdena": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionPosEquimosis": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionPosHematoma": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionPosAnerisma": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionPosAdecuada": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idDecisionPosDato": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "observacionFistula": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "idOrganizacion": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idUsuarioInserta": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fechaInserta": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "idUsuarioActualiza": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fechaActualiza": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "activo": {
+            "type": "boolean"
           }
         },
         "additionalProperties": false
@@ -4047,6 +9676,45 @@
           "orden": {
             "type": "integer",
             "format": "int32"
+          },
+          "idUsuarioInserta": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fechaInserta": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "idUsuarioActualiza": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fechaActualiza": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "activo": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Municipio": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idEstado": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "municipio": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
           },
           "idUsuarioInserta": {
             "type": "integer",
@@ -4152,6 +9820,192 @@
             "minLength": 0,
             "type": "string",
             "nullable": true
+          },
+          "idUsuarioInserta": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fechaInserta": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "idUsuarioActualiza": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fechaActualiza": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "activo": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Paciente": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "paciente": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "apellidoPaterno": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "apellidoMaterno": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "nombreCompleto": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaNacimiento": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "edad": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idSexo": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idEstado": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idMunicipio": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idColonia": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "codigoPostal": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "calle": {
+            "maxLength": 500,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "numeroInterior": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "numeroExterior": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "telefonoMovil": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "telefonoCasa": {
+            "maxLength": 10,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "correo": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "idOrganizacion": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idUsuarioInserta": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fechaInserta": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "idUsuarioActualiza": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fechaActualiza": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "activo": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PacienteImagen": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idPaciente": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ruta": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "nombre": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "extension": {
+            "maxLength": 5,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "archivo": {
+            "type": "string",
+            "nullable": true
+          },
+          "imagen": {
+            "type": "string",
+            "nullable": true
+          },
+          "idOrganizacion": {
+            "type": "integer",
+            "format": "int64"
           },
           "idUsuarioInserta": {
             "type": "integer",
@@ -4292,6 +10146,45 @@
         },
         "additionalProperties": false
       },
+      "Sexo": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "sexo": {
+            "maxLength": 50,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "idOrganizacion": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idUsuarioInserta": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fechaInserta": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "idUsuarioActualiza": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fechaActualiza": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "activo": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
       "SubMenu": {
         "type": "object",
         "properties": {
@@ -4324,6 +10217,127 @@
           "orden": {
             "type": "integer",
             "format": "int32"
+          },
+          "idUsuarioInserta": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fechaInserta": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "idUsuarioActualiza": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "fechaActualiza": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "activo": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Transhemodialisis": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "idAgenda": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "hora": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "ta": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "fc": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "fr": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "sat": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "temp": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "qc": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "qo": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "part": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "pven": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "ptm": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "tasaUf": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "uf": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "ktv": {
+            "maxLength": 250,
+            "minLength": 0,
+            "type": "string",
+            "nullable": true
+          },
+          "idOrganizacion": {
+            "type": "integer",
+            "format": "int64"
           },
           "idUsuarioInserta": {
             "type": "integer",

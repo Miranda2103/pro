@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using pro.Context;
-using pro.Interface.pro;
-using pro.Model.pro;
+using pro.Interface;
+using pro.Model;
 
-namespace pro.Repository.pro
+namespace pro.Repository
 {
     public class RSubMenu : ISubMenu
     {

@@ -1,6 +1,6 @@
-﻿using pro.Model.pro;
+﻿using pro.Model;
 
-namespace pro.Interface.pro
+namespace pro.Interface
 {
     public interface IVRolMenu
     {

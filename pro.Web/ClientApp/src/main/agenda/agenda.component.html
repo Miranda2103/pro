@@ -1,0 +1,63 @@
+<div class="w100 ha100 fx fx-flow padding">
+
+  <div class="w100 fx fx-direction-row fx-middle content-center">
+
+    <div class="w40 padding">
+
+      <mat-form-field class="w40 padding-right" appearance="outline">
+        <mat-label>Paciente</mat-label>
+        <mat-select [panelClass]="'panel-select'" #selectPaciente [(value)]="idPaciente" (selectionChange)="habilitarCalendario()">
+          <mat-select-filter *ngIf="selectPaciente.focused" [array]="inPaciente" [displayMember]="'nombreCompleto'" [showSpinner]="false" placeholder="Buscar" noResultsMessage="" (filteredReturn)="filteredPaciente = $event"></mat-select-filter>
+          <mat-option *ngFor="let item of filteredPaciente" [value]="item.id">
+            {{ item.nombreCompleto }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="w40" appearance="outline">
+        <mat-label>Equipo</mat-label>
+        <mat-select [panelClass]="'panel-select'" #selectEquipo [(value)]="idEquipo" (selectionChange)="habilitarCalendario();ngEquipoCalendario();">
+          <mat-select-filter *ngIf="selectEquipo.focused" [array]="inEquipo" [displayMember]="'equipo'" [showSpinner]="false" placeholder="Buscar" noResultsMessage="" (filteredReturn)="filteredEquipo = $event"></mat-select-filter>
+          <mat-option *ngFor="let item of filteredEquipo" [value]="item.id">
+            {{ item.equipo }}
+          </mat-option>
+        </mat-select>
+        <button mat-icon-button matSuffix (click)="resetEquipo($event)" *ngIf="idEquipo">
+          <mat-icon>refresh</mat-icon>
+        </button>
+      </mat-form-field>
+
+    </div>
+
+    <div class="w25 align-center padding-bottom-05">
+
+      <div class="w100 padding-bottom-05" *ngIf="shared.rd">
+      </div>
+
+    </div>
+
+    <div class="w10 align-center fx fx-flow">
+
+      <div class="w100">
+
+      </div>
+
+      <div class="w100">
+
+      </div>
+
+    </div>
+
+    <div class="w25 fx content-center padding-top">
+
+    </div>
+
+  </div>
+
+  <div class="w100" *ngIf="shared.rd">
+
+  </div>
+
+  <full-calendar class="w100 h100 fx-remaining overflow background-12" [options]="calendarOptions"></full-calendar>
+
+</div>

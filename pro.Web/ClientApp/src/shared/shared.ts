@@ -202,6 +202,10 @@ export class Shared {
     return uuidv4();
   }
 
+  ngDateNumber(): number {
+    return Date.now();
+  }
+
   ngUser(user: string): string {
     const randomNumber = Math.floor(Math.random() * 10000);
     return `${user}${randomNumber}`;

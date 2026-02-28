@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
-import { IAutenticacion, IFiltro, IMenu, IOrganizacion, IResponse, IRol, IRolMenu, IRolMenuView, IRolSubMenu, IRolSubMenuView, ISubMenu, IUsuario } from '../interface/interface-pro.interface';
+import { IAgenda, IAutenticacion, IColonia, IDecision, IEquipo, IEstado, IFiltro, IHemodialisis, IMenu, IMunicipio, IOrganizacion, IPaciente, IPacienteImagen, IResponse, IRol, IRolMenu, IRolMenuView, IRolSubMenu, IRolSubMenuView, ISexo, ISubMenu, ITranshemodialisis, IUsuario } from '../interface/interface-pro.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +17,51 @@ export class ServiceProService {
 
   ngGetVersion() {
     return this.http.get<IResponse>(this.serviceUrl + 'api/pro/Version/Get').toPromise();
+  }
+
+  async ngGetPaciente(option: number, model: IPaciente) {
+    let params = new HttpParams();
+
+    params = params.append('option', option);
+    Object.keys(model).forEach(key => { if (model[key] != '') { params = params.append(key, model[key]); } });
+
+    return await this.http.get<IResponse>(this.serviceUrl + 'api/pro/Paciente/Get', { params: params }).toPromise();
+  }
+
+  async ngGetPacienteImagen(option: number, model: IPacienteImagen) {
+    let params = new HttpParams();
+
+    params = params.append('option', option);
+    Object.keys(model).forEach(key => { if (model[key] != '') { params = params.append(key, model[key]); } });
+
+    return await this.http.get<IResponse>(this.serviceUrl + 'api/pro/PacienteImagen/Get', { params: params }).toPromise();
+  }
+
+  async ngGetHemodialisis(option: number, model: IHemodialisis) {
+    let params = new HttpParams();
+
+    params = params.append('option', option);
+    Object.keys(model).forEach(key => { if (model[key] != '') { params = params.append(key, model[key]); } });
+
+    return await this.http.get<IResponse>(this.serviceUrl + 'api/pro/Hemodialisis/Get', { params: params }).toPromise();
+  }
+
+  async ngGetTranshemodialisis(option: number, model: ITranshemodialisis) {
+    let params = new HttpParams();
+
+    params = params.append('option', option);
+    Object.keys(model).forEach(key => { if (model[key] != '') { params = params.append(key, model[key]); } });
+
+    return await this.http.get<IResponse>(this.serviceUrl + 'api/pro/Transhemodialisis/Get', { params: params }).toPromise();
+  }
+
+  async ngGetAgenda(option: number, model: IAgenda) {
+    let params = new HttpParams();
+
+    params = params.append('option', option);
+    Object.keys(model).forEach(key => { if (model[key] != '') { params = params.append(key, model[key]); } });
+
+    return await this.http.get<IResponse>(this.serviceUrl + 'api/pro/Agenda/Get', { params: params }).toPromise();
   }
 
   async ngGetOrganizacion(option: number, model: IOrganizacion) {
@@ -82,6 +127,60 @@ export class ServiceProService {
     return await this.http.get<IResponse>(this.serviceUrl + 'api/pro/RolSubMenu/Get', { 'params': params }).toPromise();
   }
 
+  async ngGetSexo(option: number, model: ISexo) {
+    let params = new HttpParams();
+
+    params = params.append('option', option);
+    Object.keys(model).forEach(key => { if (model[key] != '') { params = params.append(key, model[key]); } });
+
+    return await this.http.get<IResponse>(this.serviceUrl + 'api/pro/Sexo/Get', { params: params }).toPromise();
+  }
+
+  async ngGetEstado(option: number, model: IEstado) {
+    let params = new HttpParams();
+
+    params = params.append('option', option);
+    Object.keys(model).forEach(key => { if (model[key] != '') { params = params.append(key, model[key]); } });
+
+    return await this.http.get<IResponse>(this.serviceUrl + 'api/pro/Estado/Get', { params: params }).toPromise();
+  }
+
+  async ngGetMunicipio(option: number, model: IMunicipio) {
+    let params = new HttpParams();
+
+    params = params.append('option', option);
+    Object.keys(model).forEach(key => { if (model[key] != '') { params = params.append(key, model[key]); } });
+
+    return await this.http.get<IResponse>(this.serviceUrl + 'api/pro/Municipio/Get', { params: params }).toPromise();
+  }
+
+  async ngGetColonia(option: number, model: IColonia) {
+    let params = new HttpParams();
+
+    params = params.append('option', option);
+    Object.keys(model).forEach(key => { if (model[key] != '') { params = params.append(key, model[key]); } });
+
+    return await this.http.get<IResponse>(this.serviceUrl + 'api/pro/Colonia/Get', { params: params }).toPromise();
+  }
+
+  async ngGetDecision(option: number, model: IDecision) {
+    let params = new HttpParams();
+
+    params = params.append('option', option);
+    Object.keys(model).forEach(key => { if (model[key] != '') { params = params.append(key, model[key]); } });
+
+    return await this.http.get<IResponse>(this.serviceUrl + 'api/pro/Decision/Get', { params: params }).toPromise();
+  }
+
+  async ngGetEquipo(option: number, model: IEquipo) {
+    let params = new HttpParams();
+
+    params = params.append('option', option);
+    Object.keys(model).forEach(key => { if (model[key] != '') { params = params.append(key, model[key]); } });
+
+    return await this.http.get<IResponse>(this.serviceUrl + 'api/pro/Equipo/Get', { params: params }).toPromise();
+  }
+
   //#endregion "GET"
 
 
@@ -114,6 +213,34 @@ export class ServiceProService {
     return await this.http.post<IResponse>(this.serviceUrl + 'api/pro/Token/Post', model).toPromise();
   }
 
+  async ngPostPaciente(model: IPaciente) {
+    return await this.http.post<IResponse>(this.serviceUrl + 'api/pro/Paciente/Post', model).toPromise();
+  }
+
+  async ngPostPacienteImagen(model: IPaciente, file: File) {
+    const formData: FormData = new FormData();
+
+    formData.append('paciente', model.paciente);
+    formData.append('idPaciente', model.id.toString());
+    formData.append('file', file, file.name);
+    formData.append('idOrganizacion', model.idOrganizacion.toString());
+    formData.append('idUsuarioInserta', model.idUsuarioInserta.toString());
+
+    return await this.http.post<IResponse>(this.serviceUrl + 'api/pro/PacienteImagen/Post', formData).toPromise();
+  }
+
+  async ngPostHemodialisis(model: IHemodialisis) {
+    return await this.http.post<IResponse>(this.serviceUrl + 'api/pro/Hemodialisis/Post', model).toPromise();
+  }
+
+  async ngPostTranshemodialisis(model: ITranshemodialisis[]) {
+    return await this.http.post<IResponse>(this.serviceUrl + 'api/pro/Transhemodialisis/Post', model).toPromise();
+  }
+
+  async ngPostAgenda(model: IAgenda) {
+    return await this.http.post<IResponse>(this.serviceUrl + 'api/pro/Agenda/Post', model).toPromise();
+  }
+
   async ngPostOrganizacion(model: IOrganizacion) {
     return await this.http.post<IResponse>(this.serviceUrl + 'api/pro/Organizacion/Post', model).toPromise();
   }
@@ -142,10 +269,50 @@ export class ServiceProService {
     return await this.http.post<IResponse>(this.serviceUrl + 'api/pro/RolSubMenu/Post', model).toPromise();
   }
 
+  async ngPostSexo(model: ISexo) {
+    return await this.http.post<IResponse>(this.serviceUrl + 'api/pro/Sexo/Post', model).toPromise();
+  }
+
+  async ngPostDecision(model: IDecision) {
+    return await this.http.post<IResponse>(this.serviceUrl + 'api/pro/Decision/Post', model).toPromise();
+  }
+
+  async ngPostEquipo(model: IEquipo) {
+    return await this.http.post<IResponse>(this.serviceUrl + 'api/pro/Equipo/Post', model).toPromise();
+  }
+
   //#endregion "POST"
 
 
   //#region "PUT"
+
+  async ngPutPaciente(option: number, model: IPaciente) {
+    let params = new HttpParams();
+    params = params.append('option', option);
+
+    return await this.http.put<IResponse>(this.serviceUrl + 'api/pro/Paciente/Put', model, { params: params }).toPromise();
+  }
+
+  async ngPutHemodialisis(option: number, model: IHemodialisis) {
+    let params = new HttpParams();
+    params = params.append('option', option);
+
+    return await this.http.put<IResponse>(this.serviceUrl + 'api/pro/Hemodialisis/Put', model, { params: params }).toPromise();
+  }
+
+  async ngPutTranshemodialisis(option: number, model: ITranshemodialisis) {
+    let params = new HttpParams();
+    params = params.append('option', option);
+
+    return await this.http.put<IResponse>(this.serviceUrl + 'api/pro/Transhemodialisis/Put', model, { params: params }).toPromise();
+  }
+
+  async ngPutAgenda(option: number, model: IAgenda) {
+    let params = new HttpParams();
+    params = params.append('option', option);
+
+    return await this.http.put<IResponse>(this.serviceUrl + 'api/pro/Agenda/Put', model, { params: params }).toPromise();
+  }
 
   async ngPutOrganizacion(option: number, model: IOrganizacion) {
     let params = new HttpParams();
@@ -182,10 +349,59 @@ export class ServiceProService {
     return await this.http.put<IResponse>(this.serviceUrl + 'api/pro/SubMenu/Put', model, { params: params }).toPromise();
   }
 
+  async ngPutSexo(option: number, model: ISexo) {
+    let params = new HttpParams();
+    params = params.append('option', option);
+
+    return await this.http.put<IResponse>(this.serviceUrl + 'api/pro/Sexo/Put', model, { params: params }).toPromise();
+  }
+
+  async ngPutDecision(option: number, model: IDecision) {
+    let params = new HttpParams();
+    params = params.append('option', option);
+
+    return await this.http.put<IResponse>(this.serviceUrl + 'api/pro/Decision/Put', model, { params: params }).toPromise();
+  }
+
+  async ngPutEquipo(option: number, model: IEquipo) {
+    let params = new HttpParams();
+    params = params.append('option', option);
+
+    return await this.http.put<IResponse>(this.serviceUrl + 'api/pro/Equipo/Put', model, { params: params }).toPromise();
+  }
+
   //#endregion "PUT"
 
 
   //#region "DELETE"
+
+  async ngDeletePaciente(option: number, model: IPaciente[]) {
+    let params = new HttpParams();
+    params = params.append('option', option);
+
+    return await this.http.delete<IResponse>(this.serviceUrl + 'api/pro/Paciente/Delete', { params: params, body: model }).toPromise();
+  }
+
+  async ngDeleteHemodialisis(option: number, model: IHemodialisis[]) {
+    let params = new HttpParams();
+    params = params.append('option', option);
+
+    return await this.http.delete<IResponse>(this.serviceUrl + 'api/pro/Hemodialisis/Delete', { params: params, body: model }).toPromise();
+  }
+
+  async ngDeleteTranshemodialisis(option: number, model: ITranshemodialisis[]) {
+    let params = new HttpParams();
+    params = params.append('option', option);
+
+    return await this.http.delete<IResponse>(this.serviceUrl + 'api/pro/Transhemodialisis/Delete', { params: params, body: model }).toPromise();
+  }
+
+  async ngDeleteAgenda(option: number, model: IAgenda[]) {
+    let params = new HttpParams();
+    params = params.append('option', option);
+
+    return await this.http.delete<IResponse>(this.serviceUrl + 'api/pro/Agenda/Delete', { params: params, body: model }).toPromise();
+  }
 
   async ngDeleteOrganizacion(option: number, model: IOrganizacion[]) {
     let params = new HttpParams();
@@ -222,16 +438,99 @@ export class ServiceProService {
     return await this.http.delete<IResponse>(this.serviceUrl + 'api/pro/RolSubMenu/Delete', { params: params, body: model }).toPromise();
   }
 
+  async ngDeleteSexo(option: number, model: ISexo[]) {
+    let params = new HttpParams();
+    params = params.append('option', option);
+
+    return await this.http.delete<IResponse>(this.serviceUrl + 'api/pro/Sexo/Delete', { params: params, body: model }).toPromise();
+  }
+
+  async ngDeleteDecision(option: number, model: IDecision[]) {
+    let params = new HttpParams();
+    params = params.append('option', option);
+
+    return await this.http.delete<IResponse>(this.serviceUrl + 'api/pro/Decision/Delete', { params: params, body: model }).toPromise();
+  }
+
+  async ngDeleteEquipo(option: number, model: IEquipo[]) {
+    let params = new HttpParams();
+    params = params.append('option', option);
+
+    return await this.http.delete<IResponse>(this.serviceUrl + 'api/pro/Equipo/Delete', { params: params, body: model }).toPromise();
+  }
+
   //#endregion "DELETE"
 
 
   //#region "DOWNLOAD"
 
+  async ngDownloadPacienteImagen(model: IPacienteImagen) {
+    let params = new HttpParams();
+    params = params.append('archivo', model.archivo);
+
+    return await this.http.get(this.serviceUrl + 'api/pro/PacienteImagen/Download', { 'params': params, responseType: 'blob' }).toPromise();
+  }
 
   //#endregion "DOWNLOAD"
 
 
   //#region "STORE"
+
+  async ngGetPacienteLista(model: IFiltro) {
+    let params = new HttpParams();
+    Object.keys(model).forEach(key => { if (model[key] != '') { params = params.append(key, model[key]); } });
+
+    return await this.http.get<IResponse>(this.serviceUrl + 'api/pro/WPaciente/GetFiltroLista', { 'params': params }).toPromise();
+  }
+
+  async ngGetPacienteTotal(model: IFiltro) {
+    let params = new HttpParams();
+    Object.keys(model).forEach(key => { if (model[key] != '') { params = params.append(key, model[key]); } });
+
+    return await this.http.get<IResponse>(this.serviceUrl + 'api/pro/WPaciente/GetFiltroTotal', { 'params': params }).toPromise();
+  }
+
+  async ngGetPacienteVista(model: IFiltro) {
+    let params = new HttpParams();
+    Object.keys(model).forEach(key => { if (model[key] != '') { params = params.append(key, model[key]); } });
+
+    return await this.http.get<IResponse>(this.serviceUrl + 'api/pro/WPaciente/GetFiltroVista', { 'params': params }).toPromise();
+  }
+
+  async ngGetPacienteExportar(model: IFiltro) {
+    let params = new HttpParams();
+    Object.keys(model).forEach(key => { if (model[key] != '') { params = params.append(key, model[key]); } });
+
+    return await this.http.get(this.serviceUrl + 'api/pro/WPaciente/GetFiltroExportar', { 'params': params, responseType: 'blob' }).toPromise();
+  }
+
+  async ngGetAgendaLista(model: IFiltro) {
+    let params = new HttpParams();
+    Object.keys(model).forEach(key => { if (model[key] != '') { params = params.append(key, model[key]); } });
+
+    return await this.http.get<IResponse>(this.serviceUrl + 'api/pro/WAgenda/GetFiltroLista', { 'params': params }).toPromise();
+  }
+
+  async ngGetAgendaTotal(model: IFiltro) {
+    let params = new HttpParams();
+    Object.keys(model).forEach(key => { if (model[key] != '') { params = params.append(key, model[key]); } });
+
+    return await this.http.get<IResponse>(this.serviceUrl + 'api/pro/WAgenda/GetFiltroTotal', { 'params': params }).toPromise();
+  }
+
+  async ngGetAgendaVista(model: IFiltro) {
+    let params = new HttpParams();
+    Object.keys(model).forEach(key => { if (model[key] != '') { params = params.append(key, model[key]); } });
+
+    return await this.http.get<IResponse>(this.serviceUrl + 'api/pro/WAgenda/GetFiltroVista', { 'params': params }).toPromise();
+  }
+
+  async ngGetAgendaExportar(model: IFiltro) {
+    let params = new HttpParams();
+    Object.keys(model).forEach(key => { if (model[key] != '') { params = params.append(key, model[key]); } });
+
+    return await this.http.get(this.serviceUrl + 'api/pro/WAgenda/GetFiltroExportar', { 'params': params, responseType: 'blob' }).toPromise();
+  }
 
   async ngGetOrganizacionLista(model: IFiltro) {
     let params = new HttpParams();

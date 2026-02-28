@@ -1,4 +1,4 @@
-using pro.Model.pro;
+using pro.Model;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;

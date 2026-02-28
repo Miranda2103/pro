@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace pro.Model.pro
+namespace pro.Model
 {
     [DisplayName("Rol")]
     [Table("Rol", Schema = "prod")]

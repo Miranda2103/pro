@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './main.component';
@@ -36,6 +37,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { EchartsxModule } from 'echarts-for-angular';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { PaginatorIntl } from '../paginator-intl/paginator-intl';
 import { DatePipe } from '@angular/common';
@@ -52,6 +54,11 @@ import { RolMenuComponent } from './rol-menu/rol-menu.component';
 import { DialogRolSubMenuComponent } from './dialog-rol-submenu/dialog-rol-submenu.component';
 import { DialogMenuComponent } from './dialog-menu/dialog-menu.component';
 import { DialogSubMenuComponent } from './dialog-submenu/dialog-submenu.component';
+import { PatientComponent } from './patient/patient.component';
+import { DialogPatientComponent } from './dialog-patient/dialog-patient.component';
+import { AgendaComponent } from './agenda/agenda.component';
+import { ConsultComponent } from './consult/consult.component';
+import { DialogConsultComponent } from './dialog-consult/dialog-consult.component';
 
 
 @NgModule({
@@ -67,7 +74,12 @@ import { DialogSubMenuComponent } from './dialog-submenu/dialog-submenu.componen
     RolMenuComponent,
     DialogRolSubMenuComponent,
     DialogMenuComponent,
-    DialogSubMenuComponent
+    DialogSubMenuComponent,
+    PatientComponent,
+    DialogPatientComponent,
+    AgendaComponent,
+    ConsultComponent,
+    DialogConsultComponent
   ],
   imports: [
     CommonModule,
@@ -75,6 +87,7 @@ import { DialogSubMenuComponent } from './dialog-submenu/dialog-submenu.componen
     FormsModule,
     ReactiveFormsModule,
     NgxChartsModule,
+    FullCalendarModule,
 
     MatToolbarModule,
     MatIconModule,
@@ -91,6 +104,7 @@ import { DialogSubMenuComponent } from './dialog-submenu/dialog-submenu.componen
     MatTabsModule,
     MatInputModule,
     MatCheckboxModule,
+    MatSnackBarModule,
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,

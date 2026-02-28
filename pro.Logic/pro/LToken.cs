@@ -2,14 +2,14 @@
 using Microsoft.IdentityModel.Tokens;
 using pro.Context;
 using pro.Function;
-using pro.Interface.pro;
-using pro.Model.pro;
-using pro.Repository.pro;
+using pro.Interface;
+using pro.Model;
+using pro.Repository;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace pro.Logic.pro
+namespace pro.Logic
 {
     public class LToken
     {

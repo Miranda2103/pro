@@ -1,8 +1,8 @@
-﻿using pro.Model.pro;
+﻿using pro.Model;
 using System.Diagnostics;
 using System.Reflection;
 
-namespace pro.Logic.pro
+namespace pro.Logic
 {
     public class LVersion
     {

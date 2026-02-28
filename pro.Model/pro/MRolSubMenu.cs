@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace pro.Model.pro
+namespace pro.Model
 {
     [DisplayName("RolSubMenu")]
     [Table("RolSubMenu", Schema = "prod")]
