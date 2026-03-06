@@ -1,9 +1,3 @@
-C:\Users\syste\source\repos\pro\pro.Repository\obj\Debug\net6.0\pro.Repository.csproj.AssemblyReference.cache
-C:\Users\syste\source\repos\pro\pro.Repository\obj\Debug\net6.0\pro.Repository.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\syste\source\repos\pro\pro.Repository\obj\Debug\net6.0\pro.Repository.AssemblyInfoInputs.cache
-C:\Users\syste\source\repos\pro\pro.Repository\obj\Debug\net6.0\pro.Repository.AssemblyInfo.cs
-C:\Users\syste\source\repos\pro\pro.Repository\obj\Debug\net6.0\pro.Repository.csproj.CoreCompileInputs.cache
-C:\Users\syste\source\repos\pro\pro.Repository\obj\Debug\net6.0\pro.Repository.sourcelink.json
 C:\Users\syste\source\repos\pro\pro.Repository\bin\Debug\net6.0\pro.Repository.deps.json
 C:\Users\syste\source\repos\pro\pro.Repository\bin\Debug\net6.0\pro.Repository.runtimeconfig.json
 C:\Users\syste\source\repos\pro\pro.Repository\bin\Debug\net6.0\pro.Repository.dll
@@ -16,6 +10,12 @@ C:\Users\syste\source\repos\pro\pro.Repository\bin\Debug\net6.0\pro.Context.pdb
 C:\Users\syste\source\repos\pro\pro.Repository\bin\Debug\net6.0\pro.Function.pdb
 C:\Users\syste\source\repos\pro\pro.Repository\bin\Debug\net6.0\pro.Interface.pdb
 C:\Users\syste\source\repos\pro\pro.Repository\bin\Debug\net6.0\pro.Model.pdb
+C:\Users\syste\source\repos\pro\pro.Repository\obj\Debug\net6.0\pro.Repository.csproj.AssemblyReference.cache
+C:\Users\syste\source\repos\pro\pro.Repository\obj\Debug\net6.0\pro.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\syste\source\repos\pro\pro.Repository\obj\Debug\net6.0\pro.Repository.AssemblyInfoInputs.cache
+C:\Users\syste\source\repos\pro\pro.Repository\obj\Debug\net6.0\pro.Repository.AssemblyInfo.cs
+C:\Users\syste\source\repos\pro\pro.Repository\obj\Debug\net6.0\pro.Repository.csproj.CoreCompileInputs.cache
+C:\Users\syste\source\repos\pro\pro.Repository\obj\Debug\net6.0\pro.Repository.sourcelink.json
 C:\Users\syste\source\repos\pro\pro.Repository\obj\Debug\net6.0\pro.Repo.7196FBA9.Up2Date
 C:\Users\syste\source\repos\pro\pro.Repository\obj\Debug\net6.0\pro.Repository.dll
 C:\Users\syste\source\repos\pro\pro.Repository\obj\Debug\net6.0\refint\pro.Repository.dll

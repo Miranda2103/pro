@@ -5,31 +5,31 @@ using pro.Repository;
 
 namespace pro.Logic
 {
-    public class LTranshemodialisis
+    public class LTransHemodialisis
     {
-        public readonly ITranshemodialisis _interface;
+        public readonly ITransHemodialisis _interface;
 
-        public LTranshemodialisis(DBPRO dbc)
+        public LTransHemodialisis(DBPRO dbc)
         {
-            _interface = new RTranshemodialisis(dbc);
+            _interface = new RTransHemodialisis(dbc);
         }
 
-        public async Task<List<MTranshemodialisis>> GetAsync(int option, MTranshemodialisis model)
+        public async Task<List<MTransHemodialisis>> GetAsync(int option, MTransHemodialisis model)
         {
             return await _interface.GetAsync(option, model);
         }
 
-        public async Task<Boolean> PostAsync(List<MTranshemodialisis> model)
+        public async Task<Boolean> PostAsync(List<MTransHemodialisis> model)
         {
             return await _interface.PostAsync(model);
         }
 
-        public async Task<bool> PutAsync(int option, MTranshemodialisis model)
+        public async Task<bool> PutAsync(int option, MTransHemodialisis model)
         {
             return await _interface.PutAsync(option, model);
         }
 
-        public async Task<bool> DeleteAsync(int option, List<MTranshemodialisis> model)
+        public async Task<bool> DeleteAsync(int option, List<MTransHemodialisis> model)
         {
             return await _interface.DeleteAsync(option, model);
         }

@@ -41,14 +41,17 @@ export class DialogRolSubMenuComponent implements OnInit {
   value: string = '';
 
   ds = new MatTableDataSource<IRolSubMenuVista>();
-  fl: string[] = ['editar-fl', 'subMenu-fl', 'icono-fl', 'orden-fl', 'activo-fl'];
-  dc: string[] = ['editar', 'subMenu', 'icono', 'orden', 'activo'];
+  fl: string[] = ['editar-fl', 'subMenu-fl', 'icono-fl', 'orden-fl', 'escritura-fl', 'activo-fl'];
+  dc: string[] = ['editar', 'subMenu', 'icono', 'orden', 'escritura', 'activo'];
   search: string = '';
   selection = new SelectionModel<IRolSubMenuVista>(true, []);
+  selectionEscritura = new SelectionModel<IRolSubMenuVista>(true, []);
 
   subMenu: string = '';
   icono: string = '';
   orden: string = '';
+  lectura: string[] = [];
+  escritura: string[] = [];
   activo: string[] = [];
 
   iSubMenu: ISubMenu;
@@ -63,7 +66,7 @@ export class DialogRolSubMenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.ngController('getFiltroLista');
+    this.ngHandle('getFiltroLista');
   }
 
   ngAfterViewInit(): void {
@@ -116,6 +119,7 @@ export class DialogRolSubMenuComponent implements OnInit {
         break;
       }
       case 'selection': {
+        this.selectionEscritura = new SelectionModel<IRolSubMenuVista>(true, []);
         this.selection = new SelectionModel<IRolSubMenuVista>(true, []);
         break;
       }
@@ -123,22 +127,24 @@ export class DialogRolSubMenuComponent implements OnInit {
         this.subMenu = '';
         this.icono = '';
         this.orden = '';
+        this.lectura = [];
+        this.escritura = [];
         this.activo = [];
         break;
       }
-      case 'iModel': {
+      case 'iSubMenu': {
         this.iSubMenu = { id: 0, idMenu: this.iRolMenuVista.idMenu, subMenu: '', ruta: '', icono: '', orden: 0, idUsuarioInserta: this.shared.idUsuario, fechaInserta: this.shared.ngFechaInserta(), idUsuarioActualiza: this.shared.idUsuario, fechaActualiza: this.shared.ngFechaActualiza(), activo: true };
         break;
       }
-      case 'inModel': {
+      case 'inSubMenu': {
         this.inSubMenu = [];
         break;
       }
-      case 'iEntity': {
-        this.iRolSubMenu = { id: 0, idRol: this.idRol, idMenu: this.iRolMenuVista.idMenu, idSubMenu: 0, idUsuarioInserta: this.shared.idUsuario, fechaInserta: this.shared.ngFechaInserta(), idUsuarioActualiza: this.shared.idUsuario, fechaActualiza: this.shared.ngFechaActualiza(), activo: true };
+      case 'iRolSubMenu': {
+        this.iRolSubMenu = { id: 0, idRol: this.idRol, idMenu: this.iRolMenuVista.idMenu, idSubMenu: 0, escritura: false, idUsuarioInserta: this.shared.idUsuario, fechaInserta: this.shared.ngFechaInserta(), idUsuarioActualiza: this.shared.idUsuario, fechaActualiza: this.shared.ngFechaActualiza(), activo: true };
         break;
       }
-      case 'inEntity': {
+      case 'inRolSubMenu': {
         this.inRolSubMenu = [];
         break;
       }
@@ -182,27 +188,14 @@ export class DialogRolSubMenuComponent implements OnInit {
         this.iFiltro.formato = this.shared.extension;
         break;
       }
-      case 'iModelCreate': {
-        this.ngClean('iModel');
+      case 'deleteRolSubMenu': {
+        this.ngClean('inRolSubMenu');
+        this.inRolSubMenu.push({ id: 0, idRol: this.idRol, idMenu: this.iRolMenuVista.idMenu, idSubMenu: 0, escritura: false, idUsuarioInserta: this.shared.idUsuario, fechaInserta: this.shared.ngFechaInserta(), idUsuarioActualiza: this.shared.idUsuario, fechaActualiza: this.shared.ngFechaDefault(), activo: false });
         break;
       }
-      case 'iModelUpdate': {
-        this.ngClean('iModel');
-        const model: IRolSubMenuVista = data as IRolSubMenuVista;
-        this.iSubMenu.id = model.idSubMenu;
-        this.iSubMenu.subMenu = model.subMenu;
-        this.iSubMenu.icono = model.icono;
-        this.iSubMenu.orden = model.orden;
-        break;
-      }
-      case 'iModelDelete': {
-        this.ngClean('inEntity');
-        this.inRolSubMenu.push({ id: 0, idRol: this.idRol, idMenu: this.iRolMenuVista.idMenu, idSubMenu: 0, idUsuarioInserta: this.shared.idUsuario, fechaInserta: this.shared.ngFechaInserta(), idUsuarioActualiza: this.shared.idUsuario, fechaActualiza: this.shared.ngFechaDefault(), activo: false });
-        break;
-      }
-      case 'iModelPost': {
-        this.ngClean('inEntity');
-        this.inRolSubMenu = this.inFiltroVista.map(v => ({ id: 0, idRol: this.idRol, idMenu: this.iRolMenuVista.idMenu, idSubMenu: v.idSubMenu, idUsuarioInserta: this.shared.idUsuario, fechaInserta: this.shared.ngFechaInserta(), idUsuarioActualiza: this.shared.idUsuario, fechaActualiza: this.shared.ngFechaDefault(), activo: v.activo }));
+      case 'postRolSubMenu': {
+        this.ngClean('inRolSubMenu');
+        this.inRolSubMenu = this.inFiltroVista.map(v => ({ id: 0, idRol: this.idRol, idMenu: this.iRolMenuVista.idMenu, idSubMenu: v.idSubMenu, escritura: v.escritura, idUsuarioInserta: this.shared.idUsuario, fechaInserta: this.shared.ngFechaInserta(), idUsuarioActualiza: this.shared.idUsuario, fechaActualiza: this.shared.ngFechaDefault(), activo: v.activo }));
         break;
       }
     }
@@ -236,8 +229,59 @@ export class DialogRolSubMenuComponent implements OnInit {
         saveAs(blob, 'RolSubMenus' + '_' + this.shared.ngExportDate() + this.shared.extension);
         break;
       }
+      case 'deleteRolSubMenu': {
+
+        break;
+      }
+      case 'postRolSubMenu': {
+
+        break;
+      }
     }
 
+  }
+
+  ngHandle(option: string, data?: any): void {
+
+    switch (option) {
+      case 'getFiltroLista': {
+        this.ngController('getFiltroLista');
+        break;
+      }
+      case 'getFiltroTotal': {
+        this.ngController('getFiltroTotal');
+        break;
+      }
+      case 'getFiltroVista': {
+        this.ngController('getFiltroVista');
+        break;
+      }
+      case 'getFiltroExportar': {
+        this.ngController('getFiltroExportar');
+        break;
+      }
+      case 'deleteRolSubMenu': {
+        this.ngController('deleteRolSubMenu');
+        break;
+      }
+      case 'postRolSubMenu': {
+        this.ngController('postRolSubMenu');
+        break;
+      }
+    }
+
+  }
+
+  ngValidate(option: string, data?: any): boolean {
+    let b: boolean = true;
+
+    switch (option) {
+      case '': {
+        break;
+      }
+    }
+
+    return b;
   }
 
   ngController(option: string, data?: any): void {
@@ -264,12 +308,12 @@ export class DialogRolSubMenuComponent implements OnInit {
         break;
       }
       case 'deleteRolSubMenu': {
-        this.ngModelSet('iModelDelete');
+        this.ngModelSet('deleteRolSubMenu');
         this.ngDeleteRolSubMenu(1, this.inRolSubMenu);
         break;
       }
       case 'postRolSubMenu': {
-        this.ngModelSet('iModelPost');
+        this.ngModelSet('postRolSubMenu');
         this.ngPostRolSubMenu(this.inRolSubMenu);
         break;
       }
@@ -277,37 +321,19 @@ export class DialogRolSubMenuComponent implements OnInit {
 
   }
 
-  ngHandle(option: string, data?: any): void {
+  ngDialogSubMenu(option: string, model?: IRolSubMenuVista): void {
 
     switch (option) {
-      case '': {
+      case 'create': {
+        this.ngClean('iSubMenu');
         break;
       }
-    }
-
-  }
-
-  ngValidate(option: string, data?: any): boolean {
-    let b: boolean = true;
-
-    switch (option) {
-      case '': {
-        break;
-      }
-    }
-
-    return b;
-  }
-
-  ngDialog(option: string, model?: IRolSubMenuVista): void {
-
-    switch (option) {
-      case 'iModelCreate': {
-        this.ngModelSet('iModelCreate');
-        break;
-      }
-      case 'iModelUpdate': {
-        this.ngModelSet('iModelUpdate', model);
+      case 'update': {
+        this.ngClean('iSubMenu');
+        this.iSubMenu.id = model.idSubMenu;
+        this.iSubMenu.subMenu = model.subMenu;
+        this.iSubMenu.icono = model.icono;
+        this.iSubMenu.orden = model.orden;
         break;
       }
     }
@@ -320,7 +346,7 @@ export class DialogRolSubMenuComponent implements OnInit {
       (r: boolean) => {
 
         if (r) {
-          this.ngController('getFiltroLista');
+          this.ngHandle('getFiltroLista');
         }
 
       });
@@ -334,7 +360,7 @@ export class DialogRolSubMenuComponent implements OnInit {
 
         if (r.success) {
           this.ngModelGet('iFiltroLista', r.data);
-          this.ngController('getFiltroTotal');
+          this.ngHandle('getFiltroTotal');
         } else {
           this.message.dialogMessage(this.shared.ngFalse());
         }
@@ -355,7 +381,7 @@ export class DialogRolSubMenuComponent implements OnInit {
 
         if (r.success) {
           this.ngModelGet('iFiltroTotal', r.data);
-          this.ngController('getFiltroVista');
+          this.ngHandle('getFiltroVista');
         } else {
           this.message.dialogMessage(this.shared.ngFalse());
         }
@@ -405,13 +431,14 @@ export class DialogRolSubMenuComponent implements OnInit {
 
   }
 
-  async ngDeleteRolSubMenu(option: number, model: IRolSubMenu[]) {
+  async ngPostRolSubMenu(model: IRolSubMenu[]) {
 
-    await this.service.ngDeleteRolSubMenu(option, model)
+    await this.service.ngPostRolSubMenu(model)
       .then((r: IResponse) => {
 
         if (r.success) {
-          this.ngController('postRolSubMenu');
+          this.ngModelGet('postRolSubMenu', r.data);
+          this.ngHandle('getFiltroLista');
         } else {
           this.message.dialogMessage(this.shared.ngFalse());
         }
@@ -425,13 +452,14 @@ export class DialogRolSubMenuComponent implements OnInit {
 
   }
 
-  async ngPostRolSubMenu(model: IRolSubMenu[]) {
+  async ngDeleteRolSubMenu(option: number, model: IRolSubMenu[]) {
 
-    await this.service.ngPostRolSubMenu(model)
+    await this.service.ngDeleteRolSubMenu(option, model)
       .then((r: IResponse) => {
 
         if (r.success) {
-          this.ngController('getFiltroLista');
+          this.ngModelGet('deleteRolSubMenu', r.data);
+          this.ngHandle('postRolSubMenu');
         } else {
           this.message.dialogMessage(this.shared.ngFalse());
         }
@@ -523,6 +551,18 @@ export class DialogRolSubMenuComponent implements OnInit {
           this.value += this.ngHandleSanitize(this.orden).concat('|');
         }
 
+        if (this.lectura.length) {
+          this.filter += '3'.concat('|');
+          this.column += 'Lectura'.concat('|');
+          this.value += this.lectura.join(',').concat('|');
+        }
+
+        if (this.escritura.length) {
+          this.filter += '3'.concat('|');
+          this.column += 'Escritura'.concat('|');
+          this.value += this.escritura.join(',').concat('|');
+        }
+
         if (this.activo.length) {
           this.filter += '3'.concat('|');
           this.column += 'Activo'.concat('|');
@@ -550,11 +590,11 @@ export class DialogRolSubMenuComponent implements OnInit {
         this.ngClean('search');
         this.ngClean('selection');
         this.ngClean('header');
-        this.ngController('getFiltroLista');
+        this.ngHandle('getFiltroLista');
         break;
       }
       case 'selection': {
-        this.ngController('getFiltroLista');
+        this.ngHandle('getFiltroLista');
         break;
       }
     }

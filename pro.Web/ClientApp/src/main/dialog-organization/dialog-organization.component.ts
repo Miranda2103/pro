@@ -11,7 +11,6 @@ import { Shared } from '../../shared/shared';
   styleUrls: ['./dialog-organization.component.css']
 })
 export class DialogOrganizationComponent implements OnInit {
-  expand: boolean = true;
 
   iOrganizacion: IOrganizacion;
   inOrganizacion: IOrganizacion[] = [];
@@ -96,7 +95,8 @@ export class DialogOrganizationComponent implements OnInit {
   ngModelSet(option: string, data?: any): void {
 
     switch (option) {
-      case '': {
+      case 'getOrganizacion': {
+
         break;
       }
     }
@@ -105,7 +105,7 @@ export class DialogOrganizationComponent implements OnInit {
   ngModelGet(option: string, data?: any): void {
 
     switch (option) {
-      case 'iOrganizacion': {
+      case 'getOrganizacion': {
         const model: IOrganizacion[] = data as IOrganizacion[];
         this.inOrganizacion = model;
         break;
@@ -114,29 +114,14 @@ export class DialogOrganizationComponent implements OnInit {
     }
   }
 
-  ngController(option: string, data?: any): void {
-
-    switch (option) {
-      case 'getOrganizacion': {
-        this.ngGetOrganizacion(3, this.iOrganizacion);
-        break;
-      }
-      case 'postOrganizacion': {
-        this.ngPostOrganizacion(this.iOrganizacion);
-        break;
-      }
-      case 'putOrganizacion': {
-        this.ngPutOrganizacion(1, this.iOrganizacion);
-        break;
-      }
-    }
-
-  }
-
   ngHandle(option: string, data?: any): void {
 
     switch (option) {
-      case 'handle': {
+      case 'getOrganizacion': {
+        this.ngController('postOrganizacion');
+        break;
+      }
+      case 'organizacion': {
 
         if (this.ngValidate('iOrganizacion')) {
 
@@ -158,7 +143,7 @@ export class DialogOrganizationComponent implements OnInit {
     let b: boolean = true;
 
     switch (option) {
-      case 'iOrganizacion.organizacion': {
+      case 'getOrganizacion': {
 
         if (this.inOrganizacion.length) {
           this.message.dialogMessage('No es posible agregar la Organizacion <b>' + this.iOrganizacion.organizacion + '</b> debido a que ya se encuentra agregada, intenta con uno diferente.');
@@ -186,14 +171,34 @@ export class DialogOrganizationComponent implements OnInit {
     return b;
   }
 
+  ngController(option: string, data?: any): void {
+
+    switch (option) {
+      case 'getOrganizacion': {
+        this.ngModelSet('getOrganizacion');
+        this.ngGetOrganizacion(3, this.iOrganizacion);
+        break;
+      }
+      case 'postOrganizacion': {
+        this.ngPostOrganizacion(this.iOrganizacion);
+        break;
+      }
+      case 'putOrganizacion': {
+        this.ngPutOrganizacion(1, this.iOrganizacion);
+        break;
+      }
+    }
+
+  }
+
   async ngGetOrganizacion(option: number, model: IOrganizacion) {
 
     await this.service.ngGetOrganizacion(option, model)
       .then((r: IResponse) => {
 
         if (r.success) {
-          this.ngModelGet('iOrganizacion', r.data);
-          this.ngValidate('iOrganizacion.organizacion');
+          this.ngModelGet('getOrganizacion', r.data);
+          this.ngValidate('getOrganizacion');
         } else {
           this.message.dialogMessage(this.shared.ngFalse());
         }

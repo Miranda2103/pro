@@ -35,22 +35,6 @@
           }
         }
       },
-      "CsvHelper/33.1.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.CSharp": "4.7.0"
-        },
-        "compile": {
-          "lib/netstandard2.1/CsvHelper.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/CsvHelper.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "DocumentFormat.OpenXml/3.1.1": {
         "type": "package",
         "dependencies": {
@@ -111,35 +95,6 @@
         "build": {
           "buildTransitive/netcoreapp3.0/EntityFramework.props": {},
           "buildTransitive/netcoreapp3.0/EntityFramework.targets": {}
-        }
-      },
-      "ExcelDataReader/3.7.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.1/ExcelDataReader.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/ExcelDataReader.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
-      "ExcelDataReader.DataSet/3.7.0": {
-        "type": "package",
-        "dependencies": {
-          "ExcelDataReader": "3.7.0"
-        },
-        "compile": {
-          "lib/netstandard2.1/ExcelDataReader.DataSet.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/ExcelDataReader.DataSet.dll": {
-            "related": ".pdb;.xml"
-          }
         }
       },
       "ExcelNumberFormat/1.1.0": {
@@ -2278,32 +2233,6 @@
         "lib/netstandard2.1/ClosedXML.Parser.xml"
       ]
     },
-    "CsvHelper/33.1.0": {
-      "sha512": "kqfTOZGrn7NarNeXgjh86JcpTHUoeQDMB8t9NVa/ZtlSYiV1rxfRnQ49WaJsob4AiGrbK0XDzpyKkBwai4F8eg==",
-      "type": "package",
-      "path": "csvhelper/33.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "csvhelper.33.1.0.nupkg.sha512",
-        "csvhelper.nuspec",
-        "lib/net462/CsvHelper.dll",
-        "lib/net462/CsvHelper.xml",
-        "lib/net47/CsvHelper.dll",
-        "lib/net47/CsvHelper.xml",
-        "lib/net48/CsvHelper.dll",
-        "lib/net48/CsvHelper.xml",
-        "lib/net8.0/CsvHelper.dll",
-        "lib/net8.0/CsvHelper.xml",
-        "lib/net9.0/CsvHelper.dll",
-        "lib/net9.0/CsvHelper.xml",
-        "lib/netstandard2.0/CsvHelper.dll",
-        "lib/netstandard2.0/CsvHelper.xml",
-        "lib/netstandard2.1/CsvHelper.dll",
-        "lib/netstandard2.1/CsvHelper.xml"
-      ]
-    },
     "DocumentFormat.OpenXml/3.1.1": {
       "sha512": "2z9QBzeTLNNKWM9SaOSDMegfQk/7hDuElOsmF77pKZMkFRP/GHA/W/4yOAQD9kn15N/FsFxHn3QVYkatuZghiA==",
       "type": "package",
@@ -2407,50 +2336,6 @@
         "tools/netcoreapp3.0/any/ef6.dll",
         "tools/netcoreapp3.0/any/ef6.pdb",
         "tools/netcoreapp3.0/any/ef6.runtimeconfig.json"
-      ]
-    },
-    "ExcelDataReader/3.7.0": {
-      "sha512": "AMv3oDETRHSRyXC17rBtKH45qIfFyo433LMeaMB3u4RNr/c9Luuc0Z+JMP6+3Cx9n4wXqFqcrEIVxrf/GgYnZg==",
-      "type": "package",
-      "path": "exceldatareader/3.7.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ExcelDataReader.png",
-        "README.md",
-        "exceldatareader.3.7.0.nupkg.sha512",
-        "exceldatareader.nuspec",
-        "lib/net462/ExcelDataReader.dll",
-        "lib/net462/ExcelDataReader.pdb",
-        "lib/net462/ExcelDataReader.xml",
-        "lib/netstandard2.0/ExcelDataReader.dll",
-        "lib/netstandard2.0/ExcelDataReader.pdb",
-        "lib/netstandard2.0/ExcelDataReader.xml",
-        "lib/netstandard2.1/ExcelDataReader.dll",
-        "lib/netstandard2.1/ExcelDataReader.pdb",
-        "lib/netstandard2.1/ExcelDataReader.xml"
-      ]
-    },
-    "ExcelDataReader.DataSet/3.7.0": {
-      "sha512": "zA2/CVzbMspkNg0qf0/Zp+eU6VxYP5PtiJSErLDP46d/Y7F6of/NCcSGeXjs97KDq7UiEf6XJe+89s/92n2GYg==",
-      "type": "package",
-      "path": "exceldatareader.dataset/3.7.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ExcelDataReader.png",
-        "README.md",
-        "exceldatareader.dataset.3.7.0.nupkg.sha512",
-        "exceldatareader.dataset.nuspec",
-        "lib/net462/ExcelDataReader.DataSet.dll",
-        "lib/net462/ExcelDataReader.DataSet.pdb",
-        "lib/net462/ExcelDataReader.DataSet.xml",
-        "lib/netstandard2.0/ExcelDataReader.DataSet.dll",
-        "lib/netstandard2.0/ExcelDataReader.DataSet.pdb",
-        "lib/netstandard2.0/ExcelDataReader.DataSet.xml",
-        "lib/netstandard2.1/ExcelDataReader.DataSet.dll",
-        "lib/netstandard2.1/ExcelDataReader.DataSet.pdb",
-        "lib/netstandard2.1/ExcelDataReader.DataSet.xml"
       ]
     },
     "ExcelNumberFormat/1.1.0": {
@@ -6601,9 +6486,6 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "CsvHelper >= 33.1.0",
-      "ExcelDataReader >= 3.7.0",
-      "ExcelDataReader.DataSet >= 3.7.0",
       "System.IdentityModel.Tokens.Jwt >= 6.10.0",
       "pro.Context >= 1.0.0",
       "pro.Function >= 1.0.0",
@@ -6674,18 +6556,6 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
-          "CsvHelper": {
-            "target": "Package",
-            "version": "[33.1.0, )"
-          },
-          "ExcelDataReader": {
-            "target": "Package",
-            "version": "[3.7.0, )"
-          },
-          "ExcelDataReader.DataSet": {
-            "target": "Package",
-            "version": "[3.7.0, )"
-          },
           "System.IdentityModel.Tokens.Jwt": {
             "target": "Package",
             "version": "[6.10.0, )"

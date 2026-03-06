@@ -8,6 +8,9 @@ namespace pro.Model
         public string Tenant { get; set; }
         public string RutaReporte { get; set; }
         public string RutaPacienteImagen { get; set; }
+        public string RutaPagoImagen { get; set; }
+        public string RutaConsentimientoImagen { get; set; }
+        public string RutaAvisoImagen { get; set; }
         public int AnchoImagen { get; set; }
         public int LargoImagen { get; set; }
 
@@ -16,6 +19,9 @@ namespace pro.Model
             Tenant = string.Empty;
             RutaReporte = string.Empty;
             RutaPacienteImagen = string.Empty;
+            RutaPagoImagen = string.Empty;
+            RutaConsentimientoImagen = string.Empty;
+            RutaAvisoImagen = string.Empty;
         }
     }
 }

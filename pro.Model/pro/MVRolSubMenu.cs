@@ -15,6 +15,7 @@ namespace pro.Model
         public string Ruta { get; set; }
         public string Icono { get; set; }
         public int Orden { get; set; }
+        public bool Escritura { get; set; }
         public long IdOrganizacion { get; set; }
         public string Fecha { get; set; }
         public bool Activo { get; set; }

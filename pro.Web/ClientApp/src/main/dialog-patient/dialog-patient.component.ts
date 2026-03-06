@@ -21,7 +21,6 @@ export class DialogPatientComponent implements OnInit {
   inPacienteImagen: IPacienteImagen[] = [];
 
   file: File;
-  previewUrl: any;
 
   iSexo: ISexo;
   inSexo: ISexo[] = [];
@@ -274,57 +273,6 @@ export class DialogPatientComponent implements OnInit {
     }
   }
 
-  ngController(option: string, data?: any): void {
-
-    switch (option) {
-      case 'getSexo': {
-        this.ngModelSet('getSexo');
-        this.ngGetSexo(2, this.iSexo);
-        break;
-      }
-      case 'getEstado': {
-        this.ngModelSet('getEstado');
-        this.ngGetEstado(2, this.iEstado);
-        break;
-      }
-      case 'getMunicipio': {
-        this.ngModelSet('getMunicipio');
-        this.ngGetMunicipio(2, this.iMunicipio);
-        break;
-      }
-      case 'getColonia': {
-        this.ngModelSet('getColonia');
-        this.ngGetColonia(2, this.iColonia);
-        break;
-      }
-      case 'getPaciente': {
-        this.ngModelSet('getPaciente');
-        this.ngGetPaciente(1, this.iPaciente);
-        break;
-      }
-      case 'postPaciente': {
-        this.ngModelSet('postPaciente');
-        this.ngPostPaciente(this.iPaciente);
-        break;
-      }
-      case 'putPaciente': {
-        this.ngModelSet('putPaciente');
-        this.ngPutPaciente(1, this.iPaciente);
-        break;
-      }
-      case 'getPacienteImagen': {
-        this.ngModelSet('getPacienteImagen');
-        this.ngGetPacienteImagen(3, this.iPacienteImagen);
-        break;
-      }
-      case 'postPacienteImagen': {
-        this.ngPostPacienteImagen(this.iPaciente, this.file);
-        break;
-      }
-    }
-
-  }
-
   ngHandle(option: string, data?: any): void {
 
     switch (option) {
@@ -416,6 +364,57 @@ export class DialogPatientComponent implements OnInit {
     }
 
     return b;
+  }
+
+  ngController(option: string, data?: any): void {
+
+    switch (option) {
+      case 'getSexo': {
+        this.ngModelSet('getSexo');
+        this.ngGetSexo(2, this.iSexo);
+        break;
+      }
+      case 'getEstado': {
+        this.ngModelSet('getEstado');
+        this.ngGetEstado(2, this.iEstado);
+        break;
+      }
+      case 'getMunicipio': {
+        this.ngModelSet('getMunicipio');
+        this.ngGetMunicipio(2, this.iMunicipio);
+        break;
+      }
+      case 'getColonia': {
+        this.ngModelSet('getColonia');
+        this.ngGetColonia(2, this.iColonia);
+        break;
+      }
+      case 'getPaciente': {
+        this.ngModelSet('getPaciente');
+        this.ngGetPaciente(1, this.iPaciente);
+        break;
+      }
+      case 'postPaciente': {
+        this.ngModelSet('postPaciente');
+        this.ngPostPaciente(this.iPaciente);
+        break;
+      }
+      case 'putPaciente': {
+        this.ngModelSet('putPaciente');
+        this.ngPutPaciente(1, this.iPaciente);
+        break;
+      }
+      case 'getPacienteImagen': {
+        this.ngModelSet('getPacienteImagen');
+        this.ngGetPacienteImagen(3, this.iPacienteImagen);
+        break;
+      }
+      case 'postPacienteImagen': {
+        this.ngPostPacienteImagen(this.iPaciente, this.file);
+        break;
+      }
+    }
+
   }
 
   async ngGetSexo(option: number, model: ISexo) {

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using pro.Context;
 using pro.Logic;
 using pro.Model;
@@ -15,9 +16,9 @@ namespace pro.Api.Controllers
         private readonly LHemodialisis _logic;
         private readonly MResponse _response;
 
-        public HemodialisisController(DBPRO dbc)
+        public HemodialisisController(DBPRO dbc, IOptions<MConfiguracion> option)
         {
-            _logic = new LHemodialisis(dbc);
+            _logic = new LHemodialisis(dbc, option);
             _response = new MResponse();
         }
 
@@ -81,6 +82,21 @@ namespace pro.Api.Controllers
             catch (Exception ex)
             {
                 _response.Message = ex.Message;
+                return BadRequest(_response);
+            }
+        }
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> ReportHemodialisis([FromQuery] int idAgenda)
+        {
+            try
+            {
+                MemoryStream memoryStream = await _logic.ReportHemodialisis(idAgenda);
+                return File(memoryStream.ToArray(), "application/vnd.ms-excel");
+            }
+            catch (Exception ex)
+            {
+                _response.Message = ex.Message.ToString();
                 return BadRequest(_response);
             }
         }

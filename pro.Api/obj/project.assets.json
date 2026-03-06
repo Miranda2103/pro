@@ -35,22 +35,6 @@
           }
         }
       },
-      "CsvHelper/33.1.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.CSharp": "4.7.0"
-        },
-        "compile": {
-          "lib/netstandard2.1/CsvHelper.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/CsvHelper.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "DocumentFormat.OpenXml/3.1.1": {
         "type": "package",
         "dependencies": {
@@ -111,35 +95,6 @@
         "build": {
           "buildTransitive/netcoreapp3.0/EntityFramework.props": {},
           "buildTransitive/netcoreapp3.0/EntityFramework.targets": {}
-        }
-      },
-      "ExcelDataReader/3.7.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.1/ExcelDataReader.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/ExcelDataReader.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
-      "ExcelDataReader.DataSet/3.7.0": {
-        "type": "package",
-        "dependencies": {
-          "ExcelDataReader": "3.7.0"
-        },
-        "compile": {
-          "lib/netstandard2.1/ExcelDataReader.DataSet.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.1/ExcelDataReader.DataSet.dll": {
-            "related": ".pdb;.xml"
-          }
         }
       },
       "ExcelNumberFormat/1.1.0": {
@@ -1048,6 +1003,15 @@
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
+        }
+      },
+      "Microsoft.Office.Interop.Excel/16.0.18925.20022": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Microsoft.Office.Interop.Excel.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.Office.Interop.Excel.dll": {}
         }
       },
       "Microsoft.OpenApi/1.2.3": {
@@ -2347,9 +2311,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "CsvHelper": "33.1.0",
-          "ExcelDataReader": "3.7.0",
-          "ExcelDataReader.DataSet": "3.7.0",
           "System.IdentityModel.Tokens.Jwt": "6.10.0",
           "pro.Context": "1.0.0",
           "pro.Function": "1.0.0",
@@ -2429,32 +2390,6 @@
         "lib/netstandard2.0/ClosedXML.Parser.xml",
         "lib/netstandard2.1/ClosedXML.Parser.dll",
         "lib/netstandard2.1/ClosedXML.Parser.xml"
-      ]
-    },
-    "CsvHelper/33.1.0": {
-      "sha512": "kqfTOZGrn7NarNeXgjh86JcpTHUoeQDMB8t9NVa/ZtlSYiV1rxfRnQ49WaJsob4AiGrbK0XDzpyKkBwai4F8eg==",
-      "type": "package",
-      "path": "csvhelper/33.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "csvhelper.33.1.0.nupkg.sha512",
-        "csvhelper.nuspec",
-        "lib/net462/CsvHelper.dll",
-        "lib/net462/CsvHelper.xml",
-        "lib/net47/CsvHelper.dll",
-        "lib/net47/CsvHelper.xml",
-        "lib/net48/CsvHelper.dll",
-        "lib/net48/CsvHelper.xml",
-        "lib/net8.0/CsvHelper.dll",
-        "lib/net8.0/CsvHelper.xml",
-        "lib/net9.0/CsvHelper.dll",
-        "lib/net9.0/CsvHelper.xml",
-        "lib/netstandard2.0/CsvHelper.dll",
-        "lib/netstandard2.0/CsvHelper.xml",
-        "lib/netstandard2.1/CsvHelper.dll",
-        "lib/netstandard2.1/CsvHelper.xml"
       ]
     },
     "DocumentFormat.OpenXml/3.1.1": {
@@ -2560,50 +2495,6 @@
         "tools/netcoreapp3.0/any/ef6.dll",
         "tools/netcoreapp3.0/any/ef6.pdb",
         "tools/netcoreapp3.0/any/ef6.runtimeconfig.json"
-      ]
-    },
-    "ExcelDataReader/3.7.0": {
-      "sha512": "AMv3oDETRHSRyXC17rBtKH45qIfFyo433LMeaMB3u4RNr/c9Luuc0Z+JMP6+3Cx9n4wXqFqcrEIVxrf/GgYnZg==",
-      "type": "package",
-      "path": "exceldatareader/3.7.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ExcelDataReader.png",
-        "README.md",
-        "exceldatareader.3.7.0.nupkg.sha512",
-        "exceldatareader.nuspec",
-        "lib/net462/ExcelDataReader.dll",
-        "lib/net462/ExcelDataReader.pdb",
-        "lib/net462/ExcelDataReader.xml",
-        "lib/netstandard2.0/ExcelDataReader.dll",
-        "lib/netstandard2.0/ExcelDataReader.pdb",
-        "lib/netstandard2.0/ExcelDataReader.xml",
-        "lib/netstandard2.1/ExcelDataReader.dll",
-        "lib/netstandard2.1/ExcelDataReader.pdb",
-        "lib/netstandard2.1/ExcelDataReader.xml"
-      ]
-    },
-    "ExcelDataReader.DataSet/3.7.0": {
-      "sha512": "zA2/CVzbMspkNg0qf0/Zp+eU6VxYP5PtiJSErLDP46d/Y7F6of/NCcSGeXjs97KDq7UiEf6XJe+89s/92n2GYg==",
-      "type": "package",
-      "path": "exceldatareader.dataset/3.7.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ExcelDataReader.png",
-        "README.md",
-        "exceldatareader.dataset.3.7.0.nupkg.sha512",
-        "exceldatareader.dataset.nuspec",
-        "lib/net462/ExcelDataReader.DataSet.dll",
-        "lib/net462/ExcelDataReader.DataSet.pdb",
-        "lib/net462/ExcelDataReader.DataSet.xml",
-        "lib/netstandard2.0/ExcelDataReader.DataSet.dll",
-        "lib/netstandard2.0/ExcelDataReader.DataSet.pdb",
-        "lib/netstandard2.0/ExcelDataReader.DataSet.xml",
-        "lib/netstandard2.1/ExcelDataReader.DataSet.dll",
-        "lib/netstandard2.1/ExcelDataReader.DataSet.pdb",
-        "lib/netstandard2.1/ExcelDataReader.DataSet.xml"
       ]
     },
     "ExcelNumberFormat/1.1.0": {
@@ -3946,6 +3837,22 @@
         "microsoft.netcore.targets.1.1.0.nupkg.sha512",
         "microsoft.netcore.targets.nuspec",
         "runtime.json"
+      ]
+    },
+    "Microsoft.Office.Interop.Excel/16.0.18925.20022": {
+      "sha512": "Wlhtqu3QfLnDRHc77bJewv5k27VASgcINA3eDAljfZQX9iTuM+12Mt7EJYZpxn+2gBw9dlK7q6riUxuXd4cviw==",
+      "type": "package",
+      "path": "microsoft.office.interop.excel/16.0.18925.20022",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "docs/readme.md",
+        "lib/net40/Microsoft.Office.Interop.Excel.dll",
+        "lib/net5.0/Microsoft.Office.Interop.Excel.dll",
+        "lib/netstandard2.0/Microsoft.Office.Interop.Excel.dll",
+        "microsoft.office.interop.excel.16.0.18925.20022.nupkg.sha512",
+        "microsoft.office.interop.excel.nuspec",
+        "nuget.exe"
       ]
     },
     "Microsoft.OpenApi/1.2.3": {
@@ -7150,6 +7057,7 @@
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.25",
       "Microsoft.AspNetCore.WebSockets >= 2.1.7",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.25",
+      "Microsoft.Office.Interop.Excel >= 16.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0",
       "pro.Context >= 1.0.0",
       "pro.Interface >= 1.0.0",
@@ -7232,6 +7140,10 @@
             "target": "Package",
             "version": "[6.0.25, )"
           },
+          "Microsoft.Office.Interop.Excel": {
+            "target": "Package",
+            "version": "[16.0.0, )"
+          },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.5.0, )"
@@ -7277,5 +7189,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "pro.Api depende de Microsoft.Office.Interop.Excel (>= 16.0.0), pero no se encontró Microsoft.Office.Interop.Excel 16.0.0. Microsoft.Office.Interop.Excel 16.0.18925.20022 se resolvió en su lugar.",
+      "libraryId": "Microsoft.Office.Interop.Excel",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

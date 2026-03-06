@@ -13,6 +13,8 @@ namespace pro.Model
 
         public long IdAgenda { get; set; }
 
+        public long IdPaciente { get; set; }
+
         [StringLength(250)]
         public string Diagnostico { get; set; }
 

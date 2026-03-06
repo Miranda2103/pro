@@ -1,47 +1,18 @@
 <div class="w100 h100" [ngClass]="{'fx' : !shared.rd, 'grid' : shared.rd}">
 
-  <div class="h100 fx fx-flow border-right background-jh-2" [ngClass]="{ 'w25': expand, 'w5': !expand }" *ngIf="!shared.rd">
+  <div class="w5 h100 fx fx-flow padding border-right background-jh-2" *ngIf="!shared.rd">
 
-    <div class="w100 padding">
-
-      <div class="fl-left" *ngIf="expand">
-        <h1>Mensaje del Sistema</h1>
-      </div>
-
-      <div class="fx-push align-right">
-        <button mat-icon-button [mat-dialog-close]="false" color="warn" matTooltip="Cerrar">
-          <mat-icon>close</mat-icon>
-        </button>
-      </div>
-
-    </div>
-
-    <div class="w100 padding fx-remaining fx fx-middle content-center">
-
-      <div class="fl-left" *ngIf="expand">
-        <mat-icon class="padding-right-05">info</mat-icon>
-        <mat-label class="bold">Menu.</mat-label>
-      </div>
-
-      <div class="fx-push align-right">
-
-        <button mat-icon-button class="outline omr omb" *ngIf="expand" (click)="expand = !expand;">
-          <mat-icon matTooltip="Contraer">first_page</mat-icon>
-        </button>
-
-        <button mat-icon-button class="outline omr omb" *ngIf="!expand" (click)="expand = !expand;">
-          <mat-icon matTooltip="Expandir">last_page</mat-icon>
-        </button>
-
-      </div>
-
+    <div class="w100 fx-push align-right">
+      <button mat-icon-button [mat-dialog-close]="false" color="warn" matTooltip="Cerrar">
+        <mat-icon>close</mat-icon>
+      </button>
     </div>
 
   </div>
 
-  <div class="h100 background-jh-4" [ngClass]="{'w75': expand, 'w95': !expand , 'overflow-hidden' : !shared.rd}">
+  <div class="w95 h100 background-jh-4" [ngClass]="{'overflow-hidden' : !shared.rd}">
 
-    <div class="w40 h100 fx fx-flow padding" [ngClass]="{'overflow' : !shared.rd}">
+    <div class="w100 h100 fx fx-flow padding" [ngClass]="{'overflow' : !shared.rd}">
 
       <div class="w100" *ngIf="shared.rd">
         <button mat-raised-button class="wpx125 background-cerrar" [mat-dialog-close]="false">
@@ -51,50 +22,42 @@
       </div>
 
       <div class="w100 fx-remaining fx fx-middle content-center">
-        <div class="w100 padding-top">
-          <div class="w100">
+        <div class="w30">
 
-            <mat-form-field class="w100" appearance="outline">
-              <mat-label>SubMenu</mat-label>
-              <input matInput [(ngModel)]="iSubMenu.subMenu" (focusout)="ngController('getSubMenu');" required maxlength="250">
-              <button mat-icon-button matSuffix *ngIf="iSubMenu.subMenu != ''" (click)="ngClean('iSubMenu.subMenu',$event);">
-                <mat-icon matTooltip="Limpiar">close</mat-icon>
-              </button>
-            </mat-form-field>
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>SubMenu</mat-label>
+            <input matInput [(ngModel)]="iSubMenu.subMenu" (focusout)="ngController('getSubMenu');" required maxlength="250">
+            <button mat-icon-button matSuffix *ngIf="iSubMenu.subMenu != ''" (click)="ngClean('iSubMenu.subMenu',$event);">
+              <mat-icon matTooltip="Limpiar">close</mat-icon>
+            </button>
+          </mat-form-field>
 
-            <mat-form-field class="w100" appearance="outline">
-              <mat-label>Icono</mat-label>
-              <input matInput [(ngModel)]="iSubMenu.icono" required maxlength="250">
-              <button mat-icon-button matSuffix *ngIf="iSubMenu.icono != ''" (click)="ngClean('iSubMenu.icono',$event);">
-                <mat-icon matTooltip="Limpiar">close</mat-icon>
-              </button>
-            </mat-form-field>
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Icono</mat-label>
+            <input matInput [(ngModel)]="iSubMenu.icono" required maxlength="250">
+            <button mat-icon-button matSuffix *ngIf="iSubMenu.icono != ''" (click)="ngClean('iSubMenu.icono',$event);">
+              <mat-icon matTooltip="Limpiar">close</mat-icon>
+            </button>
+          </mat-form-field>
 
-            <mat-form-field class="w100" appearance="outline">
-              <mat-label>Orden</mat-label>
-              <input matInput [(ngModel)]="iSubMenu.orden" (keypress)="this.shared.ngNumber($event)" required maxlength="250">
-              <button mat-icon-button matSuffix *ngIf="iSubMenu.orden != 0" (click)="ngClean('iSubMenu.orden',$event);">
-                <mat-icon matTooltip="Limpiar">close</mat-icon>
-              </button>
-            </mat-form-field>
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Orden</mat-label>
+            <input matInput [(ngModel)]="iSubMenu.orden" (keypress)="this.shared.ngNumber($event)" required maxlength="250">
+            <button mat-icon-button matSuffix *ngIf="iSubMenu.orden != 0" (click)="ngClean('iSubMenu.orden',$event);">
+              <mat-icon matTooltip="Limpiar">close</mat-icon>
+            </button>
+          </mat-form-field>
 
-            <div class="w100 align-center" [ngClass]="{'visible' : iSubMenu.subMenu != '' && iSubMenu.icono != '' && iSubMenu.orden != 0, 'hidden' : iSubMenu.subMenu == '' || iSubMenu.icono == '' || iSubMenu.orden == 0 }">
-              <button mat-raised-button class="wpx125 background-4" (click)="ngHandle('handle');">
-                <mat-icon class="fl-left button-icon">save</mat-icon>
-                Guardar
-              </button>
-            </div>
-
-            <div class="w100 padding-bottom-05" *ngIf="shared.rd">
-            </div>
-
+          <div class="w100 align-center" [ngClass]="{'visible' : iSubMenu.subMenu != '' && iSubMenu.icono != '' && iSubMenu.orden != 0, 'hidden' : iSubMenu.subMenu == '' || iSubMenu.icono == '' || iSubMenu.orden == 0 }">
+            <button mat-raised-button class="wpx125 background-4" (click)="ngHandle('submenu');" *ngIf="shared.permisoEscritura">
+              <mat-icon class="fl-left button-icon">save</mat-icon>
+              Guardar
+            </button>
           </div>
+
         </div>
       </div>
 
-    </div>
-
-    <div class="w60 h100" *ngIf="!shared.rd">
     </div>
 
   </div>

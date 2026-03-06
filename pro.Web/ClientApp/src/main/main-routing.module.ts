@@ -9,6 +9,7 @@ import { RolMenuComponent } from './rol-menu/rol-menu.component';
 import { PatientComponent } from './patient/patient.component';
 import { AgendaComponent } from './agenda/agenda.component';
 import { ConsultComponent } from './consult/consult.component';
+import { AuthGuard } from '../guard/auth.guard';
 
 const routes: Routes = [
   {
@@ -17,13 +18,13 @@ const routes: Routes = [
       { path: 'dialog-message', loadChildren: () => import('src/dialog-message/dialog-message.module').then(m => m.DialogMessageModule) },
       { path: 'dialog-confirmation', loadChildren: () => import('src/dialog-confirmation/dialog-confirmation.module').then(m => m.DialogConfirmationModule) },
       { path: 'home', component: HomeComponent },
-      { path: 'patient', component: PatientComponent },
-      { path: 'consult', component: ConsultComponent },
-      { path: 'agenda', component: AgendaComponent },
-      { path: 'organization', component: OrganizationComponent },
-      { path: 'rol', component: RolComponent },
-      { path: 'rol-menu', component: RolMenuComponent },
-      { path: 'user', component: UserComponent }
+      { path: 'patient', component: PatientComponent, canActivate: [AuthGuard] },
+      { path: 'consult', component: ConsultComponent, canActivate: [AuthGuard] },
+      { path: 'agenda', component: AgendaComponent, canActivate: [AuthGuard] },
+      { path: 'organization', component: OrganizationComponent, canActivate: [AuthGuard] },
+      { path: 'rol', component: RolComponent, canActivate: [AuthGuard] },
+      { path: 'rol-menu', component: RolMenuComponent, canActivate: [AuthGuard] },
+      { path: 'user', component: UserComponent, canActivate: [AuthGuard] }
     ]
   }
 ];

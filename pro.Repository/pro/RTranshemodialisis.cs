@@ -5,42 +5,42 @@ using pro.Model;
 
 namespace pro.Repository
 {
-    public class RTranshemodialisis : ITranshemodialisis
+    public class RTransHemodialisis : ITransHemodialisis
     {
         private readonly DBPRO _dbc;
 
-        public RTranshemodialisis(DBPRO dbc)
+        public RTransHemodialisis(DBPRO dbc)
         {
             _dbc = dbc;
         }
 
-        public async Task<List<MTranshemodialisis>> GetAsync(int option, MTranshemodialisis model)
+        public async Task<List<MTransHemodialisis>> GetAsync(int option, MTransHemodialisis model)
         {
             return option switch
             {
-                1 => await _dbc.Transhemodialisis.Where(r => r.Activo == true && r.IdAgenda == model.IdAgenda).ToListAsync(),
+                1 => await _dbc.TransHemodialisis.Where(r => r.Activo == true && r.IdAgenda == model.IdAgenda).ToListAsync(),
                 _ => throw new NotImplementedException()
             };
         }
 
-        public async Task<Boolean> PostAsync(List<MTranshemodialisis> model)
+        public async Task<Boolean> PostAsync(List<MTransHemodialisis> model)
         {
-            foreach (MTranshemodialisis m in model)
+            foreach (MTransHemodialisis m in model)
             {
                 m.FechaInserta = DateTime.Now;
                 m.IdUsuarioActualiza = 0;
                 m.FechaActualiza = new DateTime(1900, 1, 1);
             }
 
-            await _dbc.Transhemodialisis.AddRangeAsync(model);
+            await _dbc.TransHemodialisis.AddRangeAsync(model);
             await _dbc.SaveChangesAsync();
 
             return true;
         }
 
-        public async Task<bool> PutAsync(int option, MTranshemodialisis model)
+        public async Task<bool> PutAsync(int option, MTransHemodialisis model)
         {
-            List<MTranshemodialisis> lm;
+            List<MTransHemodialisis> lm;
 
             switch (option)
             {
@@ -76,11 +76,11 @@ namespace pro.Repository
             return true;
         }
 
-        public async Task<bool> DeleteAsync(int option, List<MTranshemodialisis> model)
+        public async Task<bool> DeleteAsync(int option, List<MTransHemodialisis> model)
         {
-            List<MTranshemodialisis> lm;
+            List<MTransHemodialisis> lm;
 
-            foreach (MTranshemodialisis m in model)
+            foreach (MTransHemodialisis m in model)
             {
                 switch (option)
                 {

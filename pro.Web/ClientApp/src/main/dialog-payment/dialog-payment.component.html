@@ -1,0 +1,168 @@
+<div class="w100 h100" [ngClass]="{'fx' : !shared.rd, 'grid' : shared.rd}">
+
+  <div class="w5 h100 fx fx-flow padding border-right background-jh-2" *ngIf="!shared.rd">
+
+    <div class="w100 fx-push align-right">
+      <button mat-icon-button [mat-dialog-close]="false" color="warn" matTooltip="Cerrar">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+
+  </div>
+
+  <div class="w95 h100 background-jh-4" [ngClass]="{'overflow-hidden' : !shared.rd}">
+
+    <div class="w100 h100 fx fx-flow padding" [ngClass]="{'overflow' : !shared.rd}">
+
+      <div class="w100" *ngIf="shared.rd">
+        <button mat-raised-button class="wpx125 background-cerrar" [mat-dialog-close]="false">
+          <mat-icon class="fl-left button-icon">close</mat-icon>
+          Cerrar
+        </button>
+      </div>
+
+      <div class="w100 fx-remaining fx fx-middle content-center">
+        <div class="w30">
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Forma de Pago</mat-label>
+            <mat-select [panelClass]="'panel-select'" #selectFormaPago [(value)]="iPago.idFormaPago" required>
+              <mat-select-filter *ngIf="selectFormaPago.focused" [array]="inFormaPago" [displayMember]="'formaPago'" [showSpinner]="false" placeholder="Buscar" noResultsMessage="" (filteredReturn)="filteredFormaPago = $event"></mat-select-filter>
+              <mat-option *ngFor="let item of filteredFormaPago" [value]="item.id">
+                {{ item.formaPago }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Importe</mat-label>
+            <input matInput [(ngModel)]="iPago.importe" (keypress)="this.shared.ngMoney($event)" required maxlength="18">
+            <button mat-icon-button matSuffix *ngIf="iPago.importe != ''" (click)="ngClean('iPago.importe');">
+              <mat-icon matTooltip="Limpiar">close</mat-icon>
+            </button>
+          </mat-form-field>
+
+          <div class="w100 hspx15">
+          </div>
+
+          <div class="w100 align-center">
+            <button mat-raised-button class="wpx125 background-4" (click)="ngHandle('pago');" *ngIf="shared.permisoEscritura">
+              <mat-icon class="fl-left button-icon">save</mat-icon>
+              Guardar
+            </button>
+          </div>
+
+          <div class="w100 hspx25">
+          </div>
+
+          <div class="w100 fx fx-direction-row">
+
+            <div class="w40">
+
+              <button mat-raised-button class="wpx150 background-11" (click)="ngDownloadPagoDocumento();">
+                <mat-icon class="fl-left button-icon">get_app</mat-icon>
+                Recibo
+              </button>
+
+            </div>
+
+            <div class="w60">
+
+              <mat-form-field class="w100 fx fx-middle" appearance="outline">
+                <mat-label>Selecciona un archivo</mat-label>
+                <input matInput class="cursor" [(ngModel)]="iPagoImagen.nombre" (click)="filePago.click()" readonly="readonly">
+                <button mat-icon-button matSuffix *ngIf="iPagoImagen.nombre != ''" (click)="ngClean('iPagoImagen.nombre');">
+                  <mat-icon matTooltip="Limpiar">close</mat-icon>
+                </button>
+                <button mat-icon-button matSuffix (click)="filePago.click()">
+                  <mat-icon matTooltip="Adjuntar">attach_file</mat-icon>
+                </button>
+                <button mat-icon-button matSuffix (click)="ngDownloadPagoImagen()" *ngIf="iPagoImagen.id">
+                  <mat-icon matTooltip="Descargar">get_app</mat-icon>
+                </button>
+              </mat-form-field>
+              <input #filePago type="file" accept="image/*" (change)="ngHandleFilePago($event)" hidden>
+
+            </div>
+
+          </div>
+
+          <div class="w100 hspx25">
+          </div>
+
+          <div class="w100 fx fx-direction-row">
+
+            <div class="w40">
+
+              <button mat-raised-button class="wpx150 background-11" (click)="ngDownloadConsentimientoDocumento();">
+                <mat-icon class="fl-left button-icon">get_app</mat-icon>
+                Consentimiento
+              </button>
+
+            </div>
+
+            <div class="w60">
+
+              <mat-form-field class="w100 fx fx-middle" appearance="outline">
+                <mat-label>Selecciona un archivo</mat-label>
+                <input matInput class="cursor" [(ngModel)]="iConsentimientoImagen.nombre" (click)="fileConsentimiento.click()" readonly="readonly">
+                <button mat-icon-button matSuffix *ngIf="iConsentimientoImagen.nombre != ''" (click)="ngClean('iConsentimientoImagen.nombre');">
+                  <mat-icon matTooltip="Limpiar">close</mat-icon>
+                </button>
+                <button mat-icon-button matSuffix (click)="fileConsentimiento.click()">
+                  <mat-icon matTooltip="Adjuntar">attach_file</mat-icon>
+                </button>
+                <button mat-icon-button matSuffix (click)="ngDownloadConsentimientoImagen()" *ngIf="iConsentimientoImagen.id">
+                  <mat-icon matTooltip="Descargar">get_app</mat-icon>
+                </button>
+              </mat-form-field>
+              <input #fileConsentimiento type="file" accept="image/*" (change)="ngHandleFileConsentimiento($event)" hidden>
+
+            </div>
+
+          </div>
+
+          <div class="w100 hspx25">
+          </div>
+
+          <div class="w100 fx fx-direction-row">
+
+            <div class="w40">
+
+              <button mat-raised-button class="wpx150 background-11" (click)="ngDownloadAvisoDocumento();">
+                <mat-icon class="fl-left button-icon">get_app</mat-icon>
+                Aviso
+              </button>
+
+            </div>
+
+            <div class="w60">
+
+              <mat-form-field class="w100 fx fx-middle" appearance="outline">
+                <mat-label>Selecciona un archivo</mat-label>
+                <input matInput class="cursor" [(ngModel)]="iAvisoImagen.nombre" (click)="fileAviso.click()" readonly="readonly">
+                <button mat-icon-button matSuffix *ngIf="iAvisoImagen.nombre != ''" (click)="ngClean('iAvisoImagen.nombre');">
+                  <mat-icon matTooltip="Limpiar">close</mat-icon>
+                </button>
+                <button mat-icon-button matSuffix (click)="fileAviso.click()">
+                  <mat-icon matTooltip="Adjuntar">attach_file</mat-icon>
+                </button>
+                <button mat-icon-button matSuffix (click)="ngDownloadAvisoImagen()" *ngIf="iAvisoImagen.id">
+                  <mat-icon matTooltip="Descargar">get_app</mat-icon>
+                </button>
+              </mat-form-field>
+              <input #fileAviso type="file" accept="image/*" (change)="ngHandleFileAviso($event)" hidden>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+

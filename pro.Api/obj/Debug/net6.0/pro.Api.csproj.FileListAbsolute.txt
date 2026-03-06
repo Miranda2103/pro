@@ -16,13 +16,10 @@ C:\Users\syste\source\repos\pro\pro.Api\bin\Debug\net6.0\pro.Api.dll
 C:\Users\syste\source\repos\pro\pro.Api\bin\Debug\net6.0\pro.Api.pdb
 C:\Users\syste\source\repos\pro\pro.Api\bin\Debug\net6.0\ClosedXML.dll
 C:\Users\syste\source\repos\pro\pro.Api\bin\Debug\net6.0\ClosedXML.Parser.dll
-C:\Users\syste\source\repos\pro\pro.Api\bin\Debug\net6.0\CsvHelper.dll
 C:\Users\syste\source\repos\pro\pro.Api\bin\Debug\net6.0\DocumentFormat.OpenXml.dll
 C:\Users\syste\source\repos\pro\pro.Api\bin\Debug\net6.0\DocumentFormat.OpenXml.Framework.dll
 C:\Users\syste\source\repos\pro\pro.Api\bin\Debug\net6.0\EntityFramework.SqlServer.dll
 C:\Users\syste\source\repos\pro\pro.Api\bin\Debug\net6.0\EntityFramework.dll
-C:\Users\syste\source\repos\pro\pro.Api\bin\Debug\net6.0\ExcelDataReader.dll
-C:\Users\syste\source\repos\pro\pro.Api\bin\Debug\net6.0\ExcelDataReader.DataSet.dll
 C:\Users\syste\source\repos\pro\pro.Api\bin\Debug\net6.0\ExcelNumberFormat.dll
 C:\Users\syste\source\repos\pro\pro.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\syste\source\repos\pro\pro.Api\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
@@ -116,3 +113,4 @@ C:\Users\syste\source\repos\pro\pro.Api\bin\Debug\net6.0\Microsoft.Win32.SystemE
 C:\Users\syste\source\repos\pro\pro.Api\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\syste\source\repos\pro\pro.Api\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
 C:\Users\syste\source\repos\pro\pro.Api\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\syste\source\repos\pro\pro.Api\bin\Debug\net6.0\Microsoft.Office.Interop.Excel.dll

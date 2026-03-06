@@ -2,9 +2,9 @@
 
   <div class="w100 fx fx-direction-row fx-middle content-center">
 
-    <div class="w40 padding">
+    <div class="w100 fx fx-direction-row padding">
 
-      <mat-form-field class="w40 padding-right" appearance="outline">
+      <mat-form-field class="w15 padding-right" appearance="outline">
         <mat-label>Paciente</mat-label>
         <mat-select [panelClass]="'panel-select'" #selectPaciente [(value)]="idPaciente" (selectionChange)="habilitarCalendario()">
           <mat-select-filter *ngIf="selectPaciente.focused" [array]="inPaciente" [displayMember]="'nombreCompleto'" [showSpinner]="false" placeholder="Buscar" noResultsMessage="" (filteredReturn)="filteredPaciente = $event"></mat-select-filter>
@@ -14,7 +14,7 @@
         </mat-select>
       </mat-form-field>
 
-      <mat-form-field class="w40" appearance="outline">
+      <mat-form-field class="w15 padding-right" appearance="outline">
         <mat-label>Equipo</mat-label>
         <mat-select [panelClass]="'panel-select'" #selectEquipo [(value)]="idEquipo" (selectionChange)="habilitarCalendario();ngEquipoCalendario();">
           <mat-select-filter *ngIf="selectEquipo.focused" [array]="inEquipo" [displayMember]="'equipo'" [showSpinner]="false" placeholder="Buscar" noResultsMessage="" (filteredReturn)="filteredEquipo = $event"></mat-select-filter>
@@ -27,37 +27,27 @@
         </button>
       </mat-form-field>
 
-    </div>
+      <mat-form-field class="w15" appearance="outline">
+        <mat-label>Tipo Consulta</mat-label>
+        <mat-select [panelClass]="'panel-select'" #selectTipoConsulta [(value)]="idTipoConsulta" (selectionChange)="habilitarCalendario();">
+          <mat-select-filter *ngIf="selectTipoConsulta.focused" [array]="inTipoConsulta" [displayMember]="'tipoConsulta'" [showSpinner]="false" placeholder="Buscar" noResultsMessage="" (filteredReturn)="filteredTipoConsulta = $event"></mat-select-filter>
+          <mat-option *ngFor="let item of filteredTipoConsulta" [value]="item.id">
+            {{ item.tipoConsulta }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
 
-    <div class="w25 align-center padding-bottom-05">
-
-      <div class="w100 padding-bottom-05" *ngIf="shared.rd">
+      <div class="w15 padding-left">
+        <div *ngFor="let item of inEquipoView">
+          <mat-label>{{ item.equipo }}: {{ item.total }} Servicios</mat-label>
+        </div>
       </div>
 
     </div>
-
-    <div class="w10 align-center fx fx-flow">
-
-      <div class="w100">
-
-      </div>
-
-      <div class="w100">
-
-      </div>
-
-    </div>
-
-    <div class="w25 fx content-center padding-top">
-
-    </div>
+           
 
   </div>
 
-  <div class="w100" *ngIf="shared.rd">
-
-  </div>
-
-  <full-calendar class="w100 h100 fx-remaining overflow background-12" [options]="calendarOptions"></full-calendar>
+  <full-calendar class="w100 h100 fx-remaining overflow background-12" #calendarRef [options]="calendarOptions"></full-calendar>
 
 </div>

@@ -4,14 +4,16 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace pro.Model
 {
-    [DisplayName("Transhemodialisis")]
-    [Table("Transhemodialisis", Schema = "prod")]
-    public class MTranshemodialisis
+    [DisplayName("TransHemodialisis")]
+    [Table("TransHemodialisis", Schema = "prod")]
+    public class MTransHemodialisis
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
 
         public long IdAgenda { get; set; }
+
+        public long IdPaciente { get; set; }
 
         [StringLength(250)]
         public string Hora { get; set; }
@@ -68,7 +70,7 @@ namespace pro.Model
 
         public bool Activo { get; set; }
 
-        public MTranshemodialisis()
+        public MTransHemodialisis()
         {
             Hora = string.Empty;
             Ta = string.Empty;

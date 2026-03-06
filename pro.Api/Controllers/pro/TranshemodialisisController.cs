@@ -10,19 +10,19 @@ namespace pro.Api.Controllers
     [Authorize]
     [Route("api/pro/[controller]")]
     [ApiController]
-    public class TranshemodialisisController : Controller
+    public class TransHemodialisisController : Controller
     {
-        private readonly LTranshemodialisis _logic;
+        private readonly LTransHemodialisis _logic;
         private readonly MResponse _response;
 
-        public TranshemodialisisController(DBPRO dbc)
+        public TransHemodialisisController(DBPRO dbc)
         {
-            _logic = new LTranshemodialisis(dbc);
+            _logic = new LTransHemodialisis(dbc);
             _response = new MResponse();
         }
 
         [HttpGet("[action]")]
-        public async Task<IActionResult> Get([Required] int option, [FromQuery] MTranshemodialisis model)
+        public async Task<IActionResult> Get([Required] int option, [FromQuery] MTransHemodialisis model)
         {
             try
             {
@@ -39,7 +39,7 @@ namespace pro.Api.Controllers
         }
 
         [HttpPost("[action]")]
-        public async Task<IActionResult> Post(List<MTranshemodialisis> model)
+        public async Task<IActionResult> Post(List<MTransHemodialisis> model)
         {
             try
             {
@@ -54,7 +54,7 @@ namespace pro.Api.Controllers
         }
 
         [HttpPut("[action]")]
-        public async Task<IActionResult> Put(int option, MTranshemodialisis model)
+        public async Task<IActionResult> Put(int option, MTransHemodialisis model)
         {
             try
             {
@@ -69,7 +69,7 @@ namespace pro.Api.Controllers
         }
 
         [HttpDelete("[action]")]
-        public async Task<IActionResult> Delete(int option, List<MTranshemodialisis> model)
+        public async Task<IActionResult> Delete(int option, List<MTransHemodialisis> model)
         {
             try
             {

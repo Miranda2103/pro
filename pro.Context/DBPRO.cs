@@ -10,7 +10,12 @@ namespace pro.Context
         public DbSet<MPaciente> Paciente { get; set; }
         public DbSet<MPacienteImagen> PacienteImagen { get; set; }
         public DbSet<MHemodialisis> Hemodialisis { get; set; }
-        public DbSet<MTranshemodialisis> Transhemodialisis { get; set; }
+        public DbSet<MTransHemodialisis> TransHemodialisis { get; set; }
+        public DbSet<MLlegada> Llegada { get; set; }
+        public DbSet<MPago> Pago { get; set; }
+        public DbSet<MPagoImagen> PagoImagen { get; set; }
+        public DbSet<MConsentimientoImagen> ConsentimientoImagen { get; set; }
+        public DbSet<MAvisoImagen> AvisoImagen { get; set; }
         public DbSet<MAgenda> Agenda { get; set; }
         public DbSet<MOrganizacion> Organizacion { get; set; }
         public DbSet<MRol> Rol { get; set; }
@@ -30,6 +35,8 @@ namespace pro.Context
         public DbSet<MColonia> Colonia { get; set; }
         public DbSet<MDecision> Decision { get; set; }
         public DbSet<MEquipo> Equipo { get; set; }
+        public DbSet<MFormaPago> FormaPago { get; set; }
+        public DbSet<MTipoConsulta> TipoConsulta { get; set; }
 
         #endregion
 
@@ -38,6 +45,12 @@ namespace pro.Context
         public DbSet<MVUsuario> ViewUsuario { get; set; }
         public DbSet<MVRolMenu> ViewRolMenu { get; set; }
         public DbSet<MVRolSubMenu> ViewRolSubMenu { get; set; }
+        public DbSet<MVHemodialisis> ViewHemodialisis { get; set; }
+        public DbSet<MVTransHemodialisis> ViewTransHemodialisis { get; set; }
+        public DbSet<MVPago> ViewPago { get; set; }
+        public DbSet<MVConsentimiento> ViewConsentimiento { get; set; }
+        public DbSet<MVAviso> ViewAviso { get; set; }
+        public DbSet<MVEquipo> ViewEquipo { get; set; }
 
         #endregion
 
@@ -86,7 +99,12 @@ namespace pro.Context
             Paciente = Set<MPaciente>();
             PacienteImagen = Set<MPacienteImagen>();
             Hemodialisis = Set<MHemodialisis>();
-            Transhemodialisis = Set<MTranshemodialisis>();
+            TransHemodialisis = Set<MTransHemodialisis>();
+            Llegada = Set<MLlegada>();
+            Pago = Set<MPago>();
+            PagoImagen = Set<MPagoImagen>();
+            ConsentimientoImagen = Set<MConsentimientoImagen>();
+            AvisoImagen = Set<MAvisoImagen>();
             Agenda = Set<MAgenda>();
             Organizacion = Set<MOrganizacion>();
             Rol = Set<MRol>();
@@ -106,6 +124,8 @@ namespace pro.Context
             Colonia = Set<MColonia>();
             Decision = Set<MDecision>();
             Equipo = Set<MEquipo>();
+            FormaPago = Set<MFormaPago>();
+            TipoConsulta = Set<MTipoConsulta>();
 
             #endregion
 
@@ -114,6 +134,12 @@ namespace pro.Context
             ViewUsuario = Set<MVUsuario>();
             ViewRolMenu = Set<MVRolMenu>();
             ViewRolSubMenu = Set<MVRolSubMenu>();
+            ViewHemodialisis = Set<MVHemodialisis>();
+            ViewTransHemodialisis = Set<MVTransHemodialisis>();
+            ViewPago = Set<MVPago>();
+            ViewConsentimiento = Set<MVConsentimiento>();
+            ViewAviso = Set<MVAviso>();
+            ViewEquipo = Set<MVEquipo>();
 
             #endregion
 
@@ -164,6 +190,12 @@ namespace pro.Context
             modelBuilder.Entity<MVUsuario>(r => { r.HasNoKey(); r.ToView("vwUsuario"); });
             modelBuilder.Entity<MVRolMenu>(r => { r.HasNoKey(); r.ToView("vwRolMenu"); });
             modelBuilder.Entity<MVRolSubMenu>(r => { r.HasNoKey(); r.ToView("vwRolSubMenu"); });
+            modelBuilder.Entity<MVHemodialisis>(r => { r.HasNoKey(); r.ToView("vwHemodialisis"); });
+            modelBuilder.Entity<MVTransHemodialisis>(r => { r.HasNoKey(); r.ToView("vwTransHemodialisis"); });
+            modelBuilder.Entity<MVPago>(r => { r.HasNoKey(); r.ToView("vwPago"); });
+            modelBuilder.Entity<MVConsentimiento>(r => { r.HasNoKey(); r.ToView("vwConsentimiento"); });
+            modelBuilder.Entity<MVAviso>(r => { r.HasNoKey(); r.ToView("vwAviso"); });
+            modelBuilder.Entity<MVEquipo>(r => { r.HasNoKey(); r.ToView("vwEquipo"); });
 
             #endregion
 

@@ -59,7 +59,7 @@ export class OrganizationComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.ngController('getFiltroLista');
+    this.ngHandle('getFiltroLista');
   }
 
   ngAfterViewInit(): void {
@@ -127,11 +127,11 @@ export class OrganizationComponent implements OnInit {
         this.activo = [];
         break;
       }
-      case 'iModel': {
+      case 'iOrganizacion': {
         this.iOrganizacion = { id: 0, organizacion: '', nombre: '', apellidoPaterno: '', apellidoMaterno: '', nombreCompleto: '', telefono: '', correo: '', calle: '', numeroExterior: '', numeroInterior: '', colonia: '', municipio: '', estado: '', idUsuarioInserta: this.shared.idUsuario, fechaInserta: this.shared.ngFechaInserta(), idUsuarioActualiza: this.shared.idUsuario, fechaActualiza: this.shared.ngFechaActualiza(), activo: true };
         break;
       }
-      case 'inModel': {
+      case 'inOrganizacion': {
         this.inOrganizacion = [];
         break;
       }
@@ -142,18 +142,18 @@ export class OrganizationComponent implements OnInit {
   ngModelSet(option: string, data?: any): void {
 
     switch (option) {
-      case 'iFiltroLista': {
+      case 'getFiltroLista': {
         this.ngClean('iFiltro');
         break;
       }
-      case 'iFiltroTotal': {
+      case 'getFiltroTotal': {
         this.ngClean('iFiltro');
         this.iFiltro.filtro = this.filter;
         this.iFiltro.filtroColumna = this.column;
         this.iFiltro.filtroValor = this.value;
         break;
       }
-      case 'iFiltroVista': {
+      case 'getFiltroVista': {
         this.ngClean('iFiltro');
         this.ngClean('selection');
         this.iFiltro.registros = this.pageSize;
@@ -165,7 +165,7 @@ export class OrganizationComponent implements OnInit {
         this.iFiltro.filtroValor = this.value;
         break;
       }
-      case 'iFiltroExportar': {
+      case 'getFiltroExportar': {
         this.ngClean('iFiltro');
         this.iFiltro.ordenColumna = this.active;
         this.iFiltro.ordenValor = this.direction;
@@ -175,31 +175,8 @@ export class OrganizationComponent implements OnInit {
         this.iFiltro.formato = this.shared.extension;
         break;
       }
-      case 'iModelCreate': {
-        this.ngClean('iModel');
-        break;
-      }
-      case 'iModelUpdate': {
-        this.ngClean('iModel');
-        const model: IOrganizacionVista = data as IOrganizacionVista;
-        this.iOrganizacion.id = model.idOrganizacion;
-        this.iOrganizacion.organizacion = model.organizacion;
-        this.iOrganizacion.nombre = model.nombre;
-        this.iOrganizacion.apellidoPaterno = model.apellidoPaterno;
-        this.iOrganizacion.apellidoMaterno = model.apellidoMaterno;
-        this.iOrganizacion.nombreCompleto = model.nombreCompleto;
-        this.iOrganizacion.telefono = model.telefono;
-        this.iOrganizacion.correo = model.correo;
-        this.iOrganizacion.calle = model.calle;
-        this.iOrganizacion.numeroExterior = model.numeroExterior;
-        this.iOrganizacion.numeroInterior = model.numeroInterior;
-        this.iOrganizacion.colonia = model.colonia;
-        this.iOrganizacion.municipio = model.municipio;
-        this.iOrganizacion.estado = model.estado;
-        break;
-      }
-      case 'iModelDelete': {
-        this.ngClean('inModel');
+      case 'deleteOrganizacion': {
+        this.ngClean('inOrganizacion');
         this.inOrganizacion = this.selection.selected.map(v => ({ id: v.idOrganizacion, organizacion: v.organizacion, nombre: v.nombre, apellidoPaterno: v.apellidoPaterno, apellidoMaterno: v.apellidoMaterno, nombreCompleto: v.nombreCompleto, telefono: v.telefono, correo: v.correo, calle: v.calle, numeroExterior: v.numeroExterior, numeroInterior: v.numeroInterior, colonia: v.colonia, municipio: v.municipio, estado: v.estado, idUsuarioInserta: this.shared.idUsuario, fechaInserta: this.shared.ngFechaInserta(), idUsuarioActualiza: this.shared.idUsuario, fechaActualiza: this.shared.ngFechaDefault(), activo: !v.activo, estatus: true }));
         break;
       }
@@ -209,70 +186,58 @@ export class OrganizationComponent implements OnInit {
   ngModelGet(option: string, data?: any): void {
 
     switch (option) {
-      case 'iFiltroLista': {
+      case 'getFiltroLista': {
         this.ngClean('inFiltroLista');
         const model: IFiltroLista[] = data as IFiltroLista[];
         this.inFiltroLista = model;
         break;
       }
-      case 'iFiltroTotal': {
+      case 'getFiltroTotal': {
         this.ngClean('inFiltroTotal');
         const model: IFiltroTotal[] = data as IFiltroTotal[];
         this.inFiltroTotal = model;
         break;
       }
-      case 'iFiltroVista': {
+      case 'getFiltroVista': {
         this.ngClean('inFiltroVista');
         const model: IOrganizacionVista[] = data as IOrganizacionVista[];
         this.inFiltroVista = model;
         this.ngHandleSource();
         break;
       }
-      case 'iFiltroExportar': {
+      case 'getFiltroExportar': {
         const blob = new Blob([data], { type: (this.shared.extension == '.csv' ? 'text/csv;charset=utf-8' : 'application/vnd.ms-excel') });
         saveAs(blob, 'Organizacions' + '_' + this.shared.ngExportDate() + this.shared.extension);
         break;
       }
-    }
-  }
-
-  ngController(option: string, data?: any): void {
-
-    switch (option) {
-      case 'getFiltroLista': {
-        this.ngModelSet('iFiltroLista');
-        this.ngGetFiltroLista(this.iFiltro);
-        break;
-      }
-      case 'getFiltroTotal': {
-        this.ngModelSet('iFiltroTotal');
-        this.ngGetFiltroTotal(this.iFiltro);
-        break;
-      }
-      case 'getFiltroVista': {
-        this.ngModelSet('iFiltroVista');
-        this.ngGetFiltroVista(this.iFiltro);
-        break;
-      }
-      case 'getFiltroExportar': {
-        this.ngModelSet('iFiltroExportar');
-        this.ngGetFiltroExportar(this.iFiltro);
-        break;
-      }
       case 'deleteOrganizacion': {
-        this.ngModelSet('iModelDelete');
-        this.ngDeleteOrganizacion(1, this.inOrganizacion);
+
         break;
       }
-
     }
-
   }
 
   ngHandle(option: string, data?: any): void {
 
     switch (option) {
-      case '': {
+      case 'getFiltroLista': {
+        this.ngController('getFiltroLista');
+        break;
+      }
+      case 'getFiltroTotal': {
+        this.ngController('getFiltroTotal');
+        break;
+      }
+      case 'getFiltroVista': {
+        this.ngController('getFiltroVista');
+        break;
+      }
+      case 'getFiltroExportar': {
+        this.ngController('getFiltroExportar');
+        break;
+      }
+      case 'deleteOrganizacion': {
+        this.ngController('deleteOrganizacion');
         break;
       }
     }
@@ -291,15 +256,62 @@ export class OrganizationComponent implements OnInit {
     return b;
   }
 
-  ngDialog(option: string, model?: IOrganizacionVista): void {
+  ngController(option: string, data?: any): void {
 
     switch (option) {
-      case 'iModelCreate': {
-        this.ngModelSet('iModelCreate');
+      case 'getFiltroLista': {
+        this.ngModelSet('getFiltroLista');
+        this.ngGetFiltroLista(this.iFiltro);
         break;
       }
-      case 'iModelUpdate': {
-        this.ngModelSet('iModelUpdate', model);
+      case 'getFiltroTotal': {
+        this.ngModelSet('getFiltroTotal');
+        this.ngGetFiltroTotal(this.iFiltro);
+        break;
+      }
+      case 'getFiltroVista': {
+        this.ngModelSet('getFiltroVista');
+        this.ngGetFiltroVista(this.iFiltro);
+        break;
+      }
+      case 'getFiltroExportar': {
+        this.ngModelSet('getFiltroExportar');
+        this.ngGetFiltroExportar(this.iFiltro);
+        break;
+      }
+      case 'deleteOrganizacion': {
+        this.ngModelSet('deleteOrganizacion');
+        this.ngDeleteOrganizacion(1, this.inOrganizacion);
+        break;
+      }
+
+    }
+
+  }
+
+  ngDialogOrganizacion(option: string, model?: IOrganizacionVista): void {
+
+    switch (option) {
+      case 'post': {
+        this.ngClean('iOrganizacion');
+        break;
+      }
+      case 'put': {
+        this.ngClean('iOrganizacion');
+        this.iOrganizacion.id = model.idOrganizacion;
+        this.iOrganizacion.organizacion = model.organizacion;
+        this.iOrganizacion.nombre = model.nombre;
+        this.iOrganizacion.apellidoPaterno = model.apellidoPaterno;
+        this.iOrganizacion.apellidoMaterno = model.apellidoMaterno;
+        this.iOrganizacion.nombreCompleto = model.nombreCompleto;
+        this.iOrganizacion.telefono = model.telefono;
+        this.iOrganizacion.correo = model.correo;
+        this.iOrganizacion.calle = model.calle;
+        this.iOrganizacion.numeroExterior = model.numeroExterior;
+        this.iOrganizacion.numeroInterior = model.numeroInterior;
+        this.iOrganizacion.colonia = model.colonia;
+        this.iOrganizacion.municipio = model.municipio;
+        this.iOrganizacion.estado = model.estado;
         break;
       }
     }
@@ -312,7 +324,7 @@ export class OrganizationComponent implements OnInit {
       (r: boolean) => {
 
         if (r) {
-          this.ngController('getFiltroLista');
+          this.ngHandle('getFiltroLista');
         }
 
       });
@@ -325,8 +337,8 @@ export class OrganizationComponent implements OnInit {
       .then((r: IResponse) => {
 
         if (r.success) {
-          this.ngModelGet('iFiltroLista', r.data);
-          this.ngController('getFiltroTotal');
+          this.ngModelGet('getFiltroLista', r.data);
+          this.ngHandle('getFiltroTotal');
         } else {
           this.message.dialogMessage(this.shared.ngFalse());
         }
@@ -346,8 +358,8 @@ export class OrganizationComponent implements OnInit {
       .then((r: IResponse) => {
 
         if (r.success) {
-          this.ngModelGet('iFiltroTotal', r.data);
-          this.ngController('getFiltroVista');
+          this.ngModelGet('getFiltroTotal', r.data);
+          this.ngHandle('getFiltroVista');
         } else {
           this.message.dialogMessage(this.shared.ngFalse());
         }
@@ -367,7 +379,7 @@ export class OrganizationComponent implements OnInit {
       .then((r: IResponse) => {
 
         if (r.success) {
-          this.ngModelGet('iFiltroVista', r.data);
+          this.ngModelGet('getFiltroVista', r.data);
         } else {
           this.message.dialogMessage(this.shared.ngFalse());
         }
@@ -403,7 +415,7 @@ export class OrganizationComponent implements OnInit {
       .then((r: IResponse) => {
 
         if (r.success) {
-          this.ngController('getFiltroLista');
+          this.ngHandle('getFiltroLista');
         } else {
           this.message.dialogMessage(this.shared.ngFalse());
         }
@@ -572,11 +584,11 @@ export class OrganizationComponent implements OnInit {
         this.ngClean('search');
         this.ngClean('selection');
         this.ngClean('header');
-        this.ngController('getFiltroLista');
+        this.ngHandle('getFiltroLista');
         break;
       }
       case 'selection': {
-        this.ngController('getFiltroLista');
+        this.ngHandle('getFiltroLista');
         break;
       }
     }

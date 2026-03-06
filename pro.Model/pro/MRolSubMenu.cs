@@ -16,6 +16,8 @@ namespace pro.Model
 
         public long IdSubMenu { get; set; }
 
+        public bool Escritura { get; set; }
+
         public long IdUsuarioInserta { get; set; }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]

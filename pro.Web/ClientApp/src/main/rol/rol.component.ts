@@ -55,7 +55,7 @@ export class RolComponent implements OnInit {
   constructor(private cdr: ChangeDetectorRef, public shared: Shared, public message: Message, public dialog: MatDialog, public service: ServiceProService) { }
 
   ngOnInit(): void {
-    this.ngController('getFiltroLista');
+    this.ngHandle('getFiltroLista');
   }
 
   ngAfterViewInit(): void { }
@@ -119,11 +119,11 @@ export class RolComponent implements OnInit {
         this.activo = [];
         break;
       }
-      case 'iModel': {
+      case 'iRol': {
         this.iRol = { id: 0, rol: '', idOrganizacion: this.shared.idOrganizacion, idUsuarioInserta: this.shared.idUsuario, fechaInserta: this.shared.ngFechaInserta(), idUsuarioActualiza: this.shared.idUsuario, fechaActualiza: this.shared.ngFechaActualiza(), activo: true };
         break;
       }
-      case 'inModel': {
+      case 'inRol': {
         this.inRol = [];
         break;
       }
@@ -134,18 +134,18 @@ export class RolComponent implements OnInit {
   ngModelSet(option: string, data?: any): void {
 
     switch (option) {
-      case 'iFiltroLista': {
+      case 'getFiltroLista': {
         this.ngClean('iFiltro');
         break;
       }
-      case 'iFiltroTotal': {
+      case 'getFiltroTotal': {
         this.ngClean('iFiltro');
         this.iFiltro.filtro = this.filter;
         this.iFiltro.filtroColumna = this.column;
         this.iFiltro.filtroValor = this.value;
         break;
       }
-      case 'iFiltroVista': {
+      case 'getFiltroVista': {
         this.ngClean('iFiltro');
         this.ngClean('selection');
         this.iFiltro.registros = this.pageSize;
@@ -157,7 +157,7 @@ export class RolComponent implements OnInit {
         this.iFiltro.filtroValor = this.value;
         break;
       }
-      case 'iFiltroExportar': {
+      case 'getFiltroExportar': {
         this.ngClean('iFiltro');
         this.iFiltro.ordenColumna = this.active;
         this.iFiltro.ordenValor = this.direction;
@@ -167,19 +167,8 @@ export class RolComponent implements OnInit {
         this.iFiltro.formato = this.shared.extension;
         break;
       }
-      case 'iModelCreate': {
-        this.ngClean('iModel');
-        break;
-      }
-      case 'iModelUpdate': {
-        this.ngClean('iModel');
-        const model: IRolVista = data as IRolVista;
-        this.iRol.id = model.idRol;
-        this.iRol.rol = model.rol;
-        break;
-      }
-      case 'iModelDelete': {
-        this.ngClean('inModel');
+      case 'deleteRol': {
+        this.ngClean('inRol');
         this.inRol = this.selection.selected.map(v => ({ id: v.idRol, rol: v.rol, idOrganizacion: this.shared.idOrganizacion, idUsuarioInserta: this.shared.idUsuario, fechaInserta: this.shared.ngFechaInserta(), idUsuarioActualiza: this.shared.idUsuario, fechaActualiza: this.shared.ngFechaDefault(), activo: !v.activo, estatus: true }));
         break;
       }
@@ -189,70 +178,58 @@ export class RolComponent implements OnInit {
   ngModelGet(option: string, data?: any): void {
 
     switch (option) {
-      case 'iFiltroLista': {
+      case 'getFiltroLista': {
         this.ngClean('inFiltroLista');
         const model: IFiltroLista[] = data as IFiltroLista[];
         this.inFiltroLista = model;
         break;
       }
-      case 'iFiltroTotal': {
+      case 'getFiltroTotal': {
         this.ngClean('inFiltroTotal');
         const model: IFiltroTotal[] = data as IFiltroTotal[];
         this.inFiltroTotal = model;
         break;
       }
-      case 'iFiltroVista': {
+      case 'getFiltroVista': {
         this.ngClean('inFiltroVista');
         const model: IRolVista[] = data as IRolVista[];
         this.inFiltroVista = model;
         this.ngHandleSource();
         break;
       }
-      case 'iFiltroExportar': {
+      case 'getFiltroExportar': {
         const blob = new Blob([data], { type: (this.shared.extension == '.csv' ? 'text/csv;charset=utf-8' : 'application/vnd.ms-excel') });
         saveAs(blob, 'Rols' + '_' + this.shared.ngExportDate() + this.shared.extension);
         break;
       }
-    }
-  }
-
-  ngController(option: string, data?: any): void {
-
-    switch (option) {
-      case 'getFiltroLista': {
-        this.ngModelSet('iFiltroLista');
-        this.ngGetFiltroLista(this.iFiltro);
-        break;
-      }
-      case 'getFiltroTotal': {
-        this.ngModelSet('iFiltroTotal');
-        this.ngGetFiltroTotal(this.iFiltro);
-        break;
-      }
-      case 'getFiltroVista': {
-        this.ngModelSet('iFiltroVista');
-        this.ngGetFiltroVista(this.iFiltro);
-        break;
-      }
-      case 'getFiltroExportar': {
-        this.ngModelSet('iFiltroExportar');
-        this.ngGetFiltroExportar(this.iFiltro);
-        break;
-      }
       case 'deleteRol': {
-        this.ngModelSet('iModelDelete');
-        this.ngDeleteRol(1, this.inRol);
+
         break;
       }
-
     }
-
   }
 
   ngHandle(option: string, data?: any): void {
 
     switch (option) {
-      case '': {
+      case 'getFiltroLista': {
+        this.ngController('getFiltroLista');
+        break;
+      }
+      case 'getFiltroTotal': {
+        this.ngController('getFiltroTotal');
+        break;
+      }
+      case 'getFiltroVista': {
+        this.ngController('getFiltroVista');
+        break;
+      }
+      case 'getFiltroExportar': {
+        this.ngController('getFiltroExportar');
+        break;
+      }
+      case 'deleteRol': {
+        this.ngController('deleteRol');
         break;
       }
     }
@@ -271,15 +248,50 @@ export class RolComponent implements OnInit {
     return b;
   }
 
-  ngDialog(option: string, model?: IRolVista): void {
+  ngController(option: string, data?: any): void {
 
     switch (option) {
-      case 'iModelCreate': {
-        this.ngModelSet('iModelCreate');
+      case 'getFiltroLista': {
+        this.ngModelSet('getFiltroLista');
+        this.ngGetFiltroLista(this.iFiltro);
         break;
       }
-      case 'iModelUpdate': {
-        this.ngModelSet('iModelUpdate', model);
+      case 'getFiltroTotal': {
+        this.ngModelSet('getFiltroTotal');
+        this.ngGetFiltroTotal(this.iFiltro);
+        break;
+      }
+      case 'getFiltroVista': {
+        this.ngModelSet('getFiltroVista');
+        this.ngGetFiltroVista(this.iFiltro);
+        break;
+      }
+      case 'getFiltroExportar': {
+        this.ngModelSet('getFiltroExportar');
+        this.ngGetFiltroExportar(this.iFiltro);
+        break;
+      }
+      case 'deleteRol': {
+        this.ngModelSet('deleteRol');
+        this.ngDeleteRol(1, this.inRol);
+        break;
+      }
+
+    }
+
+  }
+
+  ngDialogRol(option: string, model?: IRolVista): void {
+
+    switch (option) {
+      case 'post': {
+        this.ngClean('iRol');
+        break;
+      }
+      case 'put': {
+        this.ngClean('iRol');
+        this.iRol.id = model.idRol;
+        this.iRol.rol = model.rol;
         break;
       }
     }
@@ -292,7 +304,7 @@ export class RolComponent implements OnInit {
       (r: boolean) => {
 
         if (r) {
-          this.ngController('getFiltroLista');
+          this.ngHandle('getFiltroLista');
         }
 
       });
@@ -305,8 +317,8 @@ export class RolComponent implements OnInit {
       .then((r: IResponse) => {
 
         if (r.success) {
-          this.ngModelGet('iFiltroLista', r.data);
-          this.ngController('getFiltroTotal');
+          this.ngModelGet('getFiltroLista', r.data);
+          this.ngHandle('getFiltroTotal');
         } else {
           this.message.dialogMessage(this.shared.ngFalse());
         }
@@ -326,8 +338,8 @@ export class RolComponent implements OnInit {
       .then((r: IResponse) => {
 
         if (r.success) {
-          this.ngModelGet('iFiltroTotal', r.data);
-          this.ngController('getFiltroVista');
+          this.ngModelGet('getFiltroTotal', r.data);
+          this.ngHandle('getFiltroVista');
         } else {
           this.message.dialogMessage(this.shared.ngFalse());
         }
@@ -347,7 +359,7 @@ export class RolComponent implements OnInit {
       .then((r: IResponse) => {
 
         if (r.success) {
-          this.ngModelGet('iFiltroVista', r.data);
+          this.ngModelGet('getFiltroVista', r.data);
         } else {
           this.message.dialogMessage(this.shared.ngFalse());
         }
@@ -366,7 +378,7 @@ export class RolComponent implements OnInit {
     await this.service.ngGetRolExportar(model)
       .then((r) => {
 
-        this.ngModelGet('iFiltroExportar', r);
+        this.ngModelGet('getFiltroExportar', r);
 
       }).catch(
         (e: any) => {
@@ -383,7 +395,7 @@ export class RolComponent implements OnInit {
       .then((r: IResponse) => {
 
         if (r.success) {
-          this.ngController('getFiltroLista');
+          this.ngHandle('getFiltroLista');
         } else {
           this.message.dialogMessage(this.shared.ngFalse());
         }
@@ -522,11 +534,11 @@ export class RolComponent implements OnInit {
         this.ngClean('search');
         this.ngClean('selection');
         this.ngClean('header');
-        this.ngController('getFiltroLista');
+        this.ngHandle('getFiltroLista');
         break;
       }
       case 'selection': {
-        this.ngController('getFiltroLista');
+        this.ngHandle('getFiltroLista');
         break;
       }
     }

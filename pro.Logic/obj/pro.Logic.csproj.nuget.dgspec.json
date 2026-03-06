@@ -340,18 +340,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "CsvHelper": {
-              "target": "Package",
-              "version": "[33.1.0, )"
-            },
-            "ExcelDataReader": {
-              "target": "Package",
-              "version": "[3.7.0, )"
-            },
-            "ExcelDataReader.DataSet": {
-              "target": "Package",
-              "version": "[3.7.0, )"
-            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[6.10.0, )"

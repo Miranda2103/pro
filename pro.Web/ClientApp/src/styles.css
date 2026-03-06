@@ -2669,6 +2669,12 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
   color: white !important;
 }
 
+.background-login-1 {
+  background-image: url(assets/provital.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .background-jh-1 {
   background-image: url(assets/test1.jpg);
   background-repeat: no-repeat;
@@ -2804,6 +2810,11 @@ th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
 
 .background-bitacora {
   background-color: #177765;
+  color: white;
+}
+
+.background-pago {
+  background-color: #1976D2;
   color: white;
 }
 

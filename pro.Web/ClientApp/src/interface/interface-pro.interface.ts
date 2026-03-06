@@ -86,6 +86,7 @@ export interface IFoto {
 export interface IHemodialisis {
   id: number,
   idAgenda: number,
+  idPaciente: number,
   diagnostico: string,
   fechaIngreso: string,
   talla: string,
@@ -200,9 +201,10 @@ export interface IHemodialisis {
   activo: boolean
 }
 
-export interface ITranshemodialisis {
+export interface ITransHemodialisis {
   id: number,
   idAgenda: number,
+  idPaciente: number,
   hora: string,
   ta: string,
   fc: string,
@@ -217,6 +219,88 @@ export interface ITranshemodialisis {
   tasaUf: string,
   uf: string,
   ktv: string,
+  idOrganizacion: number,
+  idUsuarioInserta: number,
+  fechaInserta: string,
+  idUsuarioActualiza: number,
+  fechaActualiza: string,
+  activo: boolean
+}
+
+export interface ILlegada {
+  id: number,
+  idAgenda: number,
+  idPaciente: number,
+  fechaLlegada: string,
+  horaLlegada: string,
+  idOrganizacion: number,
+  idUsuarioInserta: number,
+  fechaInserta: string,
+  idUsuarioActualiza: number,
+  fechaActualiza: string,
+  activo: boolean
+}
+
+export interface IPago {
+  id: number,
+  idAgenda: number,
+  idPaciente: number,
+  idFormaPago: number,
+  importe: string,
+  idOrganizacion: number,
+  idUsuarioInserta: number,
+  fechaInserta: string,
+  idUsuarioActualiza: number,
+  fechaActualiza: string,
+  activo: boolean
+}
+
+export interface IPagoImagen {
+  id: number,
+  idPago: number,
+  idAgenda: number,
+  idPaciente: number,
+  ruta: string,
+  nombre: string,
+  extension: string,
+  archivo: string,
+  imagen: string,
+  idOrganizacion: number,
+  idUsuarioInserta: number,
+  fechaInserta: string,
+  idUsuarioActualiza: number,
+  fechaActualiza: string,
+  activo: boolean
+}
+
+export interface IConsentimientoImagen {
+  id: number,
+  idPago: number,
+  idAgenda: number,
+  idPaciente: number,
+  ruta: string,
+  nombre: string,
+  extension: string,
+  archivo: string,
+  imagen: string,
+  idOrganizacion: number,
+  idUsuarioInserta: number,
+  fechaInserta: string,
+  idUsuarioActualiza: number,
+  fechaActualiza: string,
+  activo: boolean
+}
+
+export interface IAvisoImagen {
+  id: number,
+  idPago: number,
+  idAgenda: number,
+  idPaciente: number,
+  ruta: string,
+  nombre: string,
+  extension: string,
+  archivo: string,
+  imagen: string,
   idOrganizacion: number,
   idUsuarioInserta: number,
   fechaInserta: string,
@@ -334,6 +418,7 @@ export interface IRolSubMenu {
   idRol: number,
   idMenu: number,
   idSubMenu: number,
+  escritura: boolean,
   idUsuarioInserta: number,
   fechaInserta: string,
   idUsuarioActualiza: number,
@@ -399,6 +484,28 @@ export interface IDecision {
 export interface IEquipo {
   id: number,
   equipo: string,
+  idOrganizacion: number,
+  idUsuarioInserta: number,
+  fechaInserta: string,
+  idUsuarioActualiza: number,
+  fechaActualiza: string,
+  activo: boolean
+}
+
+export interface ITipoConsulta {
+  id: number,
+  tipoConsulta: string,
+  idOrganizacion: number,
+  idUsuarioInserta: number,
+  fechaInserta: string,
+  idUsuarioActualiza: number,
+  fechaActualiza: string,
+  activo: boolean
+}
+
+export interface IFormaPago {
+  id: number,
+  formaPago: string,
   idOrganizacion: number,
   idUsuarioInserta: number,
   fechaInserta: string,
@@ -509,8 +616,16 @@ export interface IRolSubMenuView {
   ruta: string,
   icono: string,
   orden: number,
+  escritura: boolean,
   idOrganizacion: number,
   fecha: string,
+  activo: boolean
+}
+
+export interface IEquipoView {
+  equipo: string,
+  total: number,
+  idOrganizacion: number,
   activo: boolean
 }
 
@@ -633,6 +748,7 @@ export interface IRolSubMenuVista {
   subMenu: string,
   icono: string,
   orden: number,
+  escritura: boolean,
   activo: boolean
 }
 

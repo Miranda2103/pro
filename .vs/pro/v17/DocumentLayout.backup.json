@@ -3,24 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\syste\\source\\repos\\pro\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1B9D41AA-6F99-44BD-A8D8-72B2DC6B6961}|pro.Web\\pro.Web.csproj|c:\\users\\syste\\source\\repos\\pro\\pro.web\\clientapp\\src\\main\\consult\\consult.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{1B9D41AA-6F99-44BD-A8D8-72B2DC6B6961}|pro.Web\\pro.Web.csproj|solutionrelative:pro.web\\clientapp\\src\\main\\consult\\consult.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1B9D41AA-6F99-44BD-A8D8-72B2DC6B6961}|pro.Web\\pro.Web.csproj|c:\\users\\syste\\source\\repos\\pro\\pro.web\\clientapp\\src\\main\\consult\\consult.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1B9D41AA-6F99-44BD-A8D8-72B2DC6B6961}|pro.Web\\pro.Web.csproj|solutionrelative:pro.web\\clientapp\\src\\main\\consult\\consult.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1B9D41AA-6F99-44BD-A8D8-72B2DC6B6961}|pro.Web\\pro.Web.csproj|c:\\users\\syste\\source\\repos\\pro\\pro.web\\clientapp\\src\\main\\agenda\\agenda.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1B9D41AA-6F99-44BD-A8D8-72B2DC6B6961}|pro.Web\\pro.Web.csproj|solutionrelative:pro.web\\clientapp\\src\\main\\agenda\\agenda.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1B9D41AA-6F99-44BD-A8D8-72B2DC6B6961}|pro.Web\\pro.Web.csproj|c:\\users\\syste\\source\\repos\\pro\\pro.web\\clientapp\\src\\main\\agenda\\agenda.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
       "RelativeMoniker": "D:0:0:{1B9D41AA-6F99-44BD-A8D8-72B2DC6B6961}|pro.Web\\pro.Web.csproj|solutionrelative:pro.web\\clientapp\\src\\main\\agenda\\agenda.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B9D41AA-6F99-44BD-A8D8-72B2DC6B6961}|pro.Web\\pro.Web.csproj|c:\\users\\syste\\source\\repos\\pro\\pro.web\\clientapp\\src\\interface\\interface-pro.interface.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
-      "RelativeMoniker": "D:0:0:{1B9D41AA-6F99-44BD-A8D8-72B2DC6B6961}|pro.Web\\pro.Web.csproj|solutionrelative:pro.web\\clientapp\\src\\interface\\interface-pro.interface.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+      "AbsoluteMoniker": "D:0:0:{1B9D41AA-6F99-44BD-A8D8-72B2DC6B6961}|pro.Web\\pro.Web.csproj|c:\\users\\syste\\source\\repos\\pro\\pro.web\\clientapp\\src\\main\\agenda\\agenda.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1B9D41AA-6F99-44BD-A8D8-72B2DC6B6961}|pro.Web\\pro.Web.csproj|solutionrelative:pro.web\\clientapp\\src\\main\\agenda\\agenda.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1B9D41AA-6F99-44BD-A8D8-72B2DC6B6961}|pro.Web\\pro.Web.csproj|c:\\users\\syste\\source\\repos\\pro\\pro.web\\clientapp\\src\\service\\service-pro.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
@@ -39,79 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "consult.component.html",
-              "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\main\\consult\\consult.component.html",
-              "RelativeDocumentMoniker": "pro.Web\\ClientApp\\src\\main\\consult\\consult.component.html",
-              "ToolTip": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\main\\consult\\consult.component.html",
-              "RelativeToolTip": "pro.Web\\ClientApp\\src\\main\\consult\\consult.component.html",
-              "ViewState": "AgIAADcBAAAAAAAAAIAwwEYBAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-02-28T05:23:12.135Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "consult.component.ts",
-              "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\main\\consult\\consult.component.ts",
-              "RelativeDocumentMoniker": "pro.Web\\ClientApp\\src\\main\\consult\\consult.component.ts",
-              "ToolTip": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\main\\consult\\consult.component.ts",
-              "RelativeToolTip": "pro.Web\\ClientApp\\src\\main\\consult\\consult.component.ts",
-              "ViewState": "AgIAAMcBAAAAAAAAAAAAANsBAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-02-28T05:23:11.405Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "interface-pro.interface.ts",
-              "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\interface\\interface-pro.interface.ts",
-              "RelativeDocumentMoniker": "pro.Web\\ClientApp\\src\\interface\\interface-pro.interface.ts",
-              "ToolTip": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\interface\\interface-pro.interface.ts",
-              "RelativeToolTip": "pro.Web\\ClientApp\\src\\interface\\interface-pro.interface.ts",
-              "ViewState": "AgIAADECAAAAAAAAAAAkwDwCAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-02-26T22:10:53.77Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "agenda.component.html",
               "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\main\\agenda\\agenda.component.html",
               "RelativeDocumentMoniker": "pro.Web\\ClientApp\\src\\main\\agenda\\agenda.component.html",
               "ToolTip": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\main\\agenda\\agenda.component.html",
               "RelativeToolTip": "pro.Web\\ClientApp\\src\\main\\agenda\\agenda.component.html",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABIAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-02-28T04:02:36.234Z",
+              "WhenOpened": "2026-03-06T08:25:36.963Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "agenda.component.ts",
               "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\main\\agenda\\agenda.component.ts",
               "RelativeDocumentMoniker": "pro.Web\\ClientApp\\src\\main\\agenda\\agenda.component.ts",
               "ToolTip": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\main\\agenda\\agenda.component.ts",
               "RelativeToolTip": "pro.Web\\ClientApp\\src\\main\\agenda\\agenda.component.ts",
-              "ViewState": "AgIAAKwBAAAAAAAAAAAAwL8BAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAOgAAAAAAAAAAAAgwP4AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-02-28T04:02:35.576Z",
+              "WhenOpened": "2026-03-06T08:25:36.123Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "service-pro.service.ts",
               "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\service\\service-pro.service.ts",
               "RelativeDocumentMoniker": "pro.Web\\ClientApp\\src\\service\\service-pro.service.ts",
               "ToolTip": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\service\\service-pro.service.ts",
               "RelativeToolTip": "pro.Web\\ClientApp\\src\\service\\service-pro.service.ts",
-              "ViewState": "AgIAALMBAAAAAAAAAAAkwMIBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAIBAAAAAAAAAAAAAA0BAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-02-26T04:34:36.913Z",
+              "WhenOpened": "2026-03-04T04:27:01.164Z",
               "EditorCaption": ""
             }
           ]

@@ -5,11 +5,13 @@ import { PageEvent } from '@angular/material/paginator';
 import { MatSort, Sort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { saveAs } from 'file-saver';
-import { IAgenda, IAgendaVista, IFiltro, IFiltroLista, IFiltroTotal, IResponse } from '../../interface/interface-pro.interface';
+import { IAgenda, IAgendaVista, IFiltro, IFiltroLista, IFiltroTotal, ILlegada, IPago, IResponse } from '../../interface/interface-pro.interface';
 import { Message } from '../../message/message';
 import { ServiceProService } from '../../service/service-pro.service';
 import { Shared } from '../../shared/shared';
 import { DialogConsultComponent } from '../dialog-consult/dialog-consult.component';
+import { DialogArriveComponent } from '../dialog-arrive/dialog-arrive.component';
+import { DialogPaymentComponent } from '../dialog-payment/dialog-payment.component';
 
 @Component({
   selector: 'app-consult',
@@ -58,11 +60,17 @@ export class ConsultComponent implements OnInit {
   iAgenda: IAgenda;
   inAgenda: IAgenda[] = [];
 
+  iLlegada: ILlegada;
+  inLlegada: ILlegada[] = [];
+
+  iPago: IPago;
+  inPago: IPago[] = [];
+
   constructor(private cdr: ChangeDetectorRef, public shared: Shared, public message: Message, public dialog: MatDialog, public service: ServiceProService) { }
 
   ngOnInit(): void {
     this.shared.ngResetPicker();
-    this.ngController('getFiltroLista');
+    this.ngHandle('getFiltroLista');
   }
 
   ngAfterViewInit(): void { }
@@ -140,6 +148,22 @@ export class ConsultComponent implements OnInit {
         this.inAgenda = [];
         break;
       }
+      case 'iLlegada': {
+        this.iLlegada = { id: 0, idAgenda: 0, idPaciente: 0, fechaLlegada: '', horaLlegada: '', idOrganizacion: this.shared.idOrganizacion, idUsuarioInserta: this.shared.idUsuario, fechaInserta: this.shared.ngFechaInserta(), idUsuarioActualiza: this.shared.idUsuario, fechaActualiza: this.shared.ngFechaActualiza(), activo: true };
+        break;
+      }
+      case 'inLlegada': {
+        this.inLlegada = [];
+        break;
+      }
+      case 'iPago': {
+        this.iPago = { id: 0, idAgenda: 0, idPaciente: 0, idFormaPago: 0, importe: '', idOrganizacion: this.shared.idOrganizacion, idUsuarioInserta: this.shared.idUsuario, fechaInserta: this.shared.ngFechaInserta(), idUsuarioActualiza: this.shared.idUsuario, fechaActualiza: this.shared.ngFechaActualiza(), activo: true };
+        break;
+      }
+      case 'inPago': {
+        this.inPago = [];
+        break;
+      }
     }
 
   }
@@ -180,11 +204,18 @@ export class ConsultComponent implements OnInit {
         this.iFiltro.formato = this.shared.extension;
         break;
       }
-      case 'dialog': {
-        this.ngClean('iAgenda');
+      case 'getLlegada': {
+        this.ngClean('iLlegada');
         const model: IAgendaVista = data as IAgendaVista;
-        this.iAgenda.id = model.idAgenda;
-        this.iAgenda.idPaciente = model.idPaciente;
+        this.iLlegada.idAgenda = model.idAgenda;
+        this.iLlegada.idPaciente = model.idPaciente;
+        break;
+      }
+      case 'getPago': {
+        this.ngClean('iPago');
+        const model: IAgendaVista = data as IAgendaVista;
+        this.iPago.idAgenda = model.idAgenda;
+        this.iPago.idPaciente = model.idPaciente;
         break;
       }
     }
@@ -217,11 +248,74 @@ export class ConsultComponent implements OnInit {
         saveAs(blob, 'Consulta' + '_' + this.shared.ngExportDate() + this.shared.extension);
         break;
       }
+      case 'getLlegada': {
+        this.ngClean('inLlegada');
+        const model: ILlegada[] = data as ILlegada[];
+        this.inLlegada = model;
+        this.ngHandle('dialog');
+        break;
+      }
+      case 'getPago': {
+        this.ngClean('inPago');
+        const model: IPago[] = data as IPago[];
+        this.inPago = model;
+        break;
+      }
+    }
+  }
+
+  ngHandle(option: string, data?: any): void {
+
+    switch (option) {
+      case 'getFiltroLista': {
+        this.ngController('getFiltroLista');
+        break;
+      }
+      case 'getFiltroTotal': {
+        this.ngController('getFiltroTotal');
+        break;
+      }
+      case 'getFiltroVista': {
+        this.ngController('getFiltroVista');
+        break;
+      }
+      case 'getFiltroExportar': {
+        this.ngController('getFiltroExportar');
+        break;
+      }
+      case 'getLlegada': {
+        this.ngController('getLlegada', data);
+        break;
+      }
+      case 'getPago': {
+        this.ngController('getPago', data);
+        break;
+      }
       case 'dialog': {
+
+        if (this.inLlegada.length == 0) {
+          this.ngDialogLlegada(this.inLlegada);
+        }
+        else {
+          this.ngDialogConsulta();
+        }
 
         break;
       }
     }
+
+  }
+
+  ngValidate(option: string, data?: any): boolean {
+    let b: boolean = true;
+
+    switch (option) {
+      case '': {
+        break;
+      }
+    }
+
+    return b;
   }
 
   ngController(option: string, data?: any): void {
@@ -247,36 +341,72 @@ export class ConsultComponent implements OnInit {
         this.ngGetFiltroExportar(this.iFiltro);
         break;
       }
-    }
-
-  }
-
-  ngHandle(option: string, data?: any): void {
-
-    switch (option) {
-      case '': {
+      case 'getLlegada': {
+        this.ngModelSet('getLlegada', data);
+        this.ngGetLlegada(2, this.iLlegada);
+        break;
+      }
+      case 'getPago': {
+        this.ngModelSet('getPago', data);
+        this.ngGetPago(2, this.iPago);
         break;
       }
     }
 
   }
 
-  ngValidate(option: string, data?: any): boolean {
-    let b: boolean = true;
+  ngDialogLlegada(model: ILlegada[]): void {
 
-    switch (option) {
-      case '': {
-        break;
-      }
+    if (model.length >= 1) {
+      this.ngClean('iLlegada');
+      this.iLlegada = this.inLlegada[0];
     }
 
-    return b;
+    this.dialog.open(DialogArriveComponent, {
+      panelClass: ['w100', 'h100'],
+      autoFocus: false,
+      data: { iLlegada: this.iLlegada }
+    }).beforeClosed().subscribe(
+      (r: boolean) => {
+
+        if (r) {
+          this.ngHandle('getFiltroLista');
+        }
+
+      });
+
   }
 
-  ngDialog(model: IAgendaVista): void {
-    this.ngModelSet('dialog', model);
+  ngDialogConsulta(): void {
+
+    this.ngClean('iAgenda');
+    this.iAgenda.id = this.iLlegada.idAgenda;
+    this.iAgenda.idPaciente = this.iLlegada.idPaciente;
+
+    if (this.inLlegada.length >= 1) {
+      this.ngClean('iLlegada');
+      this.iLlegada = this.inLlegada[0];
+    }
 
     this.dialog.open(DialogConsultComponent, {
+      panelClass: ['w100', 'h100'],
+      autoFocus: false,
+      data: { iAgenda: this.iAgenda, iLlegada: this.iLlegada }
+    }).beforeClosed().subscribe(
+      (r: boolean) => {
+
+        if (r) {
+          this.ngHandle('getFiltroLista');
+        }
+
+      });
+
+  }
+
+  ngDialogPago(model: IAgendaVista): void {
+    this.ngModelSet('dialog', model);
+
+    this.dialog.open(DialogPaymentComponent, {
       panelClass: ['w100', 'h100'],
       autoFocus: false,
       data: { model: this.iAgenda }
@@ -284,7 +414,7 @@ export class ConsultComponent implements OnInit {
       (r: boolean) => {
 
         if (r) {
-          this.ngController('getFiltroLista');
+          this.ngHandle('getFiltroLista');
         }
 
       });
@@ -298,7 +428,7 @@ export class ConsultComponent implements OnInit {
 
         if (r.success) {
           this.ngModelGet('getFiltroLista', r.data);
-          this.ngController('getFiltroTotal');
+          this.ngHandle('getFiltroTotal');
         } else {
           this.message.dialogMessage(this.shared.ngFalse());
         }
@@ -319,7 +449,7 @@ export class ConsultComponent implements OnInit {
 
         if (r.success) {
           this.ngModelGet('getFiltroTotal', r.data);
-          this.ngController('getFiltroVista');
+          this.ngHandle('getFiltroVista');
         } else {
           this.message.dialogMessage(this.shared.ngFalse());
         }
@@ -364,6 +494,46 @@ export class ConsultComponent implements OnInit {
         (e: any) => {
           console.error(e);
           this.message.dialogMessage(e['message']);
+        }
+      ).finally(() => { });
+
+  }
+
+  async ngGetLlegada(option: number, model: ILlegada) {
+
+    await this.service.ngGetLlegada(option, model)
+      .then((r: IResponse) => {
+
+        if (r.success) {
+          this.ngModelGet('getLlegada', r.data);
+        } else {
+          this.message.dialogMessage(this.shared.ngFalse());
+        }
+
+      }).catch(
+        (e: any) => {
+          console.error(e);
+          this.message.dialogMessage(this.shared.ngError(e));
+        }
+      ).finally(() => { });
+
+  }
+
+  async ngGetPago(option: number, model: IPago) {
+
+    await this.service.ngGetPago(option, model)
+      .then((r: IResponse) => {
+
+        if (r.success) {
+          this.ngModelGet('getPago', r.data);
+        } else {
+          this.message.dialogMessage(this.shared.ngFalse());
+        }
+
+      }).catch(
+        (e: any) => {
+          console.error(e);
+          this.message.dialogMessage(this.shared.ngError(e));
         }
       ).finally(() => { });
 
@@ -554,11 +724,11 @@ export class ConsultComponent implements OnInit {
         this.ngClean('search');
         this.ngClean('selection');
         this.ngClean('header');
-        this.ngController('getFiltroLista');
+        this.ngHandle('getFiltroLista');
         break;
       }
       case 'selection': {
-        this.ngController('getFiltroLista');
+        this.ngHandle('getFiltroLista');
         break;
       }
     }

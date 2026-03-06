@@ -8,6 +8,7 @@ namespace pro.Model
         public string SubMenu { get; set; }
         public string Icono { get; set; }
         public int Orden { get; set; }
+        public bool Escritura { get; set; }
         public string Activo { get; set; }
 
         public MWRolSubMenuExportar()

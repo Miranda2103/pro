@@ -59,6 +59,8 @@ import { DialogPatientComponent } from './dialog-patient/dialog-patient.componen
 import { AgendaComponent } from './agenda/agenda.component';
 import { ConsultComponent } from './consult/consult.component';
 import { DialogConsultComponent } from './dialog-consult/dialog-consult.component';
+import { DialogArriveComponent } from './dialog-arrive/dialog-arrive.component';
+import { DialogPaymentComponent } from './dialog-payment/dialog-payment.component';
 
 
 @NgModule({
@@ -79,7 +81,9 @@ import { DialogConsultComponent } from './dialog-consult/dialog-consult.componen
     DialogPatientComponent,
     AgendaComponent,
     ConsultComponent,
-    DialogConsultComponent
+    DialogConsultComponent,
+    DialogArriveComponent,
+    DialogPaymentComponent
   ],
   imports: [
     CommonModule,

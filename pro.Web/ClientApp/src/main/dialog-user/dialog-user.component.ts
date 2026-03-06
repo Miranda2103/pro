@@ -11,9 +11,7 @@ import { Shared } from '../../shared/shared';
   styleUrls: ['./dialog-user.component.css']
 })
 export class DialogUserComponent implements OnInit {
-  expand: boolean = true;
 
-  close: boolean = false;
   input: String = '';
 
   iUsuario: IUsuario;
@@ -30,7 +28,7 @@ export class DialogUserComponent implements OnInit {
   ngOnInit(): void {
     this.ngInput();
     this.ngHandle('reset');
-    this.ngController('getRol');
+    this.ngHandle('getRol');
   }
 
   ngAfterViewInit(): void {
@@ -89,8 +87,12 @@ export class DialogUserComponent implements OnInit {
   ngModelSet(option: string, data?: any): void {
 
     switch (option) {
-      case 'iRol': {
+      case 'getRol': {
         this.ngClean('iRol');
+        break;
+      }
+      case 'getUsuario': {
+        
         break;
       }
     }
@@ -99,14 +101,14 @@ export class DialogUserComponent implements OnInit {
   ngModelGet(option: string, data?: any): void {
 
     switch (option) {
-      case 'iRol': {
+      case 'getRol': {
         this.ngClean('inRol');
         const model: IRol[] = data as IRol[];
         this.inRol = model;
         this.filteredRol = this.inRol;
         break;
       }
-      case 'iUsuario': {
+      case 'getUsuario': {
         this.ngClean('inUsuario');
         const model: IUsuario[] = data as IUsuario[];
         this.inUsuario = model;
@@ -116,33 +118,17 @@ export class DialogUserComponent implements OnInit {
 
   }
 
-  ngController(option: string, data?: any): void {
-
-    switch (option) {
-      case 'getRol': {
-        this.ngModelSet('iRol');
-        this.ngGetRol(2, this.iRol);
-        break;
-      }
-      case 'getUsuario': {
-        this.ngGetUsuario(3, this.iUsuario);
-        break;
-      }
-      case 'postUsuario': {
-        this.ngPostUsuario(this.iUsuario);
-        break;
-      }
-      case 'putUsuario': {
-        this.ngPutUsuario(1, this.iUsuario);
-        break;
-      }
-    }
-
-  }
-
   ngHandle(option: string, data?: any): void {
 
     switch (option) {
+      case 'getRol': {
+        this.ngController('getRol');
+        break;
+      }
+      case 'getUsuario': {
+        this.ngController('getUsuario');
+        break;
+      }
       case 'reset': {
 
         if (this.iUsuario.id == 0) {
@@ -151,7 +137,7 @@ export class DialogUserComponent implements OnInit {
 
         break;
       }
-      case 'iUsuario': {
+      case 'usuario': {
 
         if (this.iUsuario.id == 0) {
           this.ngController('postUsuario');
@@ -170,7 +156,7 @@ export class DialogUserComponent implements OnInit {
     let b: boolean = true;
 
     switch (option) {
-      case 'iUsuario': {
+      case 'getUsuario': {
 
         if (this.inUsuario.length) {
           this.message.dialogMessage('No es posible agregar el usuario <b>' + this.iUsuario.usuario + '</b> debido a que ya se encuentra agregado, intenta con uno diferente.');
@@ -185,13 +171,38 @@ export class DialogUserComponent implements OnInit {
     return b;
   }
 
+  ngController(option: string, data?: any): void {
+
+    switch (option) {
+      case 'getRol': {
+        this.ngModelSet('getRol');
+        this.ngGetRol(2, this.iRol);
+        break;
+      }
+      case 'getUsuario': {
+        this.ngModelSet('getUsuario');
+        this.ngGetUsuario(3, this.iUsuario);
+        break;
+      }
+      case 'postUsuario': {
+        this.ngPostUsuario(this.iUsuario);
+        break;
+      }
+      case 'putUsuario': {
+        this.ngPutUsuario(1, this.iUsuario);
+        break;
+      }
+    }
+
+  }
+
   async ngGetRol(option: number, model: IRol) {
 
     await this.service.ngGetRol(option, model)
       .then((r: IResponse) => {
 
         if (r.success) {
-          this.ngModelGet('iRol', r.data);
+          this.ngModelGet('getRol', r.data);
         } else {
           this.message.dialogMessage(this.shared.ngFalse());
         }
@@ -211,8 +222,8 @@ export class DialogUserComponent implements OnInit {
       .then((r: IResponse) => {
 
         if (r.success) {
-          this.ngModelGet('iUsuario', r.data);
-          this.ngValidate('iUsuario');
+          this.ngModelGet('getUsuario', r.data);
+          this.ngValidate('getUsuario');
         } else {
           this.message.dialogMessage(this.shared.ngFalse());
         }

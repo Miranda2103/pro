@@ -11,7 +11,6 @@ import { Shared } from '../../shared/shared';
   styleUrls: ['./dialog-rol.component.css']
 })
 export class DialogRolComponent implements OnInit {
-  expand: boolean = true;
 
   iRol: IRol;
   inRol: IRol[] = [];
@@ -48,7 +47,8 @@ export class DialogRolComponent implements OnInit {
   ngModelSet(option: string, data?: any): void {
 
     switch (option) {
-      case '': {
+      case 'getRol': {
+
         break;
       }
     }
@@ -57,7 +57,8 @@ export class DialogRolComponent implements OnInit {
   ngModelGet(option: string, data?: any): void {
 
     switch (option) {
-      case 'iRol': {
+      case 'getRol': {
+        this.ngClean('inRol');
         const model: IRol[] = data as IRol[];
         this.inRol = model;
         break;
@@ -66,29 +67,14 @@ export class DialogRolComponent implements OnInit {
     }
   }
 
-  ngController(option: string, data?: any): void {
-
-    switch (option) {
-      case 'getRol': {
-        this.ngGetRol(3, this.iRol);
-        break;
-      }
-      case 'postRol': {
-        this.ngPostRol(this.iRol);
-        break;
-      }
-      case 'putRol': {
-        this.ngPutRol(1, this.iRol);
-        break;
-      }
-    }
-
-  }
-
   ngHandle(option: string, data?: any): void {
 
     switch (option) {
-      case 'handle': {
+      case 'getRol': {
+        this.ngController('getRol');
+        break;
+      }
+      case 'rol': {
 
         if (this.iRol.id == 0) {
           this.ngController('postRol');
@@ -106,7 +92,7 @@ export class DialogRolComponent implements OnInit {
     let b: boolean = true;
 
     switch (option) {
-      case 'iRol.rol': {
+      case 'getRol': {
 
         if (this.inRol.length) {
           this.message.dialogMessage('No es posible agregar el rol <b>' + this.iRol.rol + '</b> debido a que ya se encuentra agregado, intenta con uno diferente.');
@@ -121,14 +107,34 @@ export class DialogRolComponent implements OnInit {
     return b;
   }
 
+  ngController(option: string, data?: any): void {
+
+    switch (option) {
+      case 'getRol': {
+        this.ngModelSet('getRol');
+        this.ngGetRol(3, this.iRol);
+        break;
+      }
+      case 'postRol': {
+        this.ngPostRol(this.iRol);
+        break;
+      }
+      case 'putRol': {
+        this.ngPutRol(1, this.iRol);
+        break;
+      }
+    }
+
+  }
+
   async ngGetRol(option: number, model: IRol) {
 
     await this.service.ngGetRol(option, model)
       .then((r: IResponse) => {
 
         if (r.success) {
-          this.ngModelGet('iRol', r.data);
-          this.ngValidate('iRol.rol');
+          this.ngModelGet('getRol', r.data);
+          this.ngValidate('getRol');
         } else {
           this.message.dialogMessage(this.shared.ngFalse());
         }

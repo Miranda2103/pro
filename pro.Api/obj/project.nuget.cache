@@ -1,17 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "LWbCLUCh6Ac=",
+  "dgSpecHash": "9yy68KudQBg=",
   "success": true,
   "projectFilePath": "C:\\Users\\syste\\source\\repos\\pro\\pro.Api\\pro.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\syste\\.nuget\\packages\\closedxml\\0.105.0\\closedxml.0.105.0.nupkg.sha512",
     "C:\\Users\\syste\\.nuget\\packages\\closedxml.parser\\2.0.0\\closedxml.parser.2.0.0.nupkg.sha512",
-    "C:\\Users\\syste\\.nuget\\packages\\csvhelper\\33.1.0\\csvhelper.33.1.0.nupkg.sha512",
     "C:\\Users\\syste\\.nuget\\packages\\documentformat.openxml\\3.1.1\\documentformat.openxml.3.1.1.nupkg.sha512",
     "C:\\Users\\syste\\.nuget\\packages\\documentformat.openxml.framework\\3.1.1\\documentformat.openxml.framework.3.1.1.nupkg.sha512",
     "C:\\Users\\syste\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
-    "C:\\Users\\syste\\.nuget\\packages\\exceldatareader\\3.7.0\\exceldatareader.3.7.0.nupkg.sha512",
-    "C:\\Users\\syste\\.nuget\\packages\\exceldatareader.dataset\\3.7.0\\exceldatareader.dataset.3.7.0.nupkg.sha512",
     "C:\\Users\\syste\\.nuget\\packages\\excelnumberformat\\1.1.0\\excelnumberformat.1.1.0.nupkg.sha512",
     "C:\\Users\\syste\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.3.0\\microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512",
     "C:\\Users\\syste\\.nuget\\packages\\microsoft.aspnetcore.authentication.core\\2.3.0\\microsoft.aspnetcore.authentication.core.2.3.0.nupkg.sha512",
@@ -64,6 +61,7 @@
     "C:\\Users\\syste\\.nuget\\packages\\microsoft.net.http.headers\\2.3.0\\microsoft.net.http.headers.2.3.0.nupkg.sha512",
     "C:\\Users\\syste\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\syste\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\syste\\.nuget\\packages\\microsoft.office.interop.excel\\16.0.18925.20022\\microsoft.office.interop.excel.16.0.18925.20022.nupkg.sha512",
     "C:\\Users\\syste\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\syste\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\syste\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
@@ -148,5 +146,18 @@
     "C:\\Users\\syste\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.36\\microsoft.aspnetcore.app.ref.6.0.36.nupkg.sha512",
     "C:\\Users\\syste\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.36\\microsoft.netcore.app.host.win-x64.6.0.36.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "message": "pro.Api depende de Microsoft.Office.Interop.Excel (>= 16.0.0), pero no se encontró Microsoft.Office.Interop.Excel 16.0.0. Microsoft.Office.Interop.Excel 16.0.18925.20022 se resolvió en su lugar.",
+      "projectPath": "C:\\Users\\syste\\source\\repos\\pro\\pro.Api\\pro.Api.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\syste\\source\\repos\\pro\\pro.Api\\pro.Api.csproj",
+      "libraryId": "Microsoft.Office.Interop.Excel",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

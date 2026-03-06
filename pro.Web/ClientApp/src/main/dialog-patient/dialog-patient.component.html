@@ -111,7 +111,7 @@
         </div>
 
         <div class="w100 align-center" [ngClass]="{'visible' : iPaciente.nombre != '' && iPaciente.apellidoPaterno != '' && iPaciente.apellidoMaterno != '' && iPaciente.fechaNacimiento != '' && iPaciente.idSexo != 0 && iPaciente.idEstado != 0 && iPaciente.idMunicipio != 0 && iPaciente.idColonia != 0 && iPaciente.calle != '' && iPaciente.numeroInterior != '' && iPaciente.telefonoMovil != '' && iPaciente.correo != '' , 'hidden' : iPaciente.nombre == '' || iPaciente.apellidoPaterno == '' || iPaciente.apellidoMaterno == '' || iPaciente.fechaNacimiento == '' || iPaciente.idSexo == 0 || iPaciente.idEstado == 0 || iPaciente.idMunicipio == 0 || iPaciente.idColonia == 0 || iPaciente.calle == '' || iPaciente.numeroInterior == '' || iPaciente.telefonoMovil == '' || iPaciente.correo == '' }">
-          <button mat-raised-button class="wpx125 background-4" (click)="ngHandle('paciente');">
+          <button mat-raised-button class="wpx125 background-4" (click)="ngHandle('paciente');" *ngIf="shared.permisoEscritura">
             <mat-icon class="fl-left button-icon">save</mat-icon>
             Guardar
           </button>

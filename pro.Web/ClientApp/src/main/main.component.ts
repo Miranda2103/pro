@@ -2,11 +2,11 @@ import { AfterViewInit, ChangeDetectorRef, Component, HostListener, OnInit, View
 import { MatDialog } from '@angular/material/dialog';
 import { MatExpansionPanel } from '@angular/material/expansion';
 import { MatDrawerMode, MatSidenav } from '@angular/material/sidenav';
-import { Router } from '@angular/router';
 import { Message } from '.././message/message';
 import { Shared } from '.././shared/shared';
-import { IResponse, IRolMenuView, IRolSubMenuView, ISexo } from '../interface/interface-pro.interface';
+import { IResponse, IRolMenuView, IRolSubMenuView } from '../interface/interface-pro.interface';
 import { ServiceProService } from '../service/service-pro.service';
+
 
 @Component({
   selector: 'app-main',
@@ -50,11 +50,12 @@ export class MainComponent implements OnInit, AfterViewInit {
     }
   }
 
-  constructor(private cd: ChangeDetectorRef, public service: ServiceProService, public shared: Shared, public message: Message, public dialog: MatDialog, private router: Router) { }
+  constructor(private cd: ChangeDetectorRef, public service: ServiceProService, public shared: Shared, public message: Message, public dialog: MatDialog) {
+  }
 
   ngOnInit() {
     this.ngResize();
-    this.ngController('getRolMenuView');
+    this.ngHandle('getRolMenuView');
   }
 
   ngAfterViewInit() { }
@@ -71,7 +72,7 @@ export class MainComponent implements OnInit, AfterViewInit {
         break;
       }
       case 'iRolSubMenuView': {
-        this.iRolSubMenuView = { idRol: 0, rol: '', idMenu: 0, menu: '', idSubMenu: 0, subMenu: '', subMenuR: '', ruta: '', icono: '', orden: 0, idOrganizacion: this.shared.idOrganizacion, fecha: '', activo: true };
+        this.iRolSubMenuView = { idRol: 0, rol: '', idMenu: 0, menu: '', idSubMenu: 0, subMenu: '', subMenuR: '', ruta: '', icono: '', orden: 0, escritura: false, idOrganizacion: this.shared.idOrganizacion, fecha: '', activo: true };
         break;
       }
       case 'inRolSubMenuView': {
@@ -93,12 +94,12 @@ export class MainComponent implements OnInit, AfterViewInit {
   ngModelSet(option: string, data?: any): void {
 
     switch (option) {
-      case 'iRolMenuView': {
+      case 'getRolMenuView': {
         this.ngClean('iRolMenuView');
         this.iRolMenuView.idRol = this.shared.idRol;
         break;
       }
-      case 'iRolSubMenuView': {
+      case 'getRolSubMenuView': {
         this.ngClean('iRolSubMenuView');
         this.iRolSubMenuView.idRol = this.shared.idRol;
         break;
@@ -110,31 +111,16 @@ export class MainComponent implements OnInit, AfterViewInit {
   ngModelGet(option: string, data?: any): void {
 
     switch (option) {
-      case 'iRolMenuView': {
+      case 'getRolMenuView': {
+        this.ngClean('inRolMenuView');
         const model: IRolMenuView[] = data as IRolMenuView[];
         this.inRolMenuView = model;
         break;
       }
-      case 'iRolSubMenuView': {
+      case 'getRolSubMenuView': {
+        this.ngClean('inRolSubMenuView');
         const model: IRolSubMenuView[] = data as IRolSubMenuView[];
         this.inRolSubMenuView = model;
-        break;
-      }
-    }
-
-  }
-
-  ngController(option: string, data?: any): void {
-
-    switch (option) {
-      case 'getRolMenuView': {
-        this.ngModelSet('iRolMenuView');
-        this.ngGetRolMenuView(1, this.iRolMenuView);
-        break;
-      }
-      case 'getRolSubMenuView': {
-        this.ngModelSet('iRolSubMenuView');
-        this.ngGetRolSubMenuView(1, this.iRolSubMenuView);
         break;
       }
     }
@@ -144,8 +130,12 @@ export class MainComponent implements OnInit, AfterViewInit {
   ngHandle(option: string, data?: any): void {
 
     switch (option) {
-      case '': {
-
+      case 'getRolMenuView': {
+        this.ngController('getRolMenuView');
+        break;
+      }
+      case 'getRolSubMenuView': {
+        this.ngController('getRolSubMenuView');
         break;
       }
     }
@@ -165,14 +155,31 @@ export class MainComponent implements OnInit, AfterViewInit {
     return b;
   }
 
+  ngController(option: string, data?: any): void {
+
+    switch (option) {
+      case 'getRolMenuView': {
+        this.ngModelSet('getRolMenuView');
+        this.ngGetRolMenuView(1, this.iRolMenuView);
+        break;
+      }
+      case 'getRolSubMenuView': {
+        this.ngModelSet('getRolSubMenuView');
+        this.ngGetRolSubMenuView(1, this.iRolSubMenuView);
+        break;
+      }
+    }
+
+  }
+
   async ngGetRolMenuView(option: number, model: IRolMenuView) {
 
     await this.service.ngGetRolMenuView(option, model)
       .then((r: IResponse) => {
 
         if (r.success) {
-          this.ngModelGet('iRolMenuView', r.data);
-          this.ngController('getRolSubMenuView');
+          this.ngModelGet('getRolMenuView', r.data);
+          this.ngHandle('getRolSubMenuView');
         }
         else {
           this.message.dialogMessage(this.shared.ngFalse());
@@ -193,7 +200,7 @@ export class MainComponent implements OnInit, AfterViewInit {
       .then((r: IResponse) => {
 
         if (r.success) {
-          this.ngModelGet('iRolSubMenuView', r.data);
+          this.ngModelGet('getRolSubMenuView', r.data);
           this.ngMenu();
         }
         else {

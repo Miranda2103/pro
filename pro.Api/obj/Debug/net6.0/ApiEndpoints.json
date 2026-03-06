@@ -139,6 +139,226 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "pro.Api.Controllers.AvisoImagenController",
+    "Method": "Delete",
+    "RelativePath": "api/pro/AvisoImagen/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MAvisoImagen, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.AvisoImagenController",
+    "Method": "Get",
+    "RelativePath": "api/pro/AvisoImagen/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdPago",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdAgenda",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdPaciente",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ruta",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Extension",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Archivo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Imagen",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInserta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioActualiza",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaActualiza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.AvisoImagenController",
+    "Method": "NoticeImage",
+    "RelativePath": "api/pro/AvisoImagen/NoticeImage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "archivo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.AvisoImagenController",
+    "Method": "Post",
+    "RelativePath": "api/pro/AvisoImagen/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paciente",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "idPago",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "idAgenda",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "idPaciente",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentDisposition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Headers",
+        "Type": "Microsoft.AspNetCore.Http.IHeaderDictionary",
+        "IsRequired": false
+      },
+      {
+        "Name": "Length",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "idOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "idUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.AvisoImagenController",
+    "Method": "Put",
+    "RelativePath": "api/pro/AvisoImagen/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "pro.Model.MAvisoImagen",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "pro.Api.Controllers.ColoniaController",
     "Method": "Delete",
     "RelativePath": "api/pro/Colonia/Delete",
@@ -257,6 +477,226 @@
       {
         "Name": "model",
         "Type": "pro.Model.MColonia",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.ConsentimientoImagenController",
+    "Method": "ConsentImage",
+    "RelativePath": "api/pro/ConsentimientoImagen/ConsentImage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "archivo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.ConsentimientoImagenController",
+    "Method": "Delete",
+    "RelativePath": "api/pro/ConsentimientoImagen/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MConsentimientoImagen, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.ConsentimientoImagenController",
+    "Method": "Get",
+    "RelativePath": "api/pro/ConsentimientoImagen/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdPago",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdAgenda",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdPaciente",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ruta",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Extension",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Archivo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Imagen",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInserta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioActualiza",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaActualiza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.ConsentimientoImagenController",
+    "Method": "Post",
+    "RelativePath": "api/pro/ConsentimientoImagen/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paciente",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "idPago",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "idAgenda",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "idPaciente",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentDisposition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Headers",
+        "Type": "Microsoft.AspNetCore.Http.IHeaderDictionary",
+        "IsRequired": false
+      },
+      {
+        "Name": "Length",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "idOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "idUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.ConsentimientoImagenController",
+    "Method": "Put",
+    "RelativePath": "api/pro/ConsentimientoImagen/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "pro.Model.MConsentimientoImagen",
         "IsRequired": true
       }
     ],
@@ -595,6 +1035,120 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "pro.Api.Controllers.FormaPagoController",
+    "Method": "Delete",
+    "RelativePath": "api/pro/FormaPago/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MFormaPago, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.FormaPagoController",
+    "Method": "Get",
+    "RelativePath": "api/pro/FormaPago/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FormaPago",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInserta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioActualiza",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaActualiza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.FormaPagoController",
+    "Method": "Post",
+    "RelativePath": "api/pro/FormaPago/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "pro.Model.MFormaPago",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.FormaPagoController",
+    "Method": "Put",
+    "RelativePath": "api/pro/FormaPago/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "pro.Model.MFormaPago",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "pro.Api.Controllers.HemodialisisController",
     "Method": "Delete",
     "RelativePath": "api/pro/Hemodialisis/Delete",
@@ -635,6 +1189,11 @@
       },
       {
         "Name": "IdAgenda",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdPaciente",
         "Type": "System.Int64",
         "IsRequired": false
       },
@@ -1233,6 +1792,151 @@
       {
         "Name": "model",
         "Type": "pro.Model.MHemodialisis",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.HemodialisisController",
+    "Method": "ReportHemodialisis",
+    "RelativePath": "api/pro/Hemodialisis/ReportHemodialisis",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idAgenda",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.LlegadaController",
+    "Method": "Delete",
+    "RelativePath": "api/pro/Llegada/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MLlegada, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.LlegadaController",
+    "Method": "Get",
+    "RelativePath": "api/pro/Llegada/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdPaciente",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdAgenda",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaLlegada",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "HoraLlegada",
+        "Type": "System.TimeSpan",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInserta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioActualiza",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaActualiza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.LlegadaController",
+    "Method": "Post",
+    "RelativePath": "api/pro/Llegada/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "pro.Model.MLlegada",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.LlegadaController",
+    "Method": "Put",
+    "RelativePath": "api/pro/Llegada/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "pro.Model.MLlegada",
         "IsRequired": true
       }
     ],
@@ -2045,6 +2749,403 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "pro.Api.Controllers.PagoController",
+    "Method": "ConsentDocument",
+    "RelativePath": "api/pro/Pago/ConsentDocument",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idPaciente",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.PagoController",
+    "Method": "Delete",
+    "RelativePath": "api/pro/Pago/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MPago, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.PagoController",
+    "Method": "Get",
+    "RelativePath": "api/pro/Pago/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdPaciente",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdAgenda",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdFormaPago",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Importe",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInserta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioActualiza",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaActualiza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.PagoController",
+    "Method": "NoticeDocument",
+    "RelativePath": "api/pro/Pago/NoticeDocument",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idPaciente",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.PagoController",
+    "Method": "PaymentDocument",
+    "RelativePath": "api/pro/Pago/PaymentDocument",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idAgenda",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.PagoController",
+    "Method": "Post",
+    "RelativePath": "api/pro/Pago/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "pro.Model.MPago",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.PagoController",
+    "Method": "Put",
+    "RelativePath": "api/pro/Pago/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "pro.Model.MPago",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.PagoImagenController",
+    "Method": "Delete",
+    "RelativePath": "api/pro/PagoImagen/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MPagoImagen, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.PagoImagenController",
+    "Method": "Get",
+    "RelativePath": "api/pro/PagoImagen/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdPago",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdAgenda",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdPaciente",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ruta",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Nombre",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Extension",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Archivo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Imagen",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInserta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioActualiza",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaActualiza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.PagoImagenController",
+    "Method": "PaymentImage",
+    "RelativePath": "api/pro/PagoImagen/PaymentImage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "archivo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.PagoImagenController",
+    "Method": "Post",
+    "RelativePath": "api/pro/PagoImagen/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paciente",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "idPago",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "idAgenda",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "idPaciente",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentDisposition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Headers",
+        "Type": "Microsoft.AspNetCore.Http.IHeaderDictionary",
+        "IsRequired": false
+      },
+      {
+        "Name": "Length",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "idOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "idUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.PagoImagenController",
+    "Method": "Put",
+    "RelativePath": "api/pro/PagoImagen/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "pro.Model.MPagoImagen",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "pro.Api.Controllers.RolController",
     "Method": "Delete",
     "RelativePath": "api/pro/Rol/Delete",
@@ -2324,6 +3425,11 @@
       {
         "Name": "IdSubMenu",
         "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Escritura",
+        "Type": "System.Boolean",
         "IsRequired": false
       },
       {
@@ -2635,6 +3741,120 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "pro.Api.Controllers.TipoConsultaController",
+    "Method": "Delete",
+    "RelativePath": "api/pro/TipoConsulta/Delete",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MTipoConsulta, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.TipoConsultaController",
+    "Method": "Get",
+    "RelativePath": "api/pro/TipoConsulta/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "TipoConsulta",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioInserta",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaInserta",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdUsuarioActualiza",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaActualiza",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.TipoConsultaController",
+    "Method": "Post",
+    "RelativePath": "api/pro/TipoConsulta/Post",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "pro.Model.MTipoConsulta",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.TipoConsultaController",
+    "Method": "Put",
+    "RelativePath": "api/pro/TipoConsulta/Put",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "model",
+        "Type": "pro.Model.MTipoConsulta",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "pro.Api.Controllers.TokenController",
     "Method": "Post",
     "RelativePath": "api/pro/Token/Post",
@@ -2651,9 +3871,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.TranshemodialisisController",
+    "ContainingType": "pro.Api.Controllers.TransHemodialisisController",
     "Method": "Delete",
-    "RelativePath": "api/pro/Transhemodialisis/Delete",
+    "RelativePath": "api/pro/TransHemodialisis/Delete",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -2665,16 +3885,16 @@
       },
       {
         "Name": "model",
-        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MTranshemodialisis, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MTransHemodialisis, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.TranshemodialisisController",
+    "ContainingType": "pro.Api.Controllers.TransHemodialisisController",
     "Method": "Get",
-    "RelativePath": "api/pro/Transhemodialisis/Get",
+    "RelativePath": "api/pro/TransHemodialisis/Get",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -2691,6 +3911,11 @@
       },
       {
         "Name": "IdAgenda",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdPaciente",
         "Type": "System.Int64",
         "IsRequired": false
       },
@@ -2798,25 +4023,25 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.TranshemodialisisController",
+    "ContainingType": "pro.Api.Controllers.TransHemodialisisController",
     "Method": "Post",
-    "RelativePath": "api/pro/Transhemodialisis/Post",
+    "RelativePath": "api/pro/TransHemodialisis/Post",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "model",
-        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MTranshemodialisis, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[pro.Model.MTransHemodialisis, pro.Model, Version=1.0.19.603, Culture=neutral, PublicKeyToken=null]]",
         "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
-    "ContainingType": "pro.Api.Controllers.TranshemodialisisController",
+    "ContainingType": "pro.Api.Controllers.TransHemodialisisController",
     "Method": "Put",
-    "RelativePath": "api/pro/Transhemodialisis/Put",
+    "RelativePath": "api/pro/TransHemodialisis/Put",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -2828,7 +4053,7 @@
       },
       {
         "Name": "model",
-        "Type": "pro.Model.MTranshemodialisis",
+        "Type": "pro.Model.MTransHemodialisis",
         "IsRequired": true
       }
     ],
@@ -2984,6 +4209,129 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "pro.Api.Controllers.VAvisoController",
+    "Method": "Get",
+    "RelativePath": "api/pro/VAviso/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdPaciente",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "NombreCompleto",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Fecha",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.VConsentimientoController",
+    "Method": "Get",
+    "RelativePath": "api/pro/VConsentimiento/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdPaciente",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "NombreCompleto",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Sexo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaNacimiento",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Edad",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Fecha",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.VEquipoController",
+    "Method": "Get",
+    "RelativePath": "api/pro/VEquipo/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Equipo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Total",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdOrganizacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "pro.Api.Controllers.VersionController",
     "Method": "Get",
     "RelativePath": "api/pro/Version/Get",
@@ -2991,6 +4339,638 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.VHemodialisisController",
+    "Method": "Get",
+    "RelativePath": "api/pro/VHemodialisis/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdAgenda",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "NombreCompleto",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaNacimiento",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Edad",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Sexo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Diagnostico",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaIngreso",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Talla",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Peso",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TipoDe",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaAn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Residual",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Alergias",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FechaPanelViral",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AgsVHB",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AcVHC",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AcVIH",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionSalida",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionBaston",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionAuditiva",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionLinguistica",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionAndadera",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionCamilla",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionVisual",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionCreencias",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filtro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Tiempo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Qs",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Qo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Temp",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Na",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "C",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Qa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Hcc",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Anticoagulacion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Rodo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Infusion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ktv",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Uf",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ResumenFiltro",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FrecuenciaHemodialisis",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IndicacionesMedicas",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IndicacionesVerbales",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IndicacionesTelefonicas",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IndicacionesElectronicas",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionIndicacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPaciente",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionProcedimiento",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionVerificacion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPreescripcion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionAngioacceso",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTimeOut",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionEquipo",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionRiesgo",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionIdentifico",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "PreTAPie",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PreFCPie",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PreTempC",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PreTASentado",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PreFCSentado",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PreSaturacion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PreFRespiratoria",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PrePesoEgreso",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PrePesoActual",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PosTAPie",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PosFCPie",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PosTempC",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PosTASentado",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PosFCSentado",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PosSaturacion",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PosFRespiratoria",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PosGananciaPeso",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PosPesoFinal",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPreExterno",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPreInterno",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPreCateter",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPrePermeabilidad",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPreInfeccion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTraExterno",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTraInterno",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTraCateter",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTraPermeabilidad",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTraInfeccion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPosExterno",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPosInterno",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPosCateter",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPosPermeabilidad",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPosInfeccion",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "ObservacionCateter",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPreTrill",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPreEdena",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPreEquimosis",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPreHematoma",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPreAnerisma",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPreAdecuada",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPreDato",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTraTrill",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTraEdena",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTraEquimosis",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTraHematoma",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTraAnerisma",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTraAdecuada",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionTraDato",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPosTrill",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPosEdena",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPosEquimosis",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPosHematoma",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPosAnerisma",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPosAdecuada",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdDecisionPosDato",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "ObservacionFistula",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.VPagoController",
+    "Method": "Get",
+    "RelativePath": "api/pro/VPago/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdPago",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdAgenda",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdPaciente",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "NombreCompleto",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FormaPago",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Importe",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "ImporteLetra",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Fecha",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -3123,12 +5103,113 @@
         "IsRequired": false
       },
       {
+        "Name": "Escritura",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      },
+      {
         "Name": "IdOrganizacion",
         "Type": "System.Int64",
         "IsRequired": false
       },
       {
         "Name": "Fecha",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Activo",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "pro.Api.Controllers.VTransHemodialisisController",
+    "Method": "Get",
+    "RelativePath": "api/pro/VTransHemodialisis/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "option",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdAgenda",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Hora",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ta",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Fc",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Fr",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Sat",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Temp",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Qc",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Qo",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Part",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Pven",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ptm",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "TasaUf",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Uf",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Ktv",
         "Type": "System.String",
         "IsRequired": false
       },

@@ -9,6 +9,7 @@ namespace pro.Model
         public string SubMenu { get; set; }
         public string Icono { get; set; }
         public int Orden { get; set; }
+        public bool Escritura { get; set; }
         public bool Activo { get; set; }
 
         public MWRolSubMenuVista()

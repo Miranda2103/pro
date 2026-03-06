@@ -2,11 +2,11 @@
 
 namespace pro.Interface
 {
-    public interface ITranshemodialisis
+    public interface ITransHemodialisis
     {
-        Task<List<MTranshemodialisis>> GetAsync(int option, MTranshemodialisis model);
-        Task<Boolean> PostAsync(List<MTranshemodialisis> model);
-        Task<bool> PutAsync(int option, MTranshemodialisis model);
-        Task<bool> DeleteAsync(int option, List<MTranshemodialisis> model);
+        Task<List<MTransHemodialisis>> GetAsync(int option, MTransHemodialisis model);
+        Task<Boolean> PostAsync(List<MTransHemodialisis> model);
+        Task<bool> PutAsync(int option, MTransHemodialisis model);
+        Task<bool> DeleteAsync(int option, List<MTransHemodialisis> model);
     }
 }

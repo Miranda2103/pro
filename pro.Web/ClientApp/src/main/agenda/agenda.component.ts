@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
 import { CalendarOptions } from '@fullcalendar/core';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
@@ -8,7 +8,8 @@ import { MatDialog } from '@angular/material/dialog';
 import { Message } from '../../message/message';
 import { ServiceProService } from '../../service/service-pro.service';
 import { Shared } from '../../shared/shared';
-import { IAgenda, IEquipo, IPaciente, IResponse } from '../../interface/interface-pro.interface';
+import { IAgenda, IEquipo, IEquipoView, IPaciente, IResponse, ITipoConsulta } from '../../interface/interface-pro.interface';
+import { FullCalendarComponent } from '@fullcalendar/angular';
 
 @Component({
   selector: 'app-agenda',
@@ -16,6 +17,7 @@ import { IAgenda, IEquipo, IPaciente, IResponse } from '../../interface/interfac
   styleUrls: ['./agenda.component.css']
 })
 export class AgendaComponent implements OnInit {
+  @ViewChild('calendarRef') calendarComponent: FullCalendarComponent;
 
   iPaciente: IPaciente;
   inPaciente: IPaciente[] = [];
@@ -26,6 +28,14 @@ export class AgendaComponent implements OnInit {
   inEquipo: IEquipo[] = [];
   idEquipo: number = 0;
   filteredEquipo: IEquipo[] = [];
+
+  iTipoConsulta: ITipoConsulta;
+  inTipoConsulta: ITipoConsulta[] = [];
+  idTipoConsulta: number = 0;
+  filteredTipoConsulta: ITipoConsulta[] = [];
+
+  iEquipoView: IEquipoView;
+  inEquipoView: IEquipoView[] = [];
 
   iAgenda: IAgenda;
   inAgenda: IAgenda[] = [];
@@ -53,7 +63,13 @@ export class AgendaComponent implements OnInit {
       const end = selectInfo.end;
       const diffMs = end.getTime() - start.getTime();
       const diffHours = diffMs / (1000 * 60 * 60);
-      return diffHours === 4;
+
+      if (this.idTipoConsulta == 1) {
+        return diffHours == 4;
+      } else {
+        return true;
+      }
+
     },
     events: [],
     headerToolbar: {
@@ -79,7 +95,7 @@ export class AgendaComponent implements OnInit {
       const endHour = end ? end.getHours() : '';
       const text = `${startHour}:00 - ${endHour}:00 ${arg.event.title}`;
       const bgColor = arg.event.backgroundColor || '#1976d2';
-      return { html: `<div style="white-space:nowrap; overflow:hidden; text-overflow:ellipsis;background-color:${bgColor}; color:white; padding:2px; border-radius:3px;">${text}</div>` };
+      return { html: `<div style="white-space: normal; overflow: hidden; background-color:${bgColor}; color:white; padding:2px; border-radius:3px; word-wrap: break-word;">${text}</div>` };
     }
 
   };
@@ -98,6 +114,8 @@ export class AgendaComponent implements OnInit {
   ngOnInit(): void {
     this.ngHandle('getPaciente');
     this.ngHandle('getEquipo');
+    this.ngHandle('getTipoConsulta');
+    this.ngHandle('getEquipoView');
     this.ngHandle('getAgenda');
   }
 
@@ -123,6 +141,23 @@ export class AgendaComponent implements OnInit {
       case 'inEquipo': {
         this.inEquipo = [];
         this.filteredEquipo = [];
+        break;
+      }
+      case 'iTipoConsulta': {
+        this.iTipoConsulta = { id: 0, tipoConsulta: '', idOrganizacion: this.shared.idOrganizacion, idUsuarioInserta: this.shared.idUsuario, fechaInserta: this.shared.ngFechaInserta(), idUsuarioActualiza: this.shared.idUsuario, fechaActualiza: this.shared.ngFechaActualiza(), activo: true };
+        break;
+      }
+      case 'inTipoConsulta': {
+        this.inTipoConsulta = [];
+        this.filteredTipoConsulta = [];
+        break;
+      }
+      case 'iEquipoView': {
+        this.iEquipoView = { equipo: '', total: 0, idOrganizacion: this.shared.idOrganizacion,  activo: true };
+        break;
+      }
+      case 'inEquipoView': {
+        this.inEquipoView = [];
         break;
       }
       case 'iAgenda': {
@@ -154,6 +189,14 @@ export class AgendaComponent implements OnInit {
       }
       case 'getEquipo': {
         this.ngClean('iEquipo');
+        break;
+      }
+      case 'getTipoConsulta': {
+        this.ngClean('iTipoConsulta');
+        break;
+      }
+      case 'getEquipoView': {
+        this.ngClean('iEquipoView');
         break;
       }
       case 'getAgenda': {
@@ -196,18 +239,24 @@ export class AgendaComponent implements OnInit {
         this.filteredEquipo = model;
         break;
       }
+      case 'getTipoConsulta': {
+        this.ngClean('inTipoConsulta');
+        const model: ITipoConsulta[] = data as ITipoConsulta[];
+        this.inTipoConsulta = model;
+        this.filteredTipoConsulta = model;
+        break;
+      }
+      case 'getEquipoView': {
+        this.ngClean('inEquipoView');
+        const model: IEquipoView[] = data as IEquipoView[];
+        this.inEquipoView = model;
+        break;
+      }
       case 'getAgenda': {
         this.ngClean('inAgenda');
         const model: IAgenda[] = data as IAgenda[];
         this.inAgenda = model;
-
-        let events: any[] = [];
-
-        this.inAgenda.forEach(r => {
-          events.push({ id: r.idEquipo, start: r.fechaInicio, end: r.fechaFin, title: r.comentario, backgroundColor: this.colorAgenda[r.idEquipo] || '#1976d2', extendedProps: { idAgenda: r.id } });
-        });
-
-        this.calendarOptions.events = events;
+        this.ngEquipoCalendario();
         break;
       }
       case 'postAgenda': {
@@ -225,38 +274,6 @@ export class AgendaComponent implements OnInit {
 
   }
 
-  ngController(option: string, data?: any): void {
-
-    switch (option) {
-      case 'getPaciente': {
-        this.ngModelSet('getPaciente');
-        this.ngGetPaciente(2, this.iPaciente);
-        break;
-      }
-      case 'getEquipo': {
-        this.ngModelSet('getEquipo');
-        this.ngGetEquipo(2, this.iEquipo);
-        break;
-      }
-      case 'getAgenda': {
-        this.ngModelSet('getAgenda');
-        this.ngGetAgenda(2, this.iAgenda);
-        break;
-      }
-      case 'postAgenda': {
-        this.ngModelSet('postAgenda');
-        this.ngPostAgenda(this.iAgenda);
-        break;
-      }
-      case 'deleteAgenda': {
-        this.ngModelSet('deleteAgenda');
-        this.ngDeleteAgenda(1, this.inAgenda);
-        break;
-      }
-    }
-
-  }
-
   ngHandle(option: string, data?: any): void {
 
     switch (option) {
@@ -266,6 +283,14 @@ export class AgendaComponent implements OnInit {
       }
       case 'getEquipo': {
         this.ngController('getEquipo');
+        break;
+      }
+      case 'getTipoConsulta': {
+        this.ngController('getTipoConsulta');
+        break;
+      }
+      case 'getEquipoView': {
+        this.ngController('getEquipoView');
         break;
       }
       case 'getAgenda': {
@@ -286,6 +311,48 @@ export class AgendaComponent implements OnInit {
     }
 
     return b;
+  }
+
+  ngController(option: string, data?: any): void {
+
+    switch (option) {
+      case 'getPaciente': {
+        this.ngModelSet('getPaciente');
+        this.ngGetPaciente(2, this.iPaciente);
+        break;
+      }
+      case 'getEquipo': {
+        this.ngModelSet('getEquipo');
+        this.ngGetEquipo(2, this.iEquipo);
+        break;
+      }
+      case 'getTipoConsulta': {
+        this.ngModelSet('getTipoConsulta');
+        this.ngGetTipoConsulta(2, this.iTipoConsulta);
+        break;
+      }
+      case 'getEquipoView': {
+        this.ngModelSet('getEquipoView');
+        this.ngGetEquipoView(1, this.iEquipoView);
+        break;
+      }
+      case 'getAgenda': {
+        this.ngModelSet('getAgenda');
+        this.ngGetAgenda(2, this.iAgenda);
+        break;
+      }
+      case 'postAgenda': {
+        this.ngModelSet('postAgenda');
+        this.ngPostAgenda(this.iAgenda);
+        break;
+      }
+      case 'deleteAgenda': {
+        this.ngModelSet('deleteAgenda');
+        this.ngDeleteAgenda(1, this.inAgenda);
+        break;
+      }
+    }
+
   }
 
   async ngGetPaciente(option: number, model: IPaciente) {
@@ -315,6 +382,46 @@ export class AgendaComponent implements OnInit {
 
         if (r.success) {
           this.ngModelGet('getEquipo', r.data);
+        } else {
+          this.message.dialogMessage(this.shared.ngFalse());
+        }
+
+      }).catch(
+        (e: any) => {
+          console.error(e);
+          this.message.dialogMessage(this.shared.ngError(e));
+        }
+      ).finally(() => { });
+
+  }
+
+  async ngGetTipoConsulta(option: number, model: ITipoConsulta) {
+
+    await this.service.ngGetTipoConsulta(option, model)
+      .then((r: IResponse) => {
+
+        if (r.success) {
+          this.ngModelGet('getTipoConsulta', r.data);
+        } else {
+          this.message.dialogMessage(this.shared.ngFalse());
+        }
+
+      }).catch(
+        (e: any) => {
+          console.error(e);
+          this.message.dialogMessage(this.shared.ngError(e));
+        }
+      ).finally(() => { });
+
+  }
+
+  async ngGetEquipoView(option: number, model: IEquipoView) {
+
+    await this.service.ngGetEquipoView(option, model)
+      .then((r: IResponse) => {
+
+        if (r.success) {
+          this.ngModelGet('getEquipoView', r.data);
         } else {
           this.message.dialogMessage(this.shared.ngFalse());
         }
@@ -404,7 +511,7 @@ export class AgendaComponent implements OnInit {
   handleEventClick(clickInfo: any) {
     if (confirm(`¿Eliminar la cita "${clickInfo.event.title}"?`)) {
       clickInfo.event.remove();
-      this.idAgenda = clickInfo.event.id;
+      this.idAgenda = clickInfo.event.extendedProps.idAgenda;
       this.comentario = clickInfo.event.title;
       this.fechaAgenda = clickInfo.event.startStr;
       this.fechaInicio = clickInfo.event.startStr;
@@ -414,7 +521,7 @@ export class AgendaComponent implements OnInit {
   }
 
   habilitarCalendario() {
-    if (this.idPaciente != 0 && this.idEquipo != 0) {
+    if (this.idPaciente != 0 && this.idEquipo != 0 && this.idTipoConsulta != 0) {
       this.calendarOptions = {
         ...this.calendarOptions,
         selectable: true
@@ -423,33 +530,31 @@ export class AgendaComponent implements OnInit {
   }
 
   ngEquipoCalendario() {
-    this.calendarOptions.events = [];
-
     let events: any[] = [];
 
     this.inAgenda.forEach(r => {
-
-      if (r.idEquipo == this.idEquipo) {
-        events.push({ id: r.idEquipo, start: r.fechaInicio, end: r.fechaFin, title: r.comentario, backgroundColor: this.colorAgenda[r.idEquipo] || '#1976d2', extendedProps: { idAgenda: r.id } });
+      if (!this.idEquipo || this.idEquipo === 0 || r.idEquipo == this.idEquipo) {
+        events.push({
+          id: r.idEquipo,
+          start: r.fechaInicio,
+          end: r.fechaFin,
+          title: r.comentario,
+          backgroundColor: this.colorAgenda[r.idEquipo] || '#1976d2',
+          extendedProps: { idAgenda: r.id }
+        });
       }
     });
 
-    this.calendarOptions.events = events;
+    const calendarApi = this.calendarComponent.getApi();
+    calendarApi.removeAllEvents();
+    events.forEach(e => calendarApi.addEvent(e));
   }
 
   resetEquipo(event: MouseEvent) {
     event.stopPropagation();
     this.idEquipo = 0;
+    this.ngEquipoCalendario();
 
-    this.calendarOptions.events = [];
-
-    let events: any[] = [];
-
-    this.inAgenda.forEach(r => {
-      events.push({ id: r.idEquipo, start: r.fechaInicio, end: r.fechaFin, title: r.comentario, backgroundColor: this.colorAgenda[r.idEquipo] || '#1976d2', extendedProps: { idAgenda: r.id } });
-    });
-
-    this.calendarOptions.events = events;
   }
 
 }

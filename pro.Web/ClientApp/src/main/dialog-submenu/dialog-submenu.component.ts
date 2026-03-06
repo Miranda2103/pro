@@ -12,8 +12,6 @@ import { Shared } from '../../shared/shared';
 })
 export class DialogSubMenuComponent implements OnInit {
 
-  expand: boolean = true;
-
   iSubMenu: ISubMenu;
   inSubMenu: ISubMenu[] = [];
 
@@ -30,6 +28,14 @@ export class DialogSubMenuComponent implements OnInit {
   ngClean(option: string, data?: any): void {
 
     switch (option) {
+      case 'iSubMenu': {
+        this.iSubMenu = { id: 0, idMenu: 0, subMenu: '', ruta: '', icono: '', orden: 0, idUsuarioInserta: this.shared.idUsuario, fechaInserta: this.shared.ngFechaInserta(), idUsuarioActualiza: this.shared.idUsuario, fechaActualiza: this.shared.ngFechaActualiza(), activo: true };
+        break;
+      }
+      case 'inSubMenu': {
+        this.inSubMenu = [];
+        break;
+      }
       case 'iSubMenu.subMenu': {
         this.iSubMenu.subMenu = '';
         break;
@@ -49,7 +55,8 @@ export class DialogSubMenuComponent implements OnInit {
   ngModelSet(option: string, data?: any): void {
 
     switch (option) {
-      case '': {
+      case 'getSubMenu': {
+
         break;
       }
     }
@@ -58,13 +65,50 @@ export class DialogSubMenuComponent implements OnInit {
   ngModelGet(option: string, data?: any): void {
 
     switch (option) {
-      case 'iSubMenu': {
+      case 'getSubMenu': {
+        this.ngClean('inRol');
         const model: ISubMenu[] = data as ISubMenu[];
         this.inSubMenu = model;
         break;
       }
 
     }
+  }
+
+  ngHandle(option: string, data?: any): void {
+
+    switch (option) {
+      case 'submenu': {
+
+        if (this.iSubMenu.id == 0) {
+          this.ngController('postSubMenu');
+        } else {
+          this.ngController('putSubMenu');
+        }
+
+        break;
+      }
+    }
+
+  }
+
+  ngValidate(option: string, data?: any): boolean {
+    let b: boolean = true;
+
+    switch (option) {
+      case 'getSubMenu': {
+
+        if (this.inSubMenu.length) {
+          this.message.dialogMessage('No es posible agregar el SubMenu <b>' + this.iSubMenu.subMenu + '</b> debido a que ya se encuentra agregado, intenta con uno diferente.');
+          this.ngClean('iSubMenu.submenu');
+          b = false;
+        }
+
+        break;
+      }
+    }
+
+    return b;
   }
 
   ngController(option: string, data?: any): void {
@@ -86,50 +130,14 @@ export class DialogSubMenuComponent implements OnInit {
 
   }
 
-  ngHandle(option: string, data?: any): void {
-
-    switch (option) {
-      case 'handle': {
-
-        if (this.iSubMenu.id == 0) {
-          this.ngController('postSubMenu');
-        } else {
-          this.ngController('putSubMenu');
-        }
-
-        break;
-      }
-    }
-
-  }
-
-  ngValidate(option: string, data?: any): boolean {
-    let b: boolean = true;
-
-    switch (option) {
-      case 'iSubMenu': {
-
-        if (this.inSubMenu.length) {
-          this.message.dialogMessage('No es posible agregar el SubMenu <b>' + this.iSubMenu.subMenu + '</b> debido a que ya se encuentra agregado, intenta con uno diferente.');
-          this.ngClean('iSubMenu.submenu');
-          b = false;
-        }
-
-        break;
-      }
-    }
-
-    return b;
-  }
-
   async ngGetSubMenu(option: number, model: ISubMenu) {
 
     await this.service.ngGetSubMenu(option, model)
       .then((r: IResponse) => {
 
         if (r.success) {
-          this.ngModelGet('iSubMenu', r.data);
-          this.ngValidate('iSubMenu');
+          this.ngModelGet('getSubMenu', r.data);
+          this.ngValidate('getSubMenu');
         } else {
           this.message.dialogMessage(this.shared.ngFalse());
         }

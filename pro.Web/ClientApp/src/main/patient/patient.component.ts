@@ -17,7 +17,6 @@ import { DialogPatientComponent } from '../dialog-patient/dialog-patient.compone
   styleUrls: ['./patient.component.css']
 })
 export class PatientComponent implements OnInit {
-
   @ViewChild(MatSort) sort: MatSort;
 
   iFiltro: IFiltro;
@@ -130,11 +129,11 @@ export class PatientComponent implements OnInit {
         this.activo = [];
         break;
       }
-      case 'iModel': {
+      case 'iPaciente': {
         this.iPaciente = { id: 0, paciente: '', nombre: '', apellidoPaterno: '', apellidoMaterno: '', nombreCompleto: '', fechaNacimiento: '', edad: 0, idSexo: 0, idEstado: 0, idMunicipio: 0, idColonia: 0, codigoPostal: '', calle: '', numeroInterior: '', numeroExterior: '', telefonoMovil: '', telefonoCasa: '', correo: '', idOrganizacion: this.shared.idOrganizacion, idUsuarioInserta: this.shared.idUsuario, fechaInserta: this.shared.ngFechaInserta(), idUsuarioActualiza: this.shared.idUsuario, fechaActualiza: this.shared.ngFechaActualiza(), activo: true };
         break;
       }
-      case 'inModel': {
+      case 'inPaciente': {
         this.inPaciente = [];
         break;
       }
@@ -178,35 +177,8 @@ export class PatientComponent implements OnInit {
         this.iFiltro.formato = this.shared.extension;
         break;
       }
-      case 'postPaciente': {
-        this.ngClean('iModel');
-        break;
-      }
-      case 'putPaciente': {
-        this.ngClean('iModel');
-        const model: IPacienteVista = data as IPacienteVista;
-        this.iPaciente.id = model.idPaciente;
-        this.iPaciente.paciente = model.paciente;
-        this.iPaciente.nombre = model.nombre;
-        this.iPaciente.apellidoPaterno = model.apellidoPaterno;
-        this.iPaciente.apellidoMaterno = model.apellidoMaterno;
-        this.iPaciente.fechaNacimiento = model.fechaNacimiento;
-        this.iPaciente.edad = model.edad;
-        this.iPaciente.idSexo = model.idSexo;
-        this.iPaciente.idEstado = model.idEstado;
-        this.iPaciente.idMunicipio = model.idMunicipio;
-        this.iPaciente.idColonia = model.idColonia;
-        this.iPaciente.codigoPostal = model.codigoPostal;
-        this.iPaciente.calle = model.calle;
-        this.iPaciente.numeroInterior = model.numeroInterior;
-        this.iPaciente.numeroExterior = model.numeroExterior;
-        this.iPaciente.telefonoMovil = model.telefonoMovil;
-        this.iPaciente.telefonoCasa = model.telefonoCasa;
-        this.iPaciente.correo = model.correo;
-        break;
-      }
       case 'deletePaciente': {
-        this.ngClean('inModel');
+        this.ngClean('inPaciente');
         this.inPaciente = this.selection.selected.map(v => ({ id: v.idPaciente, paciente: v.paciente, nombre: '', apellidoPaterno: '', apellidoMaterno: '', nombreCompleto: '', fechaNacimiento: '', edad: 0, idSexo: 0, idEstado: 0, idMunicipio: 0, idColonia: 0, codigoPostal: '', calle: '', numeroInterior: '', numeroExterior: '', telefonoMovil: '', telefonoCasa: '', correo: '', idOrganizacion: this.shared.idOrganizacion, idUsuarioInserta: this.shared.idUsuario, fechaInserta: this.shared.ngFechaInserta(), idUsuarioActualiza: this.shared.idUsuario, fechaActualiza: this.shared.ngFechaDefault(), activo: !v.activo, estatus: true }));
         break;
       }
@@ -247,6 +219,45 @@ export class PatientComponent implements OnInit {
     }
   }
 
+  ngHandle(option: string, data?: any): void {
+
+    switch (option) {
+      case 'getFiltroLista': {
+        this.ngController('getFiltroLista');
+        break;
+      }
+      case 'getFiltroTotal': {
+        this.ngController('getFiltroTotal');
+        break;
+      }
+      case 'getFiltroVista': {
+        this.ngController('getFiltroVista');
+        break;
+      }
+      case 'getFiltroExportar': {
+        this.ngController('getFiltroExportar');
+        break;
+      }
+      case 'deletePaciente': {
+        this.ngController('deletePaciente');
+        break;
+      }
+    }
+
+  }
+
+  ngValidate(option: string, data?: any): boolean {
+    let b: boolean = true;
+
+    switch (option) {
+      case '': {
+        break;
+      }
+    }
+
+    return b;
+  }
+
   ngController(option: string, data?: any): void {
 
     switch (option) {
@@ -279,37 +290,33 @@ export class PatientComponent implements OnInit {
 
   }
 
-  ngHandle(option: string, data?: any): void {
+  ngDialogPaciente(option: string, model?: IPacienteVista): void {
 
     switch (option) {
-      case '': {
+      case 'post': {
+        this.ngClean('iPaciente');
         break;
       }
-    }
-
-  }
-
-  ngValidate(option: string, data?: any): boolean {
-    let b: boolean = true;
-
-    switch (option) {
-      case '': {
-        break;
-      }
-    }
-
-    return b;
-  }
-
-  ngDialog(option: string, model?: IPacienteVista): void {
-
-    switch (option) {
-      case 'postPaciente': {
-        this.ngModelSet('postPaciente');
-        break;
-      }
-      case 'putPaciente': {
-        this.ngModelSet('putPaciente', model);
+      case 'put': {
+        this.ngClean('iPaciente');
+        this.iPaciente.id = model.idPaciente;
+        this.iPaciente.paciente = model.paciente;
+        this.iPaciente.nombre = model.nombre;
+        this.iPaciente.apellidoPaterno = model.apellidoPaterno;
+        this.iPaciente.apellidoMaterno = model.apellidoMaterno;
+        this.iPaciente.fechaNacimiento = model.fechaNacimiento;
+        this.iPaciente.edad = model.edad;
+        this.iPaciente.idSexo = model.idSexo;
+        this.iPaciente.idEstado = model.idEstado;
+        this.iPaciente.idMunicipio = model.idMunicipio;
+        this.iPaciente.idColonia = model.idColonia;
+        this.iPaciente.codigoPostal = model.codigoPostal;
+        this.iPaciente.calle = model.calle;
+        this.iPaciente.numeroInterior = model.numeroInterior;
+        this.iPaciente.numeroExterior = model.numeroExterior;
+        this.iPaciente.telefonoMovil = model.telefonoMovil;
+        this.iPaciente.telefonoCasa = model.telefonoCasa;
+        this.iPaciente.correo = model.correo;
         break;
       }
     }
@@ -322,7 +329,7 @@ export class PatientComponent implements OnInit {
       (r: boolean) => {
 
         if (r) {
-          this.ngController('getFiltroLista');
+          this.ngHandle('getFiltroLista');
         }
 
       });
@@ -336,7 +343,7 @@ export class PatientComponent implements OnInit {
 
         if (r.success) {
           this.ngModelGet('getFiltroLista', r.data);
-          this.ngController('getFiltroTotal');
+          this.ngHandle('getFiltroTotal');
         } else {
           this.message.dialogMessage(this.shared.ngFalse());
         }
@@ -357,7 +364,7 @@ export class PatientComponent implements OnInit {
 
         if (r.success) {
           this.ngModelGet('getFiltroTotal', r.data);
-          this.ngController('getFiltroVista');
+          this.ngHandle('getFiltroVista');
         } else {
           this.message.dialogMessage(this.shared.ngFalse());
         }
@@ -413,7 +420,7 @@ export class PatientComponent implements OnInit {
       .then((r: IResponse) => {
 
         if (r.success) {
-          this.ngController('getFiltroLista');
+          this.ngHandle('getFiltroLista');
         } else {
           this.message.dialogMessage(this.shared.ngFalse());
         }
@@ -602,11 +609,11 @@ export class PatientComponent implements OnInit {
         this.ngClean('search');
         this.ngClean('selection');
         this.ngClean('header');
-        this.ngController('getFiltroLista');
+        this.ngHandle('getFiltroLista');
         break;
       }
       case 'selection': {
-        this.ngController('getFiltroLista');
+        this.ngHandle('getFiltroLista');
         break;
       }
     }

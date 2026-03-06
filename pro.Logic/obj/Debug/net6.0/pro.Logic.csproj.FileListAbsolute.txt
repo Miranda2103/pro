@@ -1,6 +1,4 @@
 C:\Users\syste\source\repos\pro\pro.Logic\obj\Debug\net6.0\pro.Logic.csproj.AssemblyReference.cache
-C:\Users\syste\source\repos\pro\pro.Logic\obj\Debug\net6.0\Interop.Microsoft.Office.Interop.Excel.dll
-C:\Users\syste\source\repos\pro\pro.Logic\obj\Debug\net6.0\pro.Logic.csproj.ResolveComReference.cache
 C:\Users\syste\source\repos\pro\pro.Logic\obj\Debug\net6.0\pro.Logic.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\syste\source\repos\pro\pro.Logic\obj\Debug\net6.0\pro.Logic.AssemblyInfoInputs.cache
 C:\Users\syste\source\repos\pro\pro.Logic\obj\Debug\net6.0\pro.Logic.AssemblyInfo.cs
@@ -26,3 +24,6 @@ C:\Users\syste\source\repos\pro\pro.Logic\obj\Debug\net6.0\refint\pro.Logic.dll
 C:\Users\syste\source\repos\pro\pro.Logic\obj\Debug\net6.0\pro.Logic.pdb
 C:\Users\syste\source\repos\pro\pro.Logic\obj\Debug\net6.0\pro.Logic.genruntimeconfig.cache
 C:\Users\syste\source\repos\pro\pro.Logic\obj\Debug\net6.0\ref\pro.Logic.dll
+C:\Users\syste\source\repos\pro\pro.Logic\obj\Debug\net6.0\Interop.Microsoft.Office.Interop.Excel.dll
+C:\Users\syste\source\repos\pro\pro.Logic\obj\Debug\net6.0\pro.Logic.csproj.ResolveComReference.cache
+C:\Users\syste\source\repos\pro\pro.Logic\obj\Debug\net6.0\Interop.Microsoft.Office.Interop.Word.dll

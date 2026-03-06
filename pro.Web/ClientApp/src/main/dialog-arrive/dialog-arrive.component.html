@@ -1,0 +1,65 @@
+<div class="w100 h100" [ngClass]="{'fx' : !shared.rd, 'grid' : shared.rd}">
+
+  <div class="w5 h100 fx fx-flow padding border-right background-jh-2" *ngIf="!shared.rd">
+
+    <div class="w100 fx-push align-right">
+      <button mat-icon-button [mat-dialog-close]="false" color="warn" matTooltip="Cerrar">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+
+  </div>
+
+  <div class="w95 h100 background-jh-4" [ngClass]="{'overflow-hidden' : !shared.rd}">
+
+    <div class="w100 h100 fx fx-flow padding" [ngClass]="{'overflow' : !shared.rd}">
+
+      <div class="w100" *ngIf="shared.rd">
+        <button mat-raised-button class="wpx125 background-cerrar" [mat-dialog-close]="false">
+          <mat-icon class="fl-left button-icon">close</mat-icon>
+          Cerrar
+        </button>
+      </div>
+
+      <div class="w100 fx-remaining fx fx-middle content-center">
+        <div class="w30">
+
+          <div class="w100 padding align-center">
+            <h3>¿Confirma Fecha Llegada?</h3>
+          </div>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Fecha Llegada</mat-label>
+            <input matInput [(ngModel)]="iLlegada.fechaLlegada" [matDatepicker]="fechaLlegada" (click)="fechaLlegada.open()" (focus)="fechaLlegada.open()" readonly>
+            <mat-datepicker-toggle matSuffix [for]="fechaLlegada"></mat-datepicker-toggle>
+            <mat-datepicker #fechaLlegada></mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field class="w100" appearance="outline">
+            <mat-label>Hora Llegada</mat-label>
+            <input matInput type="time" [(ngModel)]="iLlegada.horaLlegada" required onclick="this.showPicker()">
+          </mat-form-field>
+
+          <div class="w100 padding align-center">
+
+            <button mat-raised-button class="wpx125 background-11" (click)="ngHandle('Llegada');" *ngIf="shared.permisoEscritura">
+              <mat-icon class="fl-left button-icon">check</mat-icon>
+              Si
+            </button>
+
+            <button mat-raised-button class="wpx125 background-5" (click)="ngDialogConsulta();">
+              <mat-icon class="fl-left button-icon">remove</mat-icon>
+              No
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+

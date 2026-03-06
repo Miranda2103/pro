@@ -24,7 +24,8 @@ export class Shared {
   public idRol: number = 0;
   public cambiaContrasena: boolean = false;
 
-  public extension: string = '.csv';
+  //public extension: string = '.csv';
+  public extension: string = '.xlsx';
   public format: string = '.xlsx';
 
   public fechaHoy: Date = new Date();
@@ -42,6 +43,8 @@ export class Shared {
 
   public inRolMenuView: IRolMenuView[] = [];
   public inRolSubMenuView: IRolSubMenuView[] = [];
+
+  public permisoEscritura: boolean;
 
   public inExtensionDescarga: IExtensionDescarga[] = [];
 
@@ -187,6 +190,29 @@ export class Shared {
     const charCode = (event.which) ? event.which : event.keyCode;
 
     if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+      return false;
+    }
+
+    return true;
+  }
+
+  ngMoney(event: KeyboardEvent): boolean {
+    const charCode = event.which ? event.which : event.keyCode;
+    
+    if (charCode > 31 && (charCode < 48 || charCode > 57) && charCode !== 46) {
+      return false;
+    }
+
+    const input = (event.target as HTMLInputElement).value;
+    
+    if (charCode === 46 && input.includes(".")) {
+      return false;
+    }
+
+    const regex = /^\d+(\.\d{0,2})?$/;
+    const newValue = input + String.fromCharCode(charCode);
+
+    if (!regex.test(newValue)) {
       return false;
     }
 
