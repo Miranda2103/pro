@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\syste\\source\\repos\\pro\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1B9D41AA-6F99-44BD-A8D8-72B2DC6B6961}|pro.Web\\pro.Web.csproj|c:\\users\\syste\\source\\repos\\pro\\pro.web\\clientapp\\src\\environments\\environment.prod.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{1B9D41AA-6F99-44BD-A8D8-72B2DC6B6961}|pro.Web\\pro.Web.csproj|solutionrelative:pro.web\\clientapp\\src\\environments\\environment.prod.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{07F4203D-106B-4FED-8E31-EB40365A9E30}|pro.Logic\\pro.Logic.csproj|c:\\users\\syste\\source\\repos\\pro\\pro.logic\\pro\\lpago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07F4203D-106B-4FED-8E31-EB40365A9E30}|pro.Logic\\pro.Logic.csproj|solutionrelative:pro.logic\\pro\\lpago.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -71,6 +75,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "environment.prod.ts",
+              "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\environments\\environment.prod.ts",
+              "RelativeDocumentMoniker": "pro.Web\\ClientApp\\src\\environments\\environment.prod.ts",
+              "ToolTip": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\environments\\environment.prod.ts",
+              "RelativeToolTip": "pro.Web\\ClientApp\\src\\environments\\environment.prod.ts",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2026-03-08T00:15:37.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "LPago.cs",
               "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Logic\\pro\\LPago.cs",
               "RelativeDocumentMoniker": "pro.Logic\\pro\\LPago.cs",
@@ -83,7 +100,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "LHemodialisis.cs",
               "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Logic\\pro\\LHemodialisis.cs",
               "RelativeDocumentMoniker": "pro.Logic\\pro\\LHemodialisis.cs",
@@ -91,12 +108,11 @@
               "RelativeToolTip": "pro.Logic\\pro\\LHemodialisis.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAIwDMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-07T21:34:52.253Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-07T21:34:52.253Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "PagoController.cs",
               "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Api\\Controllers\\pro\\PagoController.cs",
               "RelativeDocumentMoniker": "pro.Api\\Controllers\\pro\\PagoController.cs",
@@ -104,12 +120,11 @@
               "RelativeToolTip": "pro.Api\\Controllers\\pro\\PagoController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T17:03:37.902Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-06T17:03:37.902Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Api\\appsettings.json",
               "RelativeDocumentMoniker": "pro.Api\\appsettings.json",
@@ -117,12 +132,11 @@
               "RelativeToolTip": "pro.Api\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-06T15:58:01.434Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-06T15:58:01.434Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MAvisoImagen.cs",
               "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Model\\pro\\MAvisoImagen.cs",
               "RelativeDocumentMoniker": "pro.Model\\pro\\MAvisoImagen.cs",
@@ -130,12 +144,11 @@
               "RelativeToolTip": "pro.Model\\pro\\MAvisoImagen.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T15:40:01.048Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-06T15:40:01.048Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "DBPRO.cs",
               "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Context\\DBPRO.cs",
               "RelativeDocumentMoniker": "pro.Context\\DBPRO.cs",
@@ -143,12 +156,11 @@
               "RelativeToolTip": "pro.Context\\DBPRO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T15:38:46.405Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-06T15:38:46.405Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "AgendaController.cs",
               "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Api\\Controllers\\pro\\AgendaController.cs",
               "RelativeDocumentMoniker": "pro.Api\\Controllers\\pro\\AgendaController.cs",
@@ -156,12 +168,11 @@
               "RelativeToolTip": "pro.Api\\Controllers\\pro\\AgendaController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T15:37:48.993Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-06T15:37:48.993Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "IAgenda.cs",
               "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Interface\\pro\\IAgenda.cs",
               "RelativeDocumentMoniker": "pro.Interface\\pro\\IAgenda.cs",
@@ -169,12 +180,11 @@
               "RelativeToolTip": "pro.Interface\\pro\\IAgenda.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T15:37:15.6Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-06T15:37:15.6Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "LAgenda.cs",
               "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Logic\\pro\\LAgenda.cs",
               "RelativeDocumentMoniker": "pro.Logic\\pro\\LAgenda.cs",
@@ -182,12 +192,11 @@
               "RelativeToolTip": "pro.Logic\\pro\\LAgenda.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T15:36:52.502Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-06T15:36:52.502Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "MAgenda.cs",
               "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Model\\pro\\MAgenda.cs",
               "RelativeDocumentMoniker": "pro.Model\\pro\\MAgenda.cs",
@@ -195,12 +204,11 @@
               "RelativeToolTip": "pro.Model\\pro\\MAgenda.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T15:36:16.473Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-06T15:36:16.473Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "RAgenda.cs",
               "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Repository\\pro\\RAgenda.cs",
               "RelativeDocumentMoniker": "pro.Repository\\pro\\RAgenda.cs",
@@ -208,12 +216,11 @@
               "RelativeToolTip": "pro.Repository\\pro\\RAgenda.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-06T15:35:14.618Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-06T15:35:14.618Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "agenda.component.html",
               "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\main\\agenda\\agenda.component.html",
               "RelativeDocumentMoniker": "pro.Web\\ClientApp\\src\\main\\agenda\\agenda.component.html",
@@ -221,12 +228,11 @@
               "RelativeToolTip": "pro.Web\\ClientApp\\src\\main\\agenda\\agenda.component.html",
               "ViewState": "AgIAABIAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-03-06T08:25:36.963Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-06T08:25:36.963Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "agenda.component.ts",
               "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\main\\agenda\\agenda.component.ts",
               "RelativeDocumentMoniker": "pro.Web\\ClientApp\\src\\main\\agenda\\agenda.component.ts",
@@ -234,12 +240,11 @@
               "RelativeToolTip": "pro.Web\\ClientApp\\src\\main\\agenda\\agenda.component.ts",
               "ViewState": "AgIAABYAAAAAAAAAAAAjwCYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-06T08:25:36.123Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-06T08:25:36.123Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "service-pro.service.ts",
               "DocumentMoniker": "C:\\Users\\syste\\source\\repos\\pro\\pro.Web\\ClientApp\\src\\service\\service-pro.service.ts",
               "RelativeDocumentMoniker": "pro.Web\\ClientApp\\src\\service\\service-pro.service.ts",
@@ -247,8 +252,7 @@
               "RelativeToolTip": "pro.Web\\ClientApp\\src\\service\\service-pro.service.ts",
               "ViewState": "AgIAALkCAAAAAAAAAAAYwL0CAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
-              "WhenOpened": "2026-03-04T04:27:01.164Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-04T04:27:01.164Z"
             }
           ]
         }
